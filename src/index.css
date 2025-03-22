@@ -1,0 +1,29 @@
+@import "tailwindcss";
+@plugin "daisyui" {
+  themes: light, dark, retro
+}
+@plugin "daisyui/theme" {
+  name: "light";
+  default: true;
+  --color-base: #ffffff;
+  --color-primary: #f2ae39;
+  --color-secondary: #161616;
+  --color-neutral: #ffffff;
+  --color-accent: #FFD02F;
+  --color-base-100: #F7F6F6;
+}
+
+@plugin "daisyui/theme" {
+  name: "dark";
+  default: true;
+  --color-base: #000000;
+  --color-primary: #f2ae39;
+  --color-secondary: #ffffff;
+  --color-neutral: #000000;
+  --color-accent: #685000;
+  --color-base-100: #1C1C1C;
+}
+
+:root {
+  font-family: 'Roboto', sans-serif;
+}
