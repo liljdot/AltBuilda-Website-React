@@ -1,5 +1,3 @@
-"use client"
-
 import useThemeContext from "../hooks/useThemeContext"
 
 

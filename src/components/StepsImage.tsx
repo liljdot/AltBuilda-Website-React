@@ -1,5 +1,3 @@
-"use client"
-
 import { useEffect, useState } from "react"
 
 import stepsImageDesktop from "../assets/steps-image-desktop.png"
