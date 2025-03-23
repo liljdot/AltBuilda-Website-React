@@ -2,6 +2,7 @@ import ToggleTheme from "../../components/ToggleTheme";
 import GettingStartedSection from "./GettingStartedSection";
 import HeroSection from "./HeroSection";
 import ReviewsSection from "./ReviewsSection";
+import TipsSection from "./TipsSection";
 import TransformSection from "./TransformSection";
 import WhyTrustSection from "./WhyTrustSection";
 
@@ -15,6 +16,7 @@ export default function Home() {
             <TransformSection />
             <GettingStartedSection />
             <ReviewsSection />
+            <TipsSection />
             <ToggleTheme />
           </div>
         </main>
