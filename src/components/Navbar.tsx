@@ -6,7 +6,7 @@ const Navbar: React.FC<{behind?: boolean}> = ({behind}) => {
 
     return (
         <>
-            <header className={`w-full bg-neutral ${!behind && "fixed z-100"} shadow-xl top-0`}>
+            <header className={`w-full bg-neutral ${!behind ? "fixed z-100" : "opacity-0"} shadow-xl top-0`}>
                 <div className="navbar bg-neutral  px-18.5 py-6 text-[1rem] font-semibold  z-100 max-w-450 mx-auto">
                     <div className="navbar-start">
                         <div className="dropdown"> {/*sandwich for smaller screens */}
