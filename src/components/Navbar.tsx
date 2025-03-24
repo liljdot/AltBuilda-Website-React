@@ -3,10 +3,12 @@ import NavbarLogo from "./NavbarLogo"
 import ToggleTheme from "./ToggleTheme"
 import { useEffect, useRef, useState } from "react"
 import { FiMenu } from "react-icons/fi"
+import { IoMdClose } from "react-icons/io"
 
 const Navbar: React.FC<{ behind?: boolean }> = ({ behind }) => {
     const [isSandwichMenuOpen, setIsSandwichMenuOpen] = useState<boolean>(false)
     const headerRef = useRef<HTMLElement>(null)
+    const sandwichButtonRef = useRef<HTMLButtonElement>(null)
     const { pathname } = useLocation()
 
     const toggleSandwichMenu: React.MouseEventHandler = () => {
@@ -15,21 +17,12 @@ const Navbar: React.FC<{ behind?: boolean }> = ({ behind }) => {
 
     // set sandwichmenu to close anytime user changes pages 
     useEffect(() => {
+        if (behind) {
+            return
+        }
+
         setIsSandwichMenuOpen(false)
     }, [pathname])
-
-    // close sandwich menu onclick outside header
-    useEffect(() => {
-        window.addEventListener("click", (e) => {
-            if (!isSandwichMenuOpen) {
-                return
-            }
-
-            if (!headerRef.current?.contains(e.target as HTMLElement)) {
-                setIsSandwichMenuOpen(false)
-            }
-        })
-    }, [])
 
     return (
         <>
@@ -65,8 +58,8 @@ const Navbar: React.FC<{ behind?: boolean }> = ({ behind }) => {
                         <Link to={"/get-started"} className="hidden lg:flex btn btn-secondary text-[1rem] text-neutral rounded-full font-semibold py-7 transition-all ease-in-out duration-300 hover:scale-105">Get Started for Free</Link>
 
                         {/* sandwich menu toggle only shows on mobile  */}
-                        <button className="flex lg:hidden btn btn-ghost p-0" onClick={toggleSandwichMenu}>
-                            <FiMenu className="size-6"/>
+                        <button ref={sandwichButtonRef} className="flex lg:hidden btn btn-ghost p-0" onClick={toggleSandwichMenu}>
+                            {!isSandwichMenuOpen ? <FiMenu className="size-6" /> : <IoMdClose className="size-6 text-info" />}
                         </button>
                     </div>
                 </div>
@@ -87,6 +80,8 @@ const Navbar: React.FC<{ behind?: boolean }> = ({ behind }) => {
                             <Link to={"/login"} className="btn btn-ghost text-[1rem] text-primary border border-primary rounded-full font-semibold py-7 transition-all ease-in-out duration-300 active:scale-95">Login</Link>
                         </div>
                     </div>
+
+                    <div onClick={toggleSandwichMenu} onTouchMove={() => setIsSandwichMenuOpen(false)} className={`absolute ${isSandwichMenuOpen && "h-screen"} bg-transparent w-full top-[100%]`}></div>
                 </div>
             </header >
         </>
