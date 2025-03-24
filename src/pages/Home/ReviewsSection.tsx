@@ -15,10 +15,10 @@ const ReviewsSection: React.FC = () => {
                 <img src={theme == "light" ? swirlVector2Light : swirlVector2} alt="" className="absolute bottom-0 right-0 w-22.5" />
 
                 {/* heading */}
-                <div className="text-secondary text-center px-7 flex flex-col items-center gap-3">
-                    <h2 className="text-5xl font-bold">Real Business, Real Success</h2>
+                <div className="text-secondary text-center px-7 flex flex-col items-center gap-2 md:gap-3">
+                    <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-5xl font-bold">Real Business, Real Success</h2>
 
-                    <p className="text-lg max-w-177">See how real businesses are growing with Altbuilda—streamlining operations,
+                    <p className="md:text-lg max-w-177">See how real businesses are growing with Altbuilda—streamlining operations,
                         boosting sales, and scaling with ease.</p>
                 </div>
 

@@ -16,7 +16,7 @@ const TipsSection: React.FC = () => {
                     <BlogPosts posts={blogPosts} />
                 </div>
 
-                <div className="flex flex-row justify-around">
+                <div className="flex flex-row justify-around mt-5">
                     <ActionButton to="/blog" filled>
                         View all Insights
                     </ActionButton>
