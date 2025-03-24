@@ -7,13 +7,13 @@ import stepsImageMobile from "../assets/steps-image-mobile.png"
 import stepsImageMobileDark from "../assets/steps-image-mobile-dark.png"
 import useThemeContext from "../hooks/useThemeContext"
 
-const StepsImageDesktop: React.FC<{ screenSize: number }> = ({ screenSize }) => {
+const StepsImageDesktop: React.FC<{ screenSize: number }> = ({  }) => {
     const { theme } = useThemeContext()
 
     return <img src={theme == "light" ? stepsImageDesktop : stepsImageDesktopDark} alt="Steps to Get Started" />
 }
 
-const StepsImageMobile: React.FC<{ screenSize: number }> = ({ screenSize }) => {
+const StepsImageMobile: React.FC<{ screenSize: number }> = ({  }) => {
     const { theme } = useThemeContext()
 
     return <img src={theme == "light" ? stepsImageMobile : stepsImageMobileDark} alt="Steps to Get Started" />

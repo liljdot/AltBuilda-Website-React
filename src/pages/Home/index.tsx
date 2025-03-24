@@ -1,4 +1,3 @@
-import ToggleTheme from "../../components/ToggleTheme";
 import DownloadAppSection from "./DownloadAppSection";
 import GettingStartedSection from "./GettingStartedSection";
 import HeroSection from "./HeroSection";
