@@ -13,6 +13,7 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="*" element={<div className="h-screen"></div>}/>
         </Routes>
         <Footer />
       </div>

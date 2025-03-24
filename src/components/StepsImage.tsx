@@ -23,11 +23,12 @@ const StepsImage: React.FC = () => {
     const [screenSize, setScreenSize] = useState<number>(1300)
 
     useEffect(() => {
-        setScreenSize(screen.availWidth)
+        const handleResize = () => setScreenSize(screen.availWidth)
+        handleResize()
         
-        window.addEventListener("resize", () => {
-            setScreenSize(screen.availWidth)
-        })
+        window.addEventListener("resize", handleResize)
+
+        return () => window.removeEventListener("resize", handleResize) // cleanup when component unmounts
     }, [])
 
     if (screenSize >= 640) {
