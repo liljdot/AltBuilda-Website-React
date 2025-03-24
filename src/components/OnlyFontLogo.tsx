@@ -2,10 +2,14 @@ import onlyFontLogo from "../assets/only-font-logo.png"
 import onlyFontLogoBlack from "../assets/only-font-logo-black.png"
 import useThemeContext from "../hooks/useThemeContext"
 
-const OnlyFontLogo: React.FC = () => {
+interface Props {
+    className?: string
+}
+
+const OnlyFontLogo: React.FC<Props> = ({className}) => {
     const { theme } = useThemeContext()
 
-    return <img src={theme == "light" ? onlyFontLogoBlack : onlyFontLogo} alt="AltBuilda" width={245} className="absolute bottom-0 -right-5" />
+    return <img src={theme == "light" ? onlyFontLogoBlack : onlyFontLogo} alt="AltBuilda" className={className} />
 }
 
 export default OnlyFontLogo

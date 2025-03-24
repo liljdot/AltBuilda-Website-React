@@ -19,18 +19,18 @@ const TransformSection: React.FC = () => {
 
     return (
         <>
-            <section className="bg-base-100 p-12 relative">
-                <div className="mt-12 w-fit mx-auto relative pb-5">
-                    <h3 className="text-5xl font-bold text-center text-primary">
+            <section className="bg-base-100 p-11 md:p-12 relative">
+                <div className="md:mt-12 w-fit mx-auto relative pb-5">
+                    <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-5xl font-bold text-center text-primary">
                         Transform your business
                         <br />
                         with
                     </h3>
 
-                    <OnlyFontLogo />
+                    <OnlyFontLogo className="absolute bottom-0 -right-10 lg:-right-5 w-34.5 sm:w-40 md:w-45 lg:w-61"/>
                 </div>
 
-                <div className="flex flex-row justify-between mt-35">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-10 gap-y-10 place-items-center mt-19 sm:mt-35">
                     <DoodleCard>
                         <ClipboardDoodle />
 
@@ -64,7 +64,7 @@ const TransformSection: React.FC = () => {
                     </DoodleCard>
                 </div>
 
-                <div className="flex flex-row justify-center mt-17">
+                <div className="flex flex-row justify-center mt-12 lg:mt-17">
                     <ActionButton to="/services" filled>Discover More</ActionButton>
                 </div>
             </section>
