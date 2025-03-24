@@ -80,7 +80,8 @@ const Navbar: React.FC<{ behind?: boolean }> = ({ behind }) => {
                             <Link to={"/login"} className="btn btn-ghost text-[1rem] text-primary border border-primary rounded-full font-semibold py-7 transition-all ease-in-out duration-300 active:scale-95">Login</Link>
                         </div>
                     </div>
-
+                    
+                    {/* outside area to close sandwich menu on click  */}
                     <div onClick={toggleSandwichMenu} onTouchMove={() => setIsSandwichMenuOpen(false)} className={`absolute ${isSandwichMenuOpen && "h-screen"} bg-transparent w-full top-[100%]`}></div>
                 </div>
             </header >

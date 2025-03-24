@@ -9,9 +9,9 @@ const HeroSection: React.FC = () => {
 
     return (
         <>
-            <section className="w-full relative bg-cover bg-no-repeat bg-center py-24 px-15 flex flex-row gap-0 z-99" style={{ backgroundImage: theme == "light" ? `url(${heroSectionBG})` : `url(${heroSectionBGDark})` }}>
-                <div className="w-[55%] mt-20.5 z-99">
-                    <h1 className="text-7xl z-99">
+            <section className="w-full relative bg-cover bg-no-repeat bg-center py-8.5 md:py-24 px-6.5 md:px-15 flex flex-col md:flex-row gap-11 md:gap-0 z-99" style={{ backgroundImage: theme == "light" ? `url(${heroSectionBG})` : `url(${heroSectionBGDark})` }}>
+                <div className="md:w-[55%] md:mt-20.5 z-99">
+                    <h1 className="text-3xl md:text-7xl z-99">
                         Your Ultimate Platform
                         <br />
                         <span className="font-semibold">
@@ -19,10 +19,10 @@ const HeroSection: React.FC = () => {
                         </span>
                     </h1>
 
-                    <p className="mt-10 pr-21 z-99">Empowering businesses with tools to manage operations, connect with
+                    <p className="mt-6 md:mt-10 md:pr-21 z-99">Empowering businesses with tools to manage operations, connect with
                         peers,and drive growth effortlessly</p>
 
-                    <div className="flex flex-row gap-5 mt-14 z-99">
+                    <div className="w-full sm:w-fit flex flex-row justify-between sm:gap-5 mt-8 md:mt-14 z-99">
                         <ActionButton to="/get-started" filled>
                             Get started now
                         </ActionButton>
@@ -33,7 +33,7 @@ const HeroSection: React.FC = () => {
                     </div>
                 </div>
 
-                <div className="w-[45%] z-99">
+                <div className="md:w-[45%] z-99">
                     <img src={heroSectionImage} alt="Hero Section Image" />
                 </div>
             </section>
