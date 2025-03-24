@@ -12,6 +12,7 @@
   --color-accent: #FFD02F;
   --color-base-100: #F7F6F6;
   --color-info: #00000033;
+  --color-warning: #F8E5C6;
 }
 
 @plugin "daisyui/theme" {
@@ -24,6 +25,7 @@
   --color-accent: #685000;
   --color-base-100: #1C1C1C;
   --color-info: #FFFFFF33;
+  --color-warning: #4F360A;
 }
 
 :root {

@@ -1,4 +1,5 @@
 import ToggleTheme from "../../components/ToggleTheme";
+import DownloadAppSection from "./DownloadAppSection";
 import GettingStartedSection from "./GettingStartedSection";
 import HeroSection from "./HeroSection";
 import ReviewsSection from "./ReviewsSection";
@@ -17,7 +18,7 @@ export default function Home() {
             <GettingStartedSection />
             <ReviewsSection />
             <TipsSection />
-            <ToggleTheme />
+            <DownloadAppSection />
           </div>
         </main>
       </>

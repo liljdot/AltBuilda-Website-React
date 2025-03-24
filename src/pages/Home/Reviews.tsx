@@ -16,7 +16,6 @@ interface ContainerProps {
 
 export const ReviewCard: React.FC<ReviewCardProps> = ({ details }) => {
     const rating = new Array(details.rating).fill("")
-    console.log(rating.length)
 
     return (
         <>
@@ -31,7 +30,7 @@ export const ReviewCard: React.FC<ReviewCardProps> = ({ details }) => {
                     <div className=" w-full flex flex-row justify-between items-center">
                         {/* star rating  */}
                         <div className="flex flex-row gap-0">
-                            {rating.map(() => <IoStar className="text-[gold] size-5.5" />)}
+                            {rating.map((...[, index]) => <IoStar key={"star" + index} className="text-[gold] size-5.5" />)}
                         </div>
 
                         {/* quote image */}

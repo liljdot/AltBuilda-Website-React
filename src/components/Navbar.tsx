@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom"
 import NavbarLogo from "./NavbarLogo"
+import ToggleTheme from "./ToggleTheme"
 
 const Navbar: React.FC<{behind?: boolean}> = ({behind}) => {
 
@@ -49,6 +50,8 @@ const Navbar: React.FC<{behind?: boolean}> = ({behind}) => {
                     </div>
 
                     <div className="navbar-end gap-4.5 m-0 p-0">
+                        <ToggleTheme />
+                        
                         <Link to={"/login"} className="px-0 hover:bg-transparent hover:text-primary">Login</Link>
 
                         <Link to={"/get-started"} className="btn btn-secondary text-[1rem] text-neutral rounded-full font-semibold py-7 transition-all ease-in-out duration-300 hover:scale-105">Get Started for Free</Link>
