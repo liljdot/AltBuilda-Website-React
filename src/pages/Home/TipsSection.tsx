@@ -7,12 +7,12 @@ const TipsSection: React.FC = () => {
 
     return (
         <>
-            <section className="bg-neutral relative py-20 px-13 flex flex-col items-center gap-18">
+            <section className="bg-neutral relative py-16 md:py-20 xl:px-13 flex flex-col items-center gap-5.5 md:gap-18">
                 <div className="text-secondary text-center">
-                    <h2 className="text-5xl font-bold">Access Expert Business Tips</h2>
+                    <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-5xl font-bold">Access Expert Business Tips</h3>
                 </div>
 
-                <div className="">
+                <div className="w-full">
                     <BlogPosts posts={blogPosts} />
                 </div>
 
