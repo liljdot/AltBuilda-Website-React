@@ -6,7 +6,7 @@ const MissionSection: React.FC = () => {
 
     return (
         <>
-            <section className="w-full bg-neutral py-26">
+            <section className="w-full bg-neutral py-10 md:py-26">
                 <div className="text-center">
                     <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-5xl font-medium">Our Mission</h3>
                 </div>
@@ -21,11 +21,11 @@ const MissionSection: React.FC = () => {
                     <img src={missionImageMobile} alt="AltBuilda Image" />
                 </figure>
 
-                <p className="text-center text-secondary text-xl/10 px-39 mt-19">
+                <p className="text-center text-secondary text-[1rem]/11 md:text-xl/10 px-6 lg:px-39 mt-12 md:mt-19">
                     Altbuida is designed to empower Small and Medium Enterprises (SMEs) like yours to thrive and scale. We provide the essential tools, financial solutions, and networking opportunities you need to manage your business effectively and achieve sustainable growth. Whether you're just starting or looking to expand, Altbuida is the right platform for success.
                 </p>
 
-                <div className="flex flex-row justify-center my-14">
+                <div className="flex flex-row justify-center my-10 md:my-14">
                     <ActionButton to="/services" filled>Learn More</ActionButton>
                 </div>
             </section>
