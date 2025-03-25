@@ -1,5 +1,6 @@
 import Banner from "./Banner";
 import MissionSection from "./MissionSection";
+import OfferSection from "./OfferSection";
 
 const About: React.FC = () => {
 
@@ -9,6 +10,7 @@ const About: React.FC = () => {
                 <div className="max-w-450 mx-auto">
                     <Banner />
                     <MissionSection />
+                    <OfferSection />
                 </div>
             </main>
         </>
