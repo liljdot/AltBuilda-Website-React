@@ -26,7 +26,7 @@ const Navbar: React.FC<{ behind?: boolean }> = ({ behind }) => {
 
     return (
         <>
-            <header ref={headerRef} className={`w-full bg-neutral transition-all ease-in-out duration-300 ${!behind ? "fixed z-100" : "opacity-0"} shadow-xl top-0`}>
+            <header ref={headerRef} className={`w-full bg-neutral transition-all ease-in-out duration-300 ${!behind ? "fixed z-1000" : "opacity-0"} shadow-xl top-0`}>
                 <div className="navbar bg-neutral px-4 lg:px-18.5 py-6 text-[1rem] font-semibold  z-100 max-w-450 mx-auto">
                     <div className="navbar-start">
                         {/* Logo */}
