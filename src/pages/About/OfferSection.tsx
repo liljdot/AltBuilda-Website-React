@@ -69,7 +69,7 @@ const OfferSection: React.FC = () => {
                     </figure>
                 </div>
 
-                <div className="flex flex-row justify-center my-12.5 md:my-29">
+                <div className="flex flex-row justify-center mt-12.5 md:mt-29">
                     <ActionButton to="" filled shrink>Explore our Features</ActionButton>
                 </div>
             </section>
