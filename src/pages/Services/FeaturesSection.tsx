@@ -31,6 +31,9 @@ import chartIconDark from "../../assets/chart-icon-dark.png"
 import buildingIcon from "../../assets/building-icon.png"
 import buildingIconDark from "../../assets/building-icon-dark.png"
 
+import iphoneImage from "../../assets/iphone-image.png"
+import iphoneImageDark from "../../assets/iphone-image-dark.png"
+
 import useThemeContext from "../../hooks/useThemeContext"
 import { Link } from "react-router-dom"
 
@@ -46,24 +49,31 @@ interface FeatureProps {
 }
 
 const Feature: React.FC<FeatureProps> = ({ reverse, icon, title, content, button }) => {
+    const { theme } = useThemeContext()
 
     return (
         <>
-            <div className={`flex ${reverse ? "flex-row-reverse" : "flex-row"} items-center`}>
-                <div className="w-[53%] flex flex-col gap-6 text-secondary px-28">
+            <div className={`flex flex-col gap-10 md:gap-0 ${reverse ? "md:flex-row-reverse" : "md:flex-row"} items-center px-5 md:px-0`}>
+                <div className="w-full md:w-[53%] flex flex-col gap-6 text-secondary sm:px-14 lg:px-28">
                     <figure className="size-12">
                         <img src={icon} alt="icon" />
                     </figure>
 
-                    <h4 className="text-3xl font-medium">{title}</h4>
+                    <h4 className="text-xl xl:text-3xl font-medium">{title}</h4>
 
-                    <p className="text-xl">{content}</p>
+                    <p className="xl:text-xl">{content}</p>
 
-                    {button && <Link to={button.to} className="btn btn-primary text-secondary p-6.5 rounded-full w-fit hover:scale-105 transition-all ease-in-out duration-500">{button.text}</Link>}
+                    {button && <Link to={button.to} className="btn btn-primary text-secondary p-6.5 rounded-full min-w-55 md:min-w-fit w-fit hover:scale-105 transition-all ease-in-out duration-500">{button.text}</Link>}
                 </div>
 
-                <figure className="w-[47%]">
-                    <img src={reverse ? featureImageLeft : featureImageRight} alt="features" />
+                {/* hidden for mobile and small tablets  */}
+                <figure className="hidden md:block md:w-[47%]">
+                    <img src={reverse ? featureImageLeft : featureImageRight} alt="Altbuilda on your computer" />
+                </figure>
+
+                {/* for mobile and small tablets  */}
+                <figure className="md:hidden">
+                    <img src={theme == "dark" ? iphoneImageDark : iphoneImage} alt="AltBuilda on your iphone" />
                 </figure>
             </div>
         </>
@@ -75,7 +85,7 @@ const FeaturesSection: React.FC = () => {
 
     return (
         <>
-            <section className="bg-neutral flex flex-col gap-24 py-24">
+            <section className="bg-neutral flex flex-col gap-12 md:gap-24 py-17 md:py-24">
                 <Feature
                     title="Email Newsletter"
                     content="Personalized industry insights & updates"
