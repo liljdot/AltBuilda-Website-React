@@ -1,10 +1,11 @@
 import ActionButton from "./ActionButton";
 import signVector from "../assets/sign-vector.png"
 import footerLogo from "../assets/footer-logo.png"
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
 
 const Footer: React.FC = () => {
+    const { pathname } = useLocation()
 
     return (
         <>
@@ -51,11 +52,11 @@ const Footer: React.FC = () => {
 
 
                             <nav className="flex flex-col self-start gap-11 text-left text-white text-[1rem] font-semibold p-0">
-                                <Link to={"/about"} className="link link-hover hover:text-primary">About</Link>
-                                <Link to={"/services"} className="link link-hover hover:text-primary">Services</Link>
-                                <Link to={"/blog"} className="link link-hover hover:text-primary">Blog</Link>
-                                <Link to={"/faq"} className="link link-hover hover:text-primary">FAQ</Link>
-                                <Link to={"/contact"} className="link link-hover hover:text-primary">Contact</Link>
+                                <Link to={"/about"} className={`link link-hover hover:text-primary ${pathname == "/about" && "text-primary"}`}>About</Link>
+                                <Link to={"/services"} className={`link link-hover hover:text-primary ${pathname == "/services" && "text-primary"}`}>Services</Link>
+                                <Link to={"/blog"} className={`link link-hover hover:text-primary ${pathname == "/blog" && "text-primary"}`}>Blog</Link>
+                                <Link to={"/faq"} className={`link link-hover hover:text-primary ${pathname == "/faq" && "text-primary"}`}>FAQ</Link>
+                                <Link to={"/contact"} className={`link link-hover hover:text-primary ${pathname == "/contact" && "text-primary"}`}>Contact</Link>
                             </nav>
                         </div>
 
@@ -66,11 +67,11 @@ const Footer: React.FC = () => {
                             </Link>
 
                             <nav className="grid grid-flow-col gap-11 text-white text-[1rem] font-semibold p-0">
-                                <Link to={"/about"} className="link link-hover hover:text-primary">About</Link>
-                                <Link to={"/services"} className="link link-hover hover:text-primary">Services</Link>
-                                <Link to={"/blog"} className="link link-hover hover:text-primary">Blog</Link>
-                                <Link to={"/faq"} className="link link-hover hover:text-primary">FAQ</Link>
-                                <Link to={"/contact"} className="link link-hover hover:text-primary">Contact</Link>
+                                <Link to={"/about"} className={`link link-hover hover:text-primary ${pathname == "/about" && "text-primary"}`}>About</Link>
+                                <Link to={"/services"} className={`link link-hover hover:text-primary ${pathname == "/services" && "text-primary"}`}>Services</Link>
+                                <Link to={"/blog"} className={`link link-hover hover:text-primary ${pathname == "/blog" && "text-primary"}`}>Blog</Link>
+                                <Link to={"/faq"} className={`link link-hover hover:text-primary ${pathname == "/faq" && "text-primary"}`}>FAQ</Link>
+                                <Link to={"/contact"} className={`link link-hover hover:text-primary ${pathname == "/contact" && "text-primary"}`}>Contact</Link>
                             </nav>
 
                             <div className="flex flex-row gap-8.5 p-0 text-white b">

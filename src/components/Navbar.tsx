@@ -37,15 +37,15 @@ const Navbar: React.FC<{ behind?: boolean }> = ({ behind }) => {
 
                     <div className="navbar-center hidden lg:flex lg:scale-80 xl:scale-100">
                         <ul className="menu menu-horizontal text-[1rem] px-0 gap-10.5">
-                            <li><Link to={"/about"} className="px-0 hover:bg-transparent hover:text-primary">About</Link></li>
+                            <li><Link to={"/about"} className={`${pathname == "/about" && "text-primary"} px-0 hover:bg-transparent hover:text-primary`}>About</Link></li>
 
-                            <li><Link to={"/services"} className="px-0 hover:bg-transparent hover:text-primary">Services</Link></li>
+                            <li><Link to={"/services"} className={`${pathname == "/services" && "text-primary"} px-0 hover:bg-transparent hover:text-primary`}>Services</Link></li>
 
-                            <li><Link to={"/blog"} className="px-0 hover:bg-transparent hover:text-primary">Blog</Link></li>
+                            <li><Link to={"/blog"} className={`${pathname == "/blog" && "text-primary"} px-0 hover:bg-transparent hover:text-primary`}>Blog</Link></li>
 
-                            <li><Link to={"/faq"} className="px-0 hover:bg-transparent hover:text-primary">FAQ</Link></li>
+                            <li><Link to={"/faq"} className={`${pathname == "/faq" && "text-primary"} px-0 hover:bg-transparent hover:text-primary`}>FAQ</Link></li>
 
-                            <li><Link to={"/contact"} className="px-0 hover:bg-transparent hover:text-primary">Contact</Link></li>
+                            <li><Link to={"/contact"} className={`${pathname == "/contact" && "text-primary"} px-0 hover:bg-transparent hover:text-primary`}>Contact</Link></li>
                         </ul>
                     </div>
 
@@ -68,11 +68,11 @@ const Navbar: React.FC<{ behind?: boolean }> = ({ behind }) => {
                 <div className={`lg:hidden w-full overflow-hidden ${isSandwichMenuOpen ? "h-117" : "h-0"} transition-all ease-in-out duration-300`}>
                     <div className="size-full flex flex-col justify-between p-4">
                         <ul className="flex flex-col gap-5 text-secondary font-medium [&>*]:active:text-primary">
-                            <li><Link to={"/about"}>About</Link></li>
-                            <li><Link to={"/services"}>Services</Link></li>
-                            <li><Link to={"/blog"}>Blog</Link></li>
-                            <li><Link to={"/faq"}>FAQ</Link></li>
-                            <li><Link to={"/contact"}>Contact</Link></li>
+                            <li><Link to={"/about"} className={`${pathname == "/about" && "text-primary"}`}>About</Link></li>
+                            <li><Link to={"/services"} className={`${pathname == "/services" && "text-primary"}`}>Services</Link></li>
+                            <li><Link to={"/blog"} className={`${pathname == "/blog" && "text-primary"}`}>Blog</Link></li>
+                            <li><Link to={"/faq"} className={`${pathname == "/faq" && "text-primary"}`}>FAQ</Link></li>
+                            <li><Link to={"/contact"} className={`${pathname == "/contact" && "text-primary"}`}>Contact</Link></li>
                         </ul>
 
                         <div className="flex flex-col gap-3">
