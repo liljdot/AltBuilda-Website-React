@@ -5,8 +5,8 @@ import FAQGroupSection from "./FAQGroupSection"
 import SelectedGroupSection from "./SelectedGroupSection"
 
 const FAQ: React.FC = () => {
-    const [selectedFAQGroup, setSelectedFAQGroup] = useState<FAQGroup>(FAQGroups[0])
     const [displayedFAQGroups, setDisplayedFAQGroups] = useState<FAQGroup[]>(FAQGroups)
+    const [selectedFAQGroup, setSelectedFAQGroup] = useState<FAQGroup>(displayedFAQGroups[0])
 
     return (
         <>

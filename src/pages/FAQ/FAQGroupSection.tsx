@@ -39,7 +39,7 @@ const FAQGroupSection: React.FC<FAQGroupSectionProps> = ({ FAQGroups }) => {
 
                 {/* tiles container div  */}
                 <div className="grid grid-cols-3 gap-y-16 px-8 mt-12 pb-20">
-                   {FAQGroups.map(group => <FAQGroupTile FAQGroup={group}/>)}
+                   {FAQGroups.map(group => <FAQGroupTile key={group.name} FAQGroup={group}/>)}
                 </div>
             </section>
         </>

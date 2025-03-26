@@ -35,7 +35,7 @@ const SelectedGroupSection: React.FC<Props> = ({ selectedGroup }) => {
 
                 {/* accordion container*/}
                 <div className="w-full flex flex-col gap-6 px-64 mt-16">
-                    {selectedGroup.FAQs.map(faq => <AccordionItem FAQ={faq}/>)}
+                    {selectedGroup.FAQs.map((faq, index) => <AccordionItem key={"question" + index} FAQ={faq}/>)}
                 </div>
 
                 <div className="w-full flex flex-col bg-neutral gap-8 p-8 mt-36 rounded-xl">
