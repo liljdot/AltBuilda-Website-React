@@ -5,7 +5,7 @@ import FAQGroupSection from "./FAQGroupSection"
 import SelectedGroupSection from "./SelectedGroupSection"
 
 const FAQ: React.FC = () => {
-    const [displayedFAQGroups, setDisplayedFAQGroups] = useState<FAQGroup[]>(FAQGroups)
+    const [displayedFAQGroups, ] = useState<FAQGroup[]>(FAQGroups) // set selected displayed groups for search fn
     const [selectedFAQGroup, setSelectedFAQGroup] = useState<FAQGroup>(displayedFAQGroups[0])
 
     return (
@@ -13,7 +13,7 @@ const FAQ: React.FC = () => {
             <main className="p-0 bg-neutral w-full">
                 <div className="max-w-450 mx-auto">
                     <FAQBanner />
-                    <FAQGroupSection FAQGroups={FAQGroups} />
+                    <FAQGroupSection handleSelect={setSelectedFAQGroup} selectedGroup={selectedFAQGroup} FAQGroups={FAQGroups} />
                     <SelectedGroupSection selectedGroup={selectedFAQGroup} />
                 </div>
             </main>

@@ -24,7 +24,7 @@ const SelectedGroupSection: React.FC<Props> = ({ selectedGroup }) => {
 
     return (
         <>
-            <section className="bg-warning flex flex-col items-center pt-14 px-20 pb-43">
+            <section id="questions" className="bg-warning flex flex-col items-center pt-14 px-20 pb-43">
                 <div className="flex flex-col gap-3 max-w-112 items-center">
                     <figure className="size-12">
                         {selectedGroup.icons ? <img src={theme == "dark" ? selectedGroup.icons.dark : selectedGroup.icons.light} alt="icon" className="size-full" /> : <FaRegQuestionCircle className="size-full text-primary" />}
