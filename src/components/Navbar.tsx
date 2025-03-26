@@ -69,10 +69,10 @@ const Navbar: React.FC<{ behind?: boolean }> = ({ behind }) => {
                     <div className="size-full flex flex-col justify-between p-4">
                         <ul className="flex flex-col gap-5 text-secondary font-medium [&>*]:active:text-primary">
                             <li><Link to={"/about"}>About</Link></li>
-                            <li><Link to={""}>Services</Link></li>
-                            <li><Link to={""}>Blog</Link></li>
-                            <li><Link to={""}>FAQ</Link></li>
-                            <li><Link to={""}>Contact</Link></li>
+                            <li><Link to={"/services"}>Services</Link></li>
+                            <li><Link to={"/blog"}>Blog</Link></li>
+                            <li><Link to={"/faq"}>FAQ</Link></li>
+                            <li><Link to={"/contact"}>Contact</Link></li>
                         </ul>
 
                         <div className="flex flex-col gap-3">
