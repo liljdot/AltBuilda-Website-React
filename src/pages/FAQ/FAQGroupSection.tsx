@@ -28,7 +28,7 @@ const FAQGroupTile: React.FC<FAQGroupTileProps> = ({ FAQGroup, selected, handleS
                 {FAQGroup.icons ? <img src={theme == "dark" ? FAQGroup.icons.dark : FAQGroup.icons.light} alt="icon" /> : <FaRegQuestionCircle className="size-full text-primary" />}
             </figure>
 
-            <p className={`text-xl font-semibold text-center ${selected && "text-primary"}`}>{FAQGroup.name}</p>
+            <p className={`sm:text-lg lg:text-xl font-semibold text-center ${selected && "text-primary"}`}>{FAQGroup.name}</p>
         </div>
     )
 }
@@ -37,9 +37,9 @@ const FAQGroupSection: React.FC<FAQGroupSectionProps> = ({ FAQGroups, selectedGr
 
     return (
         <>
-            <section className="bg-neutral pt-8 px-20 pb-17">
+            <section className="bg-neutral pt-12 md:pt-8 px-7.5 md:px-20 pb-25 md:pb-17">
                 {/* search container div  */}
-                <div className="px-81">
+                <div className="md:px-20 lg:px-40 xl:px-81">
                     <label className="input w-full bg-neutral">
                         <svg className="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g strokeLinejoin="round" strokeLinecap="round" strokeWidth="2.5" fill="none" stroke="currentColor"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></g></svg>
                         <input type="search" className="grow bg-ne" placeholder="Search" />
@@ -47,7 +47,7 @@ const FAQGroupSection: React.FC<FAQGroupSectionProps> = ({ FAQGroups, selectedGr
                 </div>
 
                 {/* tiles container div  */}
-                <div className="grid grid-cols-3 gap-y-16 px-8 mt-12 pb-20">
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-y-8 md:gap-y-16 lg:px-8 mt-15 md:mt-12">
                     {FAQGroups.map(group => <FAQGroupTile handleSelect={handleSelect} selected={group.name == selectedGroup.name} key={group.name} FAQGroup={group} />)}
                 </div>
             </section>
