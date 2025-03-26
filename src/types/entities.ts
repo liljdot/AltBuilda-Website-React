@@ -14,3 +14,8 @@ export interface BlogPost {
     }
     date: Date
 }
+
+export interface FAQ {
+    question: string
+    answer: string
+}
