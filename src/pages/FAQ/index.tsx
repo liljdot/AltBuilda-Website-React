@@ -1,8 +1,12 @@
-import { FAQGroups } from "../../data/FAQ"
+import { useState } from "react"
+import { FAQGroup, FAQGroups } from "../../data/FAQ"
 import FAQBanner from "./FAQBanner"
 import FAQGroupSection from "./FAQGroupSection"
+import SelectedGroupSection from "./SelectedGroupSection"
 
 const FAQ: React.FC = () => {
+    const [selectedFAQGroup, setSelectedFAQGroup] = useState<FAQGroup>(FAQGroups[0])
+    const [displayedFAQGroups, setDisplayedFAQGroups] = useState<FAQGroup[]>(FAQGroups)
 
     return (
         <>
@@ -10,6 +14,7 @@ const FAQ: React.FC = () => {
                 <div className="max-w-450 mx-auto">
                     <FAQBanner />
                     <FAQGroupSection FAQGroups={FAQGroups} />
+                    <SelectedGroupSection selectedGroup={selectedFAQGroup} />
                 </div>
             </main>
         </>

@@ -1,5 +1,4 @@
 import { FaRegQuestionCircle } from "react-icons/fa"
-import messageIconDark from "../../assets/message-icon-dark.png"
 import { FAQGroup } from "../../data/FAQ"
 import useThemeContext from "../../hooks/useThemeContext"
 
