@@ -1,5 +1,6 @@
 import ContactBanner from "./ContactBanner"
 import FormSection from "./FormSection"
+import InfoSection from "./InfoSection"
 
 const Contact: React.FC = () => {
 
@@ -9,6 +10,7 @@ const Contact: React.FC = () => {
                 <div className="max-w-450 mx-auto">
                     <ContactBanner />
                     <FormSection />
+                    <InfoSection />
                 </div>
             </main>
         </>
