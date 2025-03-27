@@ -1,7 +1,9 @@
 import Banner from "../../components/Banner";
+import useDocumentTitle from "../../hooks/useDocumentTitle";
 import FeaturesSection from "./FeaturesSection";
 
 const Services: React.FC = () => {
+    useDocumentTitle("Services | AltBuilda")
 
     return (
         <>

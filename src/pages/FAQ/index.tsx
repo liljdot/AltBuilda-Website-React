@@ -3,8 +3,10 @@ import { FAQGroup, FAQGroups } from "../../data/FAQ"
 import FAQBanner from "./FAQBanner"
 import FAQGroupSection from "./FAQGroupSection"
 import SelectedGroupSection from "./SelectedGroupSection"
+import useDocumentTitle from "../../hooks/useDocumentTitle"
 
 const FAQ: React.FC = () => {
+    useDocumentTitle("FAQ | AltBuilda")
     const [displayedFAQGroups, ] = useState<FAQGroup[]>(FAQGroups) // set selected displayed groups for search fn
     const [selectedFAQGroup, setSelectedFAQGroup] = useState<FAQGroup>(displayedFAQGroups[0])
 

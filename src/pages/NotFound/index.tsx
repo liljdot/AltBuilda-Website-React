@@ -1,8 +1,10 @@
 import image404 from "../../assets/404-image.png"
 import image404Dark from "../../assets/404-image-dark.png"
 import useThemeContext from "../../hooks/useThemeContext"
+import useDocumentTitle from "../../hooks/useDocumentTitle"
 
 const NotFound: React.FC = () => {
+    useDocumentTitle("404 | AltBuilda")
     const { theme } = useThemeContext()
 
     return (

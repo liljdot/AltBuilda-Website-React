@@ -1,3 +1,4 @@
+import useDocumentTitle from "../../hooks/useDocumentTitle";
 import DownloadAppSection from "./DownloadAppSection";
 import GettingStartedSection from "./GettingStartedSection";
 import HeroSection from "./HeroSection";
@@ -7,6 +8,8 @@ import TransformSection from "./TransformSection";
 import WhyTrustSection from "./WhyTrustSection";
 
 export default function Home() {
+  useDocumentTitle("AltBuilda")
+  
     return (
       <>
         <main className="p-0 bg-neutral w-full">

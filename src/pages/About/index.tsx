@@ -1,9 +1,11 @@
 import Banner from "../../components/Banner";
+import useDocumentTitle from "../../hooks/useDocumentTitle";
 import MissionSection from "./MissionSection";
 import OfferSection from "./OfferSection";
 import WhyChooseSection from "./WhyChooseSection";
 
 const About: React.FC = () => {
+    useDocumentTitle("About | AltBuilda")
 
     return (
         <>
