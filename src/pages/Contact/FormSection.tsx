@@ -23,11 +23,11 @@ const FormSection: React.FC = () => {
 
     return (
         <>
-            <section className="bg-base-100 px-99  py-18">
-                <form onSubmit={handleFormSubmit} className="w-full flex flex-col gap-11">
-                    <div className="flex flex-row gap-8">
-                        <div className="w-full">
-                            <label className="fieldset-label text-lg text-secondary font-medium">First name</label>
+            <section className="bg-base-100 px-4 md:px-25 lg:px-50 xl:px-75 2xl:px-99 py-5 md:py-18">
+                <form onSubmit={handleFormSubmit} className="w-full flex flex-col gap-6 md:gap-11">
+                    <div className="flex flex-col md:flex-row gap-6 md:gap-8">
+                        <div className="w-full flex flex-col gap-1.5">
+                            <label className="fieldset-label text-sm md:text-lg text-secondary font-medium">First name</label>
                             <input
                                 name="firstName"
                                 type="text"
@@ -38,8 +38,8 @@ const FormSection: React.FC = () => {
                             />
                         </div>
 
-                        <div className="w-full">
-                            <label className="fieldset-label text-lg text-secondary font-medium">Last name</label>
+                        <div className="w-full flex flex-col gap-1.5">
+                            <label className="fieldset-label text-sm md:text-lg text-secondary font-medium">Last name</label>
                             <input
                                 name="lastName"
                                 type="text"
@@ -51,8 +51,8 @@ const FormSection: React.FC = () => {
                         </div>
                     </div>
 
-                    <div className="w-full">
-                        <label className="fieldset-label text-lg text-secondary font-medium">Email</label>
+                    <div className="w-full flex flex-col gap-1.5">
+                        <label className="fieldset-label text-sm md:text-lg text-secondary font-medium">Email</label>
                         <input
                             name="email"
                             type="text"
@@ -63,8 +63,8 @@ const FormSection: React.FC = () => {
                         />
                     </div>
 
-                    <div className="w-full">
-                        <label className="fieldset-label text-lg text-secondary font-medium">Message</label>
+                    <div className="w-full flex flex-col gap-1.5">
+                        <label className="fieldset-label text-sm md:text-lg text-secondary font-medium">Message</label>
                         <textarea
                             name="message"
                             value={formData.message}
