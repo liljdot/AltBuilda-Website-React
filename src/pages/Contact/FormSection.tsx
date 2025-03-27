@@ -1,31 +1,77 @@
+import { EventHandler, useState } from "react";
 import { IoIosArrowRoundForward } from "react-icons/io";
 
+interface FormDataType {
+    firstName: string
+    lastName: string
+    email: string
+    message: string
+}
+
 const FormSection: React.FC = () => {
+    const [formData, setFormData] = useState<FormDataType>({ firstName: "", lastName: "", email: "", message: "" })
+
+    const handleFormChange: React.ChangeEventHandler<HTMLInputElement | HTMLTextAreaElement> = e => {
+        setFormData(prev => ({...prev, [e.target.name]: e.target.value}))
+    }
+
+    const handleFormSubmit: React.FormEventHandler = e => {
+        e.preventDefault()
+
+        // hit submit api here
+    }
 
     return (
         <>
             <section className="bg-base-100 px-99  py-18">
-                <form className="w-full flex flex-col gap-11">
+                <form onSubmit={handleFormSubmit} className="w-full flex flex-col gap-11">
                     <div className="flex flex-row gap-8">
                         <div className="w-full">
                             <label className="fieldset-label text-lg text-secondary font-medium">First name</label>
-                            <input type="text" className="input w-full h-12 bg-neutral rounded-lg" placeholder="First name" />
+                            <input
+                                name="firstName"
+                                type="text"
+                                value={formData.firstName}
+                                onChange={handleFormChange}
+                                className="input w-full h-12 bg-neutral rounded-lg"
+                                placeholder="First name"
+                            />
                         </div>
 
                         <div className="w-full">
                             <label className="fieldset-label text-lg text-secondary font-medium">Last name</label>
-                            <input type="text" className="input w-full h-12 bg-neutral rounded-lg" placeholder="Last name" />
+                            <input
+                                name="lastName"
+                                type="text"
+                                value={formData.lastName}
+                                onChange={handleFormChange}
+                                className="input w-full h-12 bg-neutral rounded-lg"
+                                placeholder="Last name"
+                            />
                         </div>
                     </div>
 
                     <div className="w-full">
                         <label className="fieldset-label text-lg text-secondary font-medium">Email</label>
-                        <input type="text" className="input w-full h-12 bg-neutral rounded-lg" placeholder="you@company.com" />
+                        <input
+                            name="email"
+                            type="text"
+                            value={formData.email}
+                            onChange={handleFormChange}
+                            className="input w-full h-12 bg-neutral rounded-lg"
+                            placeholder="you@company.com"
+                        />
                     </div>
 
                     <div className="w-full">
                         <label className="fieldset-label text-lg text-secondary font-medium">Message</label>
-                        <textarea className="textarea w-full h-43 bg-neutral rounded-lg" placeholder="Type in a message" />
+                        <textarea
+                            name="message"
+                            value={formData.message}
+                            onChange={handleFormChange}
+                            className="textarea w-full h-43 bg-neutral rounded-lg"
+                            placeholder="Type in a message"
+                        />
                     </div>
 
                     <div className="flex flex-row justify-center">
