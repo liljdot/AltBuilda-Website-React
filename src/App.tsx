@@ -7,6 +7,7 @@ import About from "./pages/About"
 import Services from "./pages/Services"
 import FAQ from "./pages/FAQ"
 import Contact from "./pages/Contact"
+import NotFound from "./pages/NotFound"
 
 function App() {
   const { theme } = useThemeContext()
@@ -17,11 +18,11 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />}/>
-          <Route path="/services" element={<Services />}/>
-          <Route path="/faq" element={<FAQ />}/>
-          <Route path="/contact" element={<Contact />}/>
-          <Route path="*" element={<div className="h-screen"></div>}/>
+          <Route path="/about" element={<About />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/faq" element={<FAQ />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
       </div>
