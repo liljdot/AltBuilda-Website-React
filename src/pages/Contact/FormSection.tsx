@@ -1,4 +1,4 @@
-import { EventHandler, useState } from "react";
+import { useState } from "react";
 import { IoIosArrowRoundForward } from "react-icons/io";
 
 interface FormDataType {
