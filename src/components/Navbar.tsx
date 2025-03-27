@@ -15,12 +15,16 @@ const Navbar: React.FC<{ behind?: boolean }> = ({ behind }) => {
         setIsSandwichMenuOpen(!isSandwichMenuOpen)
     }
 
-    // set sandwichmenu to close anytime user changes pages 
+    // scroll to top of page and set sandwichmenu to close anytime user changes pages 
     useEffect(() => {
         if (behind) {
             return
         }
 
+        document.body.scrollIntoView({
+            block: "start",
+            behavior: "smooth"
+        })
         setIsSandwichMenuOpen(false)
     }, [pathname])
 
