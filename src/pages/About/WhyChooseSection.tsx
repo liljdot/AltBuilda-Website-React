@@ -71,7 +71,7 @@ const WhyChooseSection: React.FC = () => {
                     </div>
 
                     <div className="flex flex-row justify-center mt-10 mb-15 md:mb-0 md:mt-17 2xl:px-31">
-                        <Link to={"/get-started"} className="w-full sm:w-fit btn btn-secondary text-sm sm:text-[1rem] text-neutral rounded-full font-semibold p-7 hover:scale-105 transition-all ease-in-out duration-500 hover:[&>*]:translate-x-2 active:scale-95">
+                        <Link to={"/services"} className="w-full sm:w-fit btn btn-secondary text-sm sm:text-[1rem] text-neutral rounded-full font-semibold p-7 hover:scale-105 transition-all ease-in-out duration-500 hover:[&>*]:translate-x-2 active:scale-95">
                             See how AltBuilda can help You
                             <IoIosArrowRoundForward className="size-8 transition-all ease-in-out duration-500" />
                         </Link>
