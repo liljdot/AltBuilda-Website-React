@@ -10,6 +10,7 @@ import Contact from "./pages/Contact"
 import NotFound from "./pages/NotFound"
 import Blog from "./pages/Blog"
 import BlogPostPage from "./pages/BlogPostPage"
+import { Toaster } from "react-hot-toast"
 
 function App() {
   const { theme } = useThemeContext()
@@ -17,6 +18,7 @@ function App() {
   return (
     <>
       <div className="bg-secondary w-screen items-center overflow-x-hidden" data-theme={theme}>
+        <Toaster />
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />

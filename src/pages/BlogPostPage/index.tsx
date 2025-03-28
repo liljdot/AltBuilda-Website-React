@@ -1,10 +1,12 @@
 import { useParams, Navigate, Link } from "react-router-dom";
+import copy from "copy-to-clipboard";
 import templateBlogPosts from "../../data/templateBlogPosts";
 import BlogPostBanner from "./BlogPostBanner";
 import ImageSection from "./ImageSection";
 import ContentSection from "./ContentSection";
 import { LuCopy } from "react-icons/lu";
 import { FaFacebook, FaLinkedin, FaTwitter } from "react-icons/fa";
+import toast from "react-hot-toast";
 
 const BlogPostPage: React.FC = () => {
     const { id } = useParams()
@@ -31,8 +33,8 @@ const BlogPostPage: React.FC = () => {
                         <ContentSection post={post} />
                     </div>
 
-                    <div className="w-full flex gap-3 h-10 flex-row px-90 mt-18 mb-23">
-                        <button onClick={() => navigator.clipboard.writeText(window.location.href)} className="btn bg-base-100 rounded-lg h-full flex flex-row items-center text-sm font-semibold p-2.5">
+                    <div className="w-full flex gap-3 h-10 flex-row px-4 sm:px-18 lg:px-37 xl:px-90 mt-18 mb-23">
+                        <button onClick={() => {copy(window.location.href); toast.success("copied")}} className="btn bg-base-100 rounded-lg h-full flex flex-row items-center text-sm font-semibold p-2.5">
                             <LuCopy className="h-full" />
                             Copy link
                         </button>
