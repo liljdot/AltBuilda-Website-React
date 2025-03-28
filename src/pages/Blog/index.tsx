@@ -20,7 +20,7 @@ const Blog: React.FC = () => {
     return (
         <>
             <main className="p-0 bg-base-100 w-full">
-                <div className="max-w-450 mx-auto px-20 pb-20">
+                <div className="max-w-450 mx-auto md:px-20 pb-20">
                     <BlogBanner />
                     <BlogPostsSection blogPosts={displayedBlogposts} />
                     {/* paginate container  */}
