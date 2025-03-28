@@ -11,13 +11,13 @@ const NewsletterForm: React.FC = () => {
 
     return (
         <>
-            <div className="flex flex-col gap-8 p-8 bg-base-100 rounded-xl border border-info">
+            <div className="flex flex-col gap-8 p-6 md:p-8 bg-base-100 rounded-xl border border-info">
                 <div className="flex flex-col text-secondary">
-                    <div className="flex size-14 p-3.5 justify-center items-center bg-base-100 rounded-lg">
+                    <div className="flex size-14 p-3.5 justify-center items-center bg-base-100 border border-info rounded-lg">
                         <FiSend className="size-full" />
                     </div>
 
-                    <h5 className="text-2xl font-medium">Weekly newsletter</h5>
+                    <h5 className="text-xl md:text-2xl font-medium mt-8 md:mt-0">Weekly newsletter</h5>
 
                     <p className="mt-2">No spams. just weekly updates with exclusive tips and insights on growing your SME.</p>
                 </div>
@@ -35,7 +35,7 @@ const NewsletterForm: React.FC = () => {
                     </div>
 
                     <div className="flex w-full">
-                        <button className="btn btn-submit btn-primary text-neutral w-full shadow-none">Subscribe</button>
+                        <button className="btn btn-submit btn-primary text-neutral rounded-lg w-full shadow-none">Subscribe</button>
                     </div>
                 </form>
             </div>

@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { BlogPost } from "../../types";
 import { MdArrowOutward } from "react-icons/md";
-import NewsletterForm from "./NewsletterForm";
 
 interface BlogPostsSectionProps {
     blogPosts: BlogPost[]
@@ -15,20 +14,20 @@ const BlogPostCard: React.FC<BlogPostCardProps> = ({post}) => {
     const placeholderAuthorImage = "https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" // insert placeholder avatar here
 
     return (
-        <Link to={`/blog/${post.id}`} className="card bg-neutral shrink-0 w-72 sm:w-96 transition-all ease-in-out duration-300 hover:underline hover:scale-102">
-            <figure className="rounded-lg h-68">
+        <Link to={`/blog/${post.id}`} className="mx-auto card bg-neutral shrink-0  w-full sm:w-96 transition-all ease-in-out duration-300 hover:underline hover:scale-102">
+            <figure className="rounded-lg  sm:h-68">
                 <img
                     src={post.image}
                     alt={post.title}
                     className="size-full" />
             </figure>
 
-            <div className="card-body flex flex-col gap-6 p-0 mt-6">
+            <div className="card-body flex flex-col gap-6 p-0 mt-5 md:mt-6">
                 <div className="flex flex-col gap-2">
                     <h6 className="text-sm text-primary font-semibold">{post.subject}</h6>
 
                     <div className="flex flex-row justify-between items-start text-secondary">
-                        <h2 className="card-title sm:text-2xl font-semibold max-w-86">{post.title}</h2>
+                        <h2 className="card-title md:text-2xl font-semibold max-w-86">{post.title}</h2>
 
                         <MdArrowOutward className="size-6" />
                     </div>
@@ -56,47 +55,10 @@ const BlogPostsSection: React.FC<BlogPostsSectionProps> = ({ blogPosts }) => {
 
     return (
         <>
-            <section className="bg-neutral pt-14 px-8">
+            <section className="bg-neutral pt-8 md:pt-14 px-11 md:px-8">
                 {/* card container  */}
-                <div className="w-full grid grid-cols-3">
-                    {/* <Link to={""} className="card bg-neutral shrink-0 w-72 sm:w-96 transition-all ease-in-out duration-300 hover:underline hover:scale-102">
-                        <figure className="rounded-lg">
-                            <img
-                                src={lowCostBlogImage}
-                                alt={"Subject"} />
-                        </figure>
-
-                        <div className="card-body flex flex-col gap-6 p-0 mt-6 border">
-                            <div className="flex flex-col gap-2">
-                                <h6 className="text-sm text-primary font-semibold">Networking</h6>
-
-                                <div className="flex flex-row justify-between items-start text-secondary">
-                                    <h2 className="card-title sm:text-2xl font-semibold max-w-86">{"3 Low-Cost Campaigns You Must Run to Win BFCM"}</h2>
-
-                                    <MdArrowOutward className="size-6" />
-                                </div>
-                            </div>
-
-                            <div className="flex flex-row gap-3">
-                                <div className="avatar">
-                                    <div className="w-10 rounded-full">
-                                        <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
-                                    </div>
-                                </div>
-
-                                <div className="text-secondary text-sm">
-                                    <p className="font-semibold">Olivia Rhye</p>
-
-                                    <p>20 Jan 2024</p>
-                                </div>
-                            </div>
-                        </div>
-                    </Link> */}
+                <div className="w-full grid grid-cols-1 justify-center gap-y-12 xl:gap-y-0 xl:grid-cols-3">
                     {blogPosts.map(post => <BlogPostCard key={post.id} post={post}/>)}
-                </div>
-
-                <div className="mt-16">
-                    <NewsletterForm />
                 </div>
             </section>
         </>

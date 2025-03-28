@@ -6,6 +6,7 @@ import { BlogPost } from "../../types"
 import usePaginate from "../../hooks/usePaginate"
 import ReactPaginate from "react-paginate"
 import { IoArrowBack, IoArrowForward } from "react-icons/io5"
+import NewsletterForm from "./NewsletterForm"
 
 const Blog: React.FC = () => {
     // get blogs here 
@@ -19,7 +20,7 @@ const Blog: React.FC = () => {
 
     return (
         <>
-            <main className="p-0 bg-base-100 w-full">
+            <main className="p-0 bg-neutral w-full">
                 <div className="max-w-450 mx-auto md:px-20 pb-20">
                     <BlogBanner />
                     <BlogPostsSection blogPosts={displayedBlogposts} />
@@ -52,6 +53,37 @@ const Blog: React.FC = () => {
                                 nextLinkClassName="right-0 absolute flex flex-row gap-3 items-center h-full hover:cursor-pointer"
                             />
                         </div>
+
+                        {/* for mobile only  */}
+                        <div className="sm:hidden w-full">
+                            <ReactPaginate
+                                pageCount={pageCount}
+                                pageRangeDisplayed={0}
+                                marginPagesDisplayed={0}
+                                pageLabelBuilder={page => `Page ${page} of ${pageCount}`}
+                                onPageChange={({ selected }) => setPageNumber(selected + 1)}
+                                breakLabel="..."
+                                breakClassName="btn btn-ptimary"
+                                className="relative w-full flex flex-row justify-center"
+                                pageLinkClassName="flex size-10 justify-center items-center"
+                                activeLinkClassName="text-secondary w-fit text-sm font-medium"
+                                previousLabel={(
+                                    <div className="p-2 border border-info rounded-lg">
+                                        <IoArrowBack className="size-4 font-bold" />
+                                    </ div>
+                                )}
+                                previousLinkClassName="left-0 absolute flex flex-row gap-3 items-center h-full hover:cursor-pointer"
+                                nextLabel={(
+                                    <div className="p-2 border border-info rounded-lg">
+                                        <IoArrowForward className="size-4 font-bold" />
+                                    </ div>
+                                )}
+                                nextLinkClassName="right-0 absolute flex flex-row gap-3 items-center h-full hover:cursor-pointer"
+                            />
+                        </div>
+                    </div>
+                    <div className="bg-neutral  px-2 md:px-0">
+                        <NewsletterForm />
                     </div>
                 </div>
             </main>

@@ -2,7 +2,7 @@ const BlogBanner: React.FC = () => {
 
     return (
         <>
-            <section className="w-full flex flex-col gap-10 items-center px-7 md:px-0 pt-10 md:pt-24 pb-4 md:pb-24">
+            <section className="w-full bg-base-100 flex flex-col gap-10 items-center px-7 md:px-0 pt-10 md:pt-24 pb-4 md:pb-24">
                 <div className="flex flex-col max-w-240 text-center">
                     <h6 className="text-primary font-semibold">Blog</h6>
 
