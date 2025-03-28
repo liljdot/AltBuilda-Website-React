@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { BlogPost } from "../../types";
 import { MdArrowOutward } from "react-icons/md";
+import NewsletterForm from "./NewsletterForm";
 
 interface BlogPostsSectionProps {
     blogPosts: BlogPost[]
@@ -55,7 +56,7 @@ const BlogPostsSection: React.FC<BlogPostsSectionProps> = ({ blogPosts }) => {
 
     return (
         <>
-            <section className="bg-neutral pt-14 px-8 pb-100">
+            <section className="bg-neutral pt-14 px-8">
                 {/* card container  */}
                 <div className="w-full grid grid-cols-3">
                     {/* <Link to={""} className="card bg-neutral shrink-0 w-72 sm:w-96 transition-all ease-in-out duration-300 hover:underline hover:scale-102">
@@ -91,9 +92,11 @@ const BlogPostsSection: React.FC<BlogPostsSectionProps> = ({ blogPosts }) => {
                             </div>
                         </div>
                     </Link> */}
-                    <BlogPostCard post={blogPosts[0]}/>
-                    <BlogPostCard post={blogPosts[1]}/>
-                    <BlogPostCard post={blogPosts[2]}/>
+                    {blogPosts.map(post => <BlogPostCard key={post.id} post={post}/>)}
+                </div>
+
+                <div className="mt-16">
+                    <NewsletterForm />
                 </div>
             </section>
         </>
