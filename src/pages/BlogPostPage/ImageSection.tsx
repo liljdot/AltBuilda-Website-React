@@ -6,7 +6,7 @@ interface Props {
 const ImageSection: React.FC<Props> = ({imageString, title}) => {
 
     return (
-        <section className="w-full bg-neutral px-75.5">
+        <section className="w-full bg-neutral px-4 lg:px-37 xl:px-75.5">
             <img src={imageString} alt={title} className="w-full"/>
         </section>
     )
