@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { BlogPost } from "../../types";
-import lowCostBlogImage from "../../assets/low-cost-blog-img.png"
 import { MdArrowOutward } from "react-icons/md";
 
 interface BlogPostsSectionProps {
