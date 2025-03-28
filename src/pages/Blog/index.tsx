@@ -7,6 +7,7 @@ import { BlogPost } from "../../types"
 const Blog: React.FC = () => {
     // get blogs here 
     const [blogPosts, setBlogPosts] = useState<BlogPost[]>([...templateBlogPosts])
+    setBlogPosts
 
     // filter function for search. pass down to banner
 
