@@ -27,7 +27,7 @@ const BlogPostPage: React.FC = () => {
                     <div className="w-full mt-9 md:mt-8">
                         <ImageSection title={post.title} imageString={post.image} />
                     </div>
-                    <div className="w-full mt-23">
+                    <div className="w-full mt-15 md:mt-23">
                         <ContentSection post={post} />
                     </div>
 
