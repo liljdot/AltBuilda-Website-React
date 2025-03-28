@@ -9,6 +9,7 @@ import FAQ from "./pages/FAQ"
 import Contact from "./pages/Contact"
 import NotFound from "./pages/NotFound"
 import Blog from "./pages/Blog"
+import BlogPostPage from "./pages/BlogPostPage"
 
 function App() {
   const { theme } = useThemeContext()
@@ -24,6 +25,7 @@ function App() {
           <Route path="/faq" element={<FAQ />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:id" element={<BlogPostPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
