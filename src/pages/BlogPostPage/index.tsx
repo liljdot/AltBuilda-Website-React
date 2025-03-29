@@ -7,8 +7,10 @@ import ContentSection from "./ContentSection";
 import { LuCopy } from "react-icons/lu";
 import { FaFacebook, FaLinkedin, FaTwitter } from "react-icons/fa";
 import toast from "react-hot-toast";
+import useDocumentTitle from "../../hooks/useDocumentTitle";
 
 const BlogPostPage: React.FC = () => {
+    useDocumentTitle("Blog | AltBuilda")
     const { id } = useParams()
     const loading = false
     const post = templateBlogPosts.find(post => post.id == id)
