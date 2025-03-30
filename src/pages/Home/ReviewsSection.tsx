@@ -31,9 +31,8 @@ const ReviewsSection: React.FC = () => {
                     <ReviewContainer>
                         <ReviewCard details={{ name: "Definity Innovations & Solutions", avatar: definityAvatar, comment: "Altbuilda helped us scale 3X in just 6 months by simplifying invoicing and tax compliance!", rating: 5 }} />
                         <ReviewCard details={{ name: "Wealthy Elephant", avatar: wealthyElephantAvatar, comment: "Business registration was a breeze with Altbuilda—we launched in 2 weeks instead of 2 months!", rating: 5 }} />
-                        <ReviewCard details={{ name: "Owolabi & Sons (Construction)", comment: "Managing taxes used to be a headache, but Altbuilda saved us 30% in compliance costs.", rating: 5 }} />
-                        <ReviewCard details={{ name: "Jehu", comment: "", rating: 5 }} />
-                        <ReviewCard details={{ name: "Jehu", comment: "", rating: 5 }} />
+                        <ReviewCard details={{ name: "4geehub", comment: "Managing taxes used to be a headache, but Altbuilda saved us 30% in compliance costs.", rating: 5 }} />
+                        <ReviewCard details={{ name: "Vinegar Doppio", comment: "Altbuilda’s networking hub connected us with the right partners, helping us secure five key collaborations that are driving growth in the palm processing industry.", rating: 5 }} />
                     </ReviewContainer>
                 </div>
             </section>

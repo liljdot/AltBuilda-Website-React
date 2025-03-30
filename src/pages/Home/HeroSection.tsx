@@ -27,7 +27,7 @@ const HeroSection: React.FC = () => {
                             Get started now
                         </ActionButton>
 
-                        <ActionButton to="/services" text="primary">
+                        <ActionButton to="/services" text="primary" shrink>
                             Explore Services
                         </ActionButton>
                     </div>
