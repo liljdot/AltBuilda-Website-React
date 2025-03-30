@@ -6,6 +6,7 @@ import swirlVector2Light from "../../assets/swirl-vector-2-light.png"
 import definityAvatar from "../../assets/definity-avatar.png"
 import wealthyElephantAvatar from "../../assets/wealthy-elephant-avatar.png"
 import palmcrestAvatar from "../../assets/palmcrest-avatar.png"
+import fourgeehubAvatar from "../../assets/fourgeehub-avatar.png"
 
 import { ReviewCard, ReviewContainer } from "./Reviews";
 import useThemeContext from "../../hooks/useThemeContext";
@@ -30,9 +31,9 @@ const ReviewsSection: React.FC = () => {
                 {/* reviews  */}
                 <div className="mt-15.5 mb-17.5">
                     <ReviewContainer>
-                        <ReviewCard details={{ name: "Definity Innovations & Solutions", avatar: definityAvatar, comment: "Altbuilda helped us scale 3X in just 6 months by simplifying invoicing and tax compliance!", rating: 5 }} />
-                        <ReviewCard details={{ name: "Wealthy Elephant", avatar: wealthyElephantAvatar, comment: "Business registration was a breeze with Altbuilda—we launched in 2 weeks instead of 2 months!", rating: 5 }} />
-                        <ReviewCard details={{ name: "4geehub", comment: "Managing taxes used to be a headache, but Altbuilda saved us 30% in compliance costs.", rating: 5 }} />
+                        <ReviewCard details={{ name: "Definity Innovations & Solutions", avatar: definityAvatar, comment: "Altbuida streamlined my operations, giving me time to focus on growth.", rating: 5 }} />
+                        <ReviewCard details={{ name: "Wealthy Elephant", avatar: wealthyElephantAvatar, comment: "Altbuida's financial solutions helped me secure funding and expand.", rating: 5 }} />
+                        <ReviewCard details={{ name: "4geehub", avatar: fourgeehubAvatar, square: true, comment: "Altbuilda simplified our processes at 4GeeHub, letting us focus on scaling our gift card trading business.", rating: 5 }} />
                         <ReviewCard details={{ name: "PalmCrest Farms and Processing", avatar: palmcrestAvatar, comment: "Altbuilda’s networking hub connected us with the right partners, helping us secure five key collaborations that are driving growth in the palm processing industry.", rating: 5 }} />
                     </ReviewContainer>
                 </div>
