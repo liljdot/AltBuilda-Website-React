@@ -5,6 +5,7 @@ import swirlVector2Light from "../../assets/swirl-vector-2-light.png"
 
 import definityAvatar from "../../assets/definity-avatar.png"
 import wealthyElephantAvatar from "../../assets/wealthy-elephant-avatar.png"
+import palmcrestAvatar from "../../assets/palmcrest-avatar.png"
 
 import { ReviewCard, ReviewContainer } from "./Reviews";
 import useThemeContext from "../../hooks/useThemeContext";
@@ -32,7 +33,7 @@ const ReviewsSection: React.FC = () => {
                         <ReviewCard details={{ name: "Definity Innovations & Solutions", avatar: definityAvatar, comment: "Altbuilda helped us scale 3X in just 6 months by simplifying invoicing and tax compliance!", rating: 5 }} />
                         <ReviewCard details={{ name: "Wealthy Elephant", avatar: wealthyElephantAvatar, comment: "Business registration was a breeze with Altbuilda—we launched in 2 weeks instead of 2 months!", rating: 5 }} />
                         <ReviewCard details={{ name: "4geehub", comment: "Managing taxes used to be a headache, but Altbuilda saved us 30% in compliance costs.", rating: 5 }} />
-                        <ReviewCard details={{ name: "Vinegar Doppio", comment: "Altbuilda’s networking hub connected us with the right partners, helping us secure five key collaborations that are driving growth in the palm processing industry.", rating: 5 }} />
+                        <ReviewCard details={{ name: "PalmCrest Farms and Processing", avatar: palmcrestAvatar, comment: "Altbuilda’s networking hub connected us with the right partners, helping us secure five key collaborations that are driving growth in the palm processing industry.", rating: 5 }} />
                     </ReviewContainer>
                 </div>
             </section>
