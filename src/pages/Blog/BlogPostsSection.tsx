@@ -58,7 +58,7 @@ const BlogPostsSection: React.FC<BlogPostsSectionProps> = ({ blogPosts }) => {
             <section className="bg-neutral pt-8 md:pt-14 px-11 md:px-8">
                 {/* card container  */}
                 <div className="w-full grid grid-cols-1 justify-center gap-y-12 xl:gap-y-0 xl:grid-cols-3">
-                    {blogPosts.map(post => <BlogPostCard key={post.id} post={post}/>)}
+                    {blogPosts.map(post => <BlogPostCard key={Math.floor(Math.random()*1000) + post.id} post={post}/>)}
                 </div>
             </section>
         </>

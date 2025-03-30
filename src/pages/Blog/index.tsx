@@ -14,7 +14,7 @@ const Blog: React.FC = () => {
     const pageCount = Math.ceil(blogPosts.length / 3)
     const [displayedBlogposts, setPageNumber] = usePaginate(blogPosts, 3)
 
-    setBlogPosts// filter function for search. pass down to banner
+    // filter function for search. pass down to banner
 
 
 
@@ -22,7 +22,7 @@ const Blog: React.FC = () => {
         <>
             <main className="p-0 bg-neutral w-full">
                 <div className="max-w-450 mx-auto md:px-20 pb-20">
-                    <BlogBanner />
+                    <BlogBanner posts={blogPosts} setPosts={setBlogPosts} />
                     <BlogPostsSection blogPosts={displayedBlogposts} />
                     {/* paginate container  */}
                     <div className="px-8 py-16 flex bg-neutral">

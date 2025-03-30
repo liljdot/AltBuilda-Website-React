@@ -1,4 +1,17 @@
-const BlogBanner: React.FC = () => {
+import { useRef } from "react"
+import { BlogPost } from "../../types"
+
+interface Props {
+    posts: BlogPost[]
+    setPosts: React.Dispatch<React.SetStateAction<BlogPost[]>>
+}
+
+const BlogBanner: React.FC<Props> = ({posts, setPosts}) => {
+    const postsRef = useRef<BlogPost[]>(posts)
+
+    const handleChange: React.ChangeEventHandler<HTMLInputElement> = e => {
+        setPosts(postsRef.current.filter(post => post.title.toLowerCase().includes(e.target.value) || post.subject.toLocaleLowerCase().includes(e.target.value)))
+    }
 
     return (
         <>
@@ -17,7 +30,7 @@ const BlogBanner: React.FC = () => {
                 <div className="w-full sm:w-80">
                     <label className="input w-full bg-neutral">
                         <svg className="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g strokeLinejoin="round" strokeLinecap="round" strokeWidth="2.5" fill="none" stroke="currentColor"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></g></svg>
-                        <input type="search" className="grow bg-ne" placeholder="Search" />
+                        <input type="search" className="grow bg-ne" placeholder="Search" onChange={handleChange} />
                     </label>
                 </div>
             </section>
