@@ -1,4 +1,4 @@
-import { Link, useLocation, useParams } from "react-router-dom"
+import { Link, useLocation } from "react-router-dom"
 import NavbarLogo from "./NavbarLogo"
 import ToggleTheme from "./ToggleTheme"
 import { useEffect, useRef, useState } from "react"
