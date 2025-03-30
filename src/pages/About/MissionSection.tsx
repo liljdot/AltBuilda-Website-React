@@ -26,7 +26,7 @@ const MissionSection: React.FC = () => {
                 </p>
 
                 <div className="flex flex-row justify-center my-10 md:my-14">
-                    <ActionButton to="/services" filled>Learn More</ActionButton>
+                    <ActionButton to="/contact" filled>Learn More</ActionButton>
                 </div>
             </section>
         </>
