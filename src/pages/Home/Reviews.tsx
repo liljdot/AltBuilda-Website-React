@@ -5,6 +5,7 @@ import { ImQuotesLeft } from "react-icons/im"
 interface ReviewCardProps {
     details: {
         rating: 0 | 1 | 2 | 3 | 4 | 5
+        avatar?: string
         name: string
         comment: string
     }
@@ -22,7 +23,7 @@ export const ReviewCard: React.FC<ReviewCardProps> = ({ details }) => {
             <div className="card bg-neutral relative px-8 shadow-2xl rounded-2xl shadow-info z-1">
                 <div className="avatar absolute -top-15 left-12">
                     <div className="w-25 rounded-full">
-                        <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                        <img src={details.avatar || "https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"} />
                     </div>
                 </div>
 
