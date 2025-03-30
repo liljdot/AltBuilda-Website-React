@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import bannerGifBG from "../../assets/contact-gif-bg.gif"
+import bannerGifBG from "../../assets/banner-gif-hd.gif"
 import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa"
 
 const ContactBanner: React.FC = () => {
