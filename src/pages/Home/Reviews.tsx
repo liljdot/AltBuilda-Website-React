@@ -21,7 +21,7 @@ export const ReviewCard: React.FC<ReviewCardProps> = ({ details }) => {
 
     return (
         <>
-            <div className="card bg-neutral relative px-8 shadow-2xl rounded-2xl shadow-info z-1">
+            <div className="card bg-neutral relative px-8 shadow-2xl rounded-2xl shadow-info z-1 lg:max-w-104">
                 <div className="avatar absolute -top-15 left-12">
                     <div className={`w-25 ${!details.square && "rounded-full"}`}>
                         <img src={details.avatar || "https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"} />

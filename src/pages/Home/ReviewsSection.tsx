@@ -16,7 +16,7 @@ const ReviewsSection: React.FC = () => {
 
     return (
         <>
-            <section className="bg-neutral relative py-25">
+            <section className="bg-base-100 relative py-25">
                 <img src={theme == "light" ? swirlVectorLight : swirlVector} alt="" className="absolute top-0 left-0 w-22.5" />
                 <img src={theme == "light" ? swirlVector2Light : swirlVector2} alt="" className="absolute bottom-0 right-0 w-22.5" />
 
@@ -29,13 +29,31 @@ const ReviewsSection: React.FC = () => {
                 </div>
 
                 {/* reviews  */}
-                <div className="mt-15.5 mb-17.5">
+                <div className="mt-15.5 mb-17.5 lg:hidden">
                     <ReviewContainer>
                         <ReviewCard details={{ name: "Definity Innovations & Solutions", avatar: definityAvatar, comment: "Altbuida streamlined my operations, giving me time to focus on growth.", rating: 5 }} />
                         <ReviewCard details={{ name: "Wealthy Elephant", avatar: wealthyElephantAvatar, comment: "Altbuida's financial solutions helped me secure funding and expand.", rating: 5 }} />
                         <ReviewCard details={{ name: "4geehub", avatar: fourgeehubAvatar, square: true, comment: "Altbuilda simplified our processes at 4GeeHub, letting us focus on scaling our gift card trading business.", rating: 5 }} />
                         <ReviewCard details={{ name: "PalmCrest Farms and Processing", avatar: palmcrestAvatar, comment: "Altbuilda’s networking hub connected us with the right partners, helping us secure five key collaborations that are driving growth in the palm processing industry.", rating: 5 }} />
                     </ReviewContainer>
+                </div>
+
+                <div className="mt-15.5 mb-17.5 hidden lg:grid grid-cols-2 gap-20 px-15 xl:px-40 2xl:px-60">
+                    <div className="w-full h-[120%] flex flex-col justify-end items-end">
+                        <ReviewCard details={{ name: "Definity Innovations & Solutions", avatar: definityAvatar, comment: "Altbuida streamlined my operations, giving me time to focus on growth.", rating: 5 }} />
+                    </div>
+
+                    <div className="w-full h-[120%] flex flex-col justify-start items-end">
+                        <ReviewCard details={{ name: "Wealthy Elephant", avatar: wealthyElephantAvatar, comment: "Altbuida's financial solutions helped me secure funding and expand.", rating: 5 }} />
+                    </div>
+
+                    <div className="w-full h-[120%] flex flex-col justify-end items-start">
+                        <ReviewCard details={{ name: "4geehub", avatar: fourgeehubAvatar, square: true, comment: "Altbuilda simplified our processes at 4GeeHub, letting us focus on scaling our gift card trading business.", rating: 5 }} />
+                    </div>
+
+                    <div className="w-full h-[120%] flex flex-col justify-start items-start">
+                        <ReviewCard details={{ name: "PalmCrest Farms and Processing", avatar: palmcrestAvatar, comment: "Altbuilda’s networking hub connected us with the right partners, helping us secure five key collaborations that are driving growth in the palm processing industry.", rating: 5 }} />
+                    </div>
                 </div>
             </section>
         </>
