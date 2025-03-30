@@ -65,7 +65,7 @@ const TransformSection: React.FC = () => {
                 </div>
 
                 <div className="flex flex-row justify-center mt-12 lg:mt-17">
-                    <ActionButton to="/services" filled>Discover More</ActionButton>
+                    <ActionButton to="/about" filled>Discover More</ActionButton>
                 </div>
             </section>
         </>
