@@ -90,7 +90,7 @@ const FeaturesSection: React.FC = () => {
                     title="Email Newsletter"
                     content="Personalized industry insights & updates"
                     icon={theme == "dark" ? chatIconDark : chatIcon}
-                    button={{ text: "Subscribe Now", to: "/blog" }}
+                    button={{ text: "Subscribe Now", to: "/blog#newsletter" }}
                 />
 
                 <Feature

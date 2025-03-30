@@ -11,7 +11,7 @@ const NewsletterForm: React.FC = () => {
 
     return (
         <>
-            <div className="flex flex-col gap-8 p-6 md:p-8 bg-base-100 rounded-xl border border-info">
+            <div id="newsletter" className="flex flex-col gap-8 p-6 md:p-8 bg-base-100 rounded-xl border border-info">
                 <div className="flex flex-col text-secondary">
                     <div className="flex size-14 p-3.5 justify-center items-center bg-base-100 border border-info rounded-lg">
                         <FiSend className="size-full" />

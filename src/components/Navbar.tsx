@@ -1,4 +1,4 @@
-import { Link, useLocation } from "react-router-dom"
+import { Link, useLocation, useParams } from "react-router-dom"
 import NavbarLogo from "./NavbarLogo"
 import ToggleTheme from "./ToggleTheme"
 import { useEffect, useRef, useState } from "react"
@@ -9,7 +9,7 @@ const Navbar: React.FC<{ behind?: boolean }> = ({ behind }) => {
     const [isSandwichMenuOpen, setIsSandwichMenuOpen] = useState<boolean>(false)
     const headerRef = useRef<HTMLElement>(null)
     const sandwichButtonRef = useRef<HTMLButtonElement>(null)
-    const { pathname } = useLocation()
+    const { pathname, hash } = useLocation()
 
     const toggleSandwichMenu: React.MouseEventHandler = () => {
         setIsSandwichMenuOpen(!isSandwichMenuOpen)
@@ -21,10 +21,18 @@ const Navbar: React.FC<{ behind?: boolean }> = ({ behind }) => {
             return
         }
 
-        document.body.scrollIntoView({
-            block: "start",
-            behavior: "smooth"
-        })
+        if (hash) {
+            document.getElementById(hash.split("#")[1])!.scrollIntoView({
+                block: "start",
+                behavior: "smooth"
+            }) // scroll to emement id if exists
+        } else {
+            document.body.scrollIntoView({
+                block: "start",
+                behavior: "smooth"
+            })
+        }
+
         setIsSandwichMenuOpen(false)
     }, [pathname])
 
@@ -84,7 +92,7 @@ const Navbar: React.FC<{ behind?: boolean }> = ({ behind }) => {
                             <Link to={"/login"} className="btn btn-ghost text-[1rem] text-primary border border-primary rounded-full font-semibold py-7 transition-all ease-in-out duration-300 active:scale-95">Login</Link>
                         </div>
                     </div>
-                    
+
                     {/* outside area to close sandwich menu on click  */}
                     <div onClick={toggleSandwichMenu} onTouchMove={() => setIsSandwichMenuOpen(false)} className={`absolute ${isSandwichMenuOpen && "h-screen"} bg-transparent w-full top-[100%]`}></div>
                 </div>
