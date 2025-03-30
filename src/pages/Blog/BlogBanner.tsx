@@ -10,7 +10,7 @@ const BlogBanner: React.FC<Props> = ({posts, setPosts}) => {
     const postsRef = useRef<BlogPost[]>(posts)
 
     const handleChange: React.ChangeEventHandler<HTMLInputElement> = e => {
-        setPosts(postsRef.current.filter(post => post.title.toLowerCase().includes(e.target.value) || post.subject.toLocaleLowerCase().includes(e.target.value)))
+        setPosts(postsRef.current.filter(post => post.title.toLowerCase().includes(e.target.value.toLowerCase()) || post.subject.toLowerCase().includes(e.target.value.toLowerCase())))
     }
 
     return (
