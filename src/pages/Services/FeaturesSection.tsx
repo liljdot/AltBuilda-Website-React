@@ -98,14 +98,14 @@ const FeaturesSection: React.FC = () => {
                     title="Business Banking(AltPro)"
                     content="Sync with AltPro for seamless financial access"
                     icon={theme == "dark" ? altproIconDark : altproIcon}
-                    button={{ text: "Open Your Account Today", to: "" }}
+                    button={{ text: "Open Your Account Today", to: "/404" }}
                 />
 
                 <Feature
                     title="Invoicing and receipt Generation"
                     content="Create, track and automate invoices"
                     icon={theme == "dark" ? invoiceIconDark : invoiceIcon}
-                    button={{ text: "Create Invoices", to: "" }}
+                    button={{ text: "Create Invoices", to: "/404" }}
                 />
 
                 <Feature
@@ -113,7 +113,7 @@ const FeaturesSection: React.FC = () => {
                     title="POS Terminal Access(Wakeel)"
                     content="Apply & Track POS terminal status"
                     icon={theme == "dark" ? speedIconDark : speedIcon}
-                    button={{ text: "Get Your POS", to: "" }}
+                    button={{ text: "Get Your POS", to: "/404" }}
                 />
 
                 <Feature
@@ -128,14 +128,14 @@ const FeaturesSection: React.FC = () => {
                     title="Tax Management and Filing Support"
                     content="Easy tax calculation & Filing tools "
                     icon={theme == "dark" ? bookIconDark : bookIcon}
-                    button={{ text: "Simplify Your Tax", to: "" }}
+                    button={{ text: "Simplify Your Tax", to: "/404" }}
                 />
 
                 <Feature
                     title="Market Hub (Business Networking)"
                     content="Connect with verified SMEs and partners"
                     icon={theme == "dark" ? peopleIconDark : peopleIcon}
-                    button={{ text: "Join the SME Community", to: "" }}
+                    button={{ text: "Join the SME Community", to: "/404" }}
                 />
 
                 <Feature
@@ -143,14 +143,14 @@ const FeaturesSection: React.FC = () => {
                     title="Campaign and Content Tools"
                     content="Schedule and track digital marketing campaigns"
                     icon={theme == "dark" ? soundIconDark : soundIcon}
-                    button={{ text: "Plan and Execute Campaigns", to: "" }}
+                    button={{ text: "Plan and Execute Campaigns", to: "/404" }}
                 />
 
                 <Feature
                     title="Sales and Revenue Insights"
                     content="Gain analytics on business performance "
                     icon={theme == "dark" ? chartIconDark : chartIcon}
-                    button={{ text: "Analyze Your Business", to: "" }}
+                    button={{ text: "Analyze Your Business", to: "/404" }}
                 />
 
                 <Feature
@@ -158,7 +158,7 @@ const FeaturesSection: React.FC = () => {
                     title="Business Registration Support"
                     content="CAC guidance for new businesses"
                     icon={theme == "dark" ? buildingIconDark : buildingIcon}
-                    button={{ text: "Start Your Business", to: "" }}
+                    button={{ text: "Start Your Business", to: "/404" }}
                 />
             </section>
         </>
