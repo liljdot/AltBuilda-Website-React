@@ -14,7 +14,7 @@ const BlogPostCard: React.FC<BlogPostCardProps> = ({post}) => {
     const placeholderAuthorImage = "https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" // insert placeholder avatar here
 
     return (
-        <Link to={`/blog/${post.id}`} className="mx-auto card bg-neutral shrink-0  w-full sm:w-96 transition-all ease-in-out duration-300 hover:underline hover:scale-102">
+        <Link to={`/blog/${post.id}`} target="_blank" className="mx-auto card bg-neutral shrink-0  w-full sm:w-96 transition-all ease-in-out duration-300 hover:underline hover:scale-102">
             <figure className="rounded-lg  sm:h-68">
                 <img
                     src={post.image}

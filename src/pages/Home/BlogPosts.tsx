@@ -13,7 +13,7 @@ const SinglePost: React.FC<SinglePostProps> = ({post}) => {
 
     return (
         <>
-            <Link to={`/blog/${post.id}`} className="card bg-neutral shrink-0 w-72 sm:w-102.5 transition-all ease-in-out duration-300 hover:underline hover:scale-102">
+            <Link to={`/blog/${post.id}`} target="_blank" className="card bg-neutral shrink-0 w-72 sm:w-102.5 transition-all ease-in-out duration-300 hover:underline hover:scale-102">
                 <figure className="rounded-lg">
                     <img
                         src={post.image}
