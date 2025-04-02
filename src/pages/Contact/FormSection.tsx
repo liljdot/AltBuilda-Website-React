@@ -35,6 +35,7 @@ const FormSection: React.FC = () => {
                                 onChange={handleFormChange}
                                 className="input w-full h-12 bg-neutral rounded-lg"
                                 placeholder="First name"
+                                maxLength={50}
                             />
                         </div>
 
@@ -47,6 +48,7 @@ const FormSection: React.FC = () => {
                                 onChange={handleFormChange}
                                 className="input w-full h-12 bg-neutral rounded-lg"
                                 placeholder="Last name"
+                                maxLength={50}
                             />
                         </div>
                     </div>
@@ -60,6 +62,7 @@ const FormSection: React.FC = () => {
                             onChange={handleFormChange}
                             className="input w-full h-12 bg-neutral rounded-lg"
                             placeholder="you@company.com"
+                            maxLength={50}
                         />
                     </div>
 
@@ -71,6 +74,7 @@ const FormSection: React.FC = () => {
                             onChange={handleFormChange}
                             className="textarea w-full h-43 bg-neutral rounded-lg"
                             placeholder="Type in a message"
+                            maxLength={300}
                         />
                     </div>
 
