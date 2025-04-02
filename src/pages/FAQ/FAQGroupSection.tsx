@@ -2,7 +2,6 @@ import { FaRegQuestionCircle } from "react-icons/fa"
 import { FAQGroup } from "../../data/FAQ"
 import useThemeContext from "../../hooks/useThemeContext"
 import { useRef } from "react"
-import { FaQ } from "react-icons/fa6"
 
 interface FAQGroupTileProps {
     FAQGroup: FAQGroup
