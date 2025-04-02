@@ -7,7 +7,7 @@ import useDocumentTitle from "../../hooks/useDocumentTitle"
 
 const FAQ: React.FC = () => {
     useDocumentTitle("FAQ | AltBuilda")
-    const [displayedFAQGroups, ] = useState<FAQGroup[]>(FAQGroups) // set selected displayed groups for search fn
+    const [displayedFAQGroups, setDisplayedFAQGroups] = useState<FAQGroup[]>(FAQGroups) // set selected displayed groups for search fn
     const [selectedFAQGroup, setSelectedFAQGroup] = useState<FAQGroup>(displayedFAQGroups[0])
 
     return (
@@ -15,7 +15,7 @@ const FAQ: React.FC = () => {
             <main className="p-0 bg-neutral w-full">
                 <div className="max-w-450 mx-auto">
                     <FAQBanner />
-                    <FAQGroupSection handleSelect={setSelectedFAQGroup} selectedGroup={selectedFAQGroup} FAQGroups={FAQGroups} />
+                    <FAQGroupSection handleSelect={setSelectedFAQGroup} selectedGroup={selectedFAQGroup} FAQGroups={displayedFAQGroups} setFAQGroups={setDisplayedFAQGroups}/>
                     <SelectedGroupSection selectedGroup={selectedFAQGroup} />
                 </div>
             </main>

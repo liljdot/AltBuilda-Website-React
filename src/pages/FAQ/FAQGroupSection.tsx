@@ -1,6 +1,8 @@
 import { FaRegQuestionCircle } from "react-icons/fa"
 import { FAQGroup } from "../../data/FAQ"
 import useThemeContext from "../../hooks/useThemeContext"
+import { useRef } from "react"
+import { FaQ } from "react-icons/fa6"
 
 interface FAQGroupTileProps {
     FAQGroup: FAQGroup
@@ -10,6 +12,7 @@ interface FAQGroupTileProps {
 
 interface FAQGroupSectionProps {
     FAQGroups: FAQGroup[]
+    setFAQGroups: React.Dispatch<React.SetStateAction<FAQGroup[]>>
     selectedGroup: FAQGroup
     handleSelect: (group: FAQGroup) => void
 }
@@ -33,7 +36,12 @@ const FAQGroupTile: React.FC<FAQGroupTileProps> = ({ FAQGroup, selected, handleS
     )
 }
 
-const FAQGroupSection: React.FC<FAQGroupSectionProps> = ({ FAQGroups, selectedGroup, handleSelect }) => {
+const FAQGroupSection: React.FC<FAQGroupSectionProps> = ({ FAQGroups, setFAQGroups, selectedGroup, handleSelect }) => {
+    const FAQGroupsRef = useRef<FAQGroup[]>(FAQGroups)
+
+    const handleSearchChange: React.ChangeEventHandler<HTMLInputElement> = e => {
+        setFAQGroups(FAQGroupsRef.current.filter(FAQGroup => FAQGroup.name.toLowerCase().includes(e.target.value.toLowerCase()) || FAQGroup.FAQs.find(FAQ => FAQ.question.toLowerCase().includes(e.target.value.toLowerCase()))))
+    }
 
     return (
         <>
@@ -42,7 +50,7 @@ const FAQGroupSection: React.FC<FAQGroupSectionProps> = ({ FAQGroups, selectedGr
                 <div className="md:px-20 lg:px-40 xl:px-81">
                     <label className="input w-full bg-neutral">
                         <svg className="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g strokeLinejoin="round" strokeLinecap="round" strokeWidth="2.5" fill="none" stroke="currentColor"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></g></svg>
-                        <input type="search" className="grow bg-ne" placeholder="Search" />
+                        <input onChange={handleSearchChange} type="search" className="grow bg-ne" placeholder="Search" />
                     </label>
                 </div>
 
