@@ -11,6 +11,7 @@ import NotFound from "./pages/NotFound"
 import Blog from "./pages/Blog"
 import BlogPostPage from "./pages/BlogPostPage"
 import { Toaster } from "react-hot-toast"
+import PrivacyPolicy from "./pages/PrivacyPolicy"
 
 function App() {
   const { theme } = useThemeContext()
@@ -28,6 +29,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:id" element={<BlogPostPage />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />

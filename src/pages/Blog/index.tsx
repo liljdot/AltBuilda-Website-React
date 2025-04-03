@@ -7,8 +7,11 @@ import usePaginate from "../../hooks/usePaginate"
 import ReactPaginate from "react-paginate"
 import { IoArrowBack, IoArrowForward } from "react-icons/io5"
 import NewsletterForm from "./NewsletterForm"
+import useDocumentTitle from "../../hooks/useDocumentTitle"
 
 const Blog: React.FC = () => {
+    useDocumentTitle("Blog | AltBuilda")
+
     // get blogs here 
     const [blogPosts, setBlogPosts] = useState<BlogPost[]>([...templateBlogPosts, ...[...templateBlogPosts].reverse(), ...templateBlogPosts, ...templateBlogPosts])
     const pageCount = Math.ceil(blogPosts.length / 3)

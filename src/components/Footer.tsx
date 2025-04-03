@@ -94,8 +94,8 @@ const Footer: React.FC = () => {
                             <p className="pt-5 sm:pt-0">© Copyright {new Date().getFullYear()}, - All right reserved</p>
 
                             <div className="w-full sm:w-fit flex flex-row justify-around gap-8 pb-5 sm:pb-0 border-b sm:border-b-0 border-info">
-                                <Link to={"/"}>Privacy Policy</Link>
-                                <Link to={"/"}>Terms & Conditions</Link>
+                                <Link target="_blank" to={"/privacy-policy"}>Privacy Policy</Link>
+                                <Link target="_blank" to={"/terms-and-conditions"}>Terms & Conditions</Link>
                             </div>
                         </aside>
                     </footer>
