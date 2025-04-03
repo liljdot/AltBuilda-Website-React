@@ -12,6 +12,7 @@ import Blog from "./pages/Blog"
 import BlogPostPage from "./pages/BlogPostPage"
 import { Toaster } from "react-hot-toast"
 import PrivacyPolicy from "./pages/PrivacyPolicy"
+import TermsandConditions from "./pages/TermsandConditions"
 
 function App() {
   const { theme } = useThemeContext()
@@ -30,6 +31,7 @@ function App() {
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:id" element={<BlogPostPage />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms-and-conditions" element={<TermsandConditions />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
