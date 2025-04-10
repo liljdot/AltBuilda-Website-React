@@ -14,8 +14,6 @@ const BulletListItem: React.FC<{ children: ReactNode }> = ({ children }) => {
     )
 }
 
-
-//replace each subsection component call with the jsx in here when actual data is given
 const Subsection: React.FC<SubsectionProps> = ({ children, subtitle }) => {
 
     return (
