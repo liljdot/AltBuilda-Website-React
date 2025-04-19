@@ -13,7 +13,7 @@ const SinglePost: React.FC<SinglePostProps> = ({post}) => {
 
     return (
         <>
-            <Link to={`/blog/${post.id}`} target="_blank" className="card bg-neutral shrink-0 w-72 sm:w-102.5 transition-all ease-in-out duration-300 hover:underline hover:scale-102">
+            <Link to={`/blog/${post.id}`} target="_blank" className="card justify-self-center bg-neutral shrink-0 w-72 sm:w-102.5 transition-all ease-in-out duration-300 hover:underline hover:scale-102 pt-2">
                 <figure className="rounded-lg">
                     <img
                         src={post.image}
@@ -32,7 +32,7 @@ const BlogPosts: React.FC<Props> = ({posts}) => {
 
     return (
         <>
-            <div className="w-full flex flex-row justify-items-start gap-8 overflow-auto xl:grid xl:grid-cols-3 xl:gap-7.5">
+            <div className="w-full flex flex-row justify-around gap-8 overflow-auto xl:grid xl:grid-cols-3 xl:gap-7.5 px-1 xl:mx-auto">
                 {posts[0] && <SinglePost post={posts[0]} />}
                 {posts[1] && <SinglePost post={posts[1]} />}
                 {posts[2] && <SinglePost post={posts[2]}/>}
