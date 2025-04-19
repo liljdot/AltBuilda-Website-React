@@ -53,7 +53,7 @@ const Navbar: React.FC<{ behind?: boolean }> = ({ behind }) => {
 
                             <li><Link to={"/services"} className={`${pathname == "/services" && "text-primary"} px-0 hover:bg-transparent hover:text-primary`}>Services</Link></li>
 
-                            <li><Link to={"/blog"} className={`${pathname == "/blog" && "text-primary"} px-0 hover:bg-transparent hover:text-primary`}>Blog</Link></li>
+                            <li><Link to={"/blog"} className={`${pathname.startsWith("/blog") && "text-primary"} px-0 hover:bg-transparent hover:text-primary`}>Blog</Link></li>
 
                             <li><Link to={"/faq"} className={`${pathname == "/faq" && "text-primary"} px-0 hover:bg-transparent hover:text-primary`}>FAQ</Link></li>
 
