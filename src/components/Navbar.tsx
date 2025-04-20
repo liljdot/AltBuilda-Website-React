@@ -82,7 +82,7 @@ const Navbar: React.FC<{ behind?: boolean }> = ({ behind }) => {
                         <ul className="flex flex-col gap-5 text-secondary font-medium [&>*]:active:text-primary">
                             <li><Link to={"/about"} className={`${pathname == "/about" && "text-primary"}`}>About</Link></li>
                             <li><Link to={"/services"} className={`${pathname == "/services" && "text-primary"}`}>Services</Link></li>
-                            <li><Link to={"/blog"} className={`${pathname == "/blog" && "text-primary"}`}>Blog</Link></li>
+                            <li><Link to={"/blog"} className={`${pathname.startsWith("/blog") && "text-primary"}`}>Blog</Link></li>
                             <li><Link to={"/faq"} className={`${pathname == "/faq" && "text-primary"}`}>FAQ</Link></li>
                             <li><Link to={"/contact"} className={`${pathname == "/contact" && "text-primary"}`}>Contact</Link></li>
                         </ul>
