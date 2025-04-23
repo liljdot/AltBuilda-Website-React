@@ -28,9 +28,11 @@ const BlogPostPage: React.FC = () => {
             <main className="p-0 bg-neutral w-full">
                 <div className="max-w-450 mx-auto md:px-20 pb-20">
                     <BlogPostBanner title={post.title} author={post.author} subject={post.subject} date={post.date} />
+
                     <div className="w-full mt-9 md:mt-8">
                         <ImageSection title={post.title} imageString={post.image} />
                     </div>
+                    
                     <div className="w-full mt-15 md:mt-23">
                         <ContentSection post={post} />
                     </div>
