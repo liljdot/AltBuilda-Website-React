@@ -1,10 +1,8 @@
 import { BlogPost } from "../types";
-// import lowCostBlogImage from "../assets/low-cost-blog-img.png"
-// import postcardMarketingImage from "../assets/postcard-marketing-img.png"
-// import thanksBlogImage from "../assets/thanks-blog-image.png"
 import howToRegisterBlogImage from "../assets/how-to-register-blog-image.png"
 import understandingTaxesBlogImage from "../assets/understanding-taxes-blog-image.png"
 import boostingSalesBlogImage from "../assets/boosting-sales-blog-image.png"
+import hustleToStructureBlogImage from "../assets/hustle-to-structure-blog-image.png"
 
 const templateBlogPosts: BlogPost[] = [
     {
@@ -354,10 +352,116 @@ const templateBlogPosts: BlogPost[] = [
             },
             {
                 type: "PARAGRAPH",
-                content: "You don’t need paid ads to grow. You need systems that help you look professional, track performance, and connect with your market"}
+                content: "You don’t need paid ads to grow. You need systems that help you look professional, track performance, and connect with your market"
+            }
         ],
         action: {
             text: "Try these growth hacks using Altbuilda’s features",
+            link: ""
+        },
+        author: {
+            name: "Olivia Rhye",
+            links: {}
+        },
+        date: new Date(2024, 0, 20),
+    },
+    {
+        id: "4",
+        title: "From Hustle To Structure: Turning Your Side Business Into A Registered Brand",
+        subject: "Networking",
+        image: hustleToStructureBlogImage,
+        body: [
+            {
+                type: "SUBTITLE",
+                content: "Introduction",
+            },
+            {
+                type: "PARAGRAPH",
+                content: "You’ve been running your business from your phone. Orders are coming in, customers are paying — but deep down, you know it’s still just a hustle. If you want to go from side gig to serious brand, it’s time to put structure in place. \n\nThis isn’t just about looking legit — it’s about setting yourself up for growth, funding, and bigger opportunities. And with tools like Altbuilda, you don’t have to figure it out alone."
+            },
+            {
+                type: "LINEBREAK"
+            },
+            {
+                type: "SUBTITLE",
+                content: "The Risk of Staying Informal"
+            },
+            {
+                type: "PARAGRAPH",
+                content: "Let’s be real: doing business informally can only take you so far."
+            },
+            {
+                type: "ULIST",
+                content: [
+                    "You can’t open a business account",
+                    "No access to grants, loans, or partnerships",
+                    "No legal protection if issues come up",
+                    "And no proof of income to show growth"
+                ]
+            },
+            {
+                type: "PARAGRAPH",
+                content: "It’s easy to say “I’m just managing it for now”, but the truth is, structure builds sustainability."
+            },
+            {
+                type: "LINEBREAK"
+            },
+            {
+                type: "SUBTITLE",
+                content: "Structure = Growth"
+            },
+            {
+                type: "PARAGRAPH",
+                content: "When you register your business and get your systems right, everything changes:"
+            },
+            {
+                type: "ULIST",
+                content: [
+                    "You can pitch to bigger clients",
+                    "You look credible to customers and partners",
+                    "You unlock access to funding, PR, and growth tools",
+                    "You run your business, not just hustle"
+                ]
+            },
+            {
+                type: "LINEBREAK"
+            },
+            {
+                type: "SUBTITLE",
+                content: "AltBuilda Makes It Seamless"
+            },
+            {
+                type: "PARAGRAPH",
+                content: "Whether you’re selling fashion, food, skincare, or services — Altbuilda gives you everything you need to move like a pro:"
+            },
+            {
+                type: "ULIST",
+                content: [
+                    "CAC Registration (done for you)",
+                    "Invoicing + POS",
+                    "Tax & compliance tracking",
+                    "Content calendar for marketing",
+                    "Networking via Market Hub",
+                    "Growth dashboards & business insights"
+                ]
+            },
+            {
+                type: "PARAGRAPH",
+                content: "All in one dashboard. No stress."
+            }
+        ],
+        conclusion: [
+            {
+                type: "SUBTITLE",
+                content: "Subscribe To AltBuilda’s Premium and Go Pro"
+            },
+            {
+                type: "PARAGRAPH",
+                content: "It’s time to stop calling your business a side thing.Take the next step — build a brand that’s structured, scalable, and investor-ready."
+            }
+        ],
+        action: {
+            text: "Subscribe to AltBuilda’s premium and go pro",
             link: ""
         },
         author: {
