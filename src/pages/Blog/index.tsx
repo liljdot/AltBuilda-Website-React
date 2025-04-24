@@ -13,7 +13,7 @@ const Blog: React.FC = () => {
     useDocumentTitle("Blog | AltBuilda")
 
     // get blogs here 
-    const [blogPosts, setBlogPosts] = useState<BlogPost[]>([...templateBlogPosts, ...[...templateBlogPosts].reverse(), ...templateBlogPosts, ...templateBlogPosts])
+    const [blogPosts, setBlogPosts] = useState<BlogPost[]>([...templateBlogPosts])
     const pageCount = Math.ceil(blogPosts.length / 3)
     const [displayedBlogposts, setPageNumber] = usePaginate(blogPosts, 3)
 
