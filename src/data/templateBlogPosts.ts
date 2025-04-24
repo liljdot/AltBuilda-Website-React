@@ -3,6 +3,8 @@ import { BlogPost } from "../types";
 // import postcardMarketingImage from "../assets/postcard-marketing-img.png"
 // import thanksBlogImage from "../assets/thanks-blog-image.png"
 import howToRegisterBlogImage from "../assets/how-to-register-blog-image.png"
+import understandingTaxesBlogImage from "../assets/understanding-taxes-blog-image.png"
+import boostingSalesBlogImage from "../assets/boosting-sales-blog-image.png"
 
 const templateBlogPosts: BlogPost[] = [
     {
@@ -142,85 +144,228 @@ const templateBlogPosts: BlogPost[] = [
         },
         author: {
             name: "Olivia Rhye",
+            links: {}
+        },
+        date: new Date(2024, 0, 20),
+    },
+    {
+        id: "2",
+        title: "Understanding Taxes As An SME: What You Must Know In 2025",
+        image: understandingTaxesBlogImage,
+        subject: "Compliance",
+        body: [
+            {
+                type: "SUBTITLE",
+                content: "Introduction",
+            },
+            {
+                type: "PARAGRAPH",
+                content: "Taxes. The word alone makes most small business owners sweat. But staying compliant doesn’t have to be a headache — especially if you understand what’s required and you’re using the right tools to stay on track. \n\nThis guide breaks down the key taxes every SME in Nigeria needs to know, common mistakes to avoid, and how Altbuilda’s tax dashboard can save you time, stress, and even penalties."
+            },
+            {
+                type: "LINEBREAK"
+            },
+            {
+                type: "SUBTITLE",
+                content: "Three Taxes Every Nigerian SME Should Know"
+            },
+            {
+                type: "HEADING",
+                content: "1. PAYE (Pay As You Earn)"
+            },
+            {
+                type: "PARAGRAPH",
+                content: "If you have staff, you’re required to deduct PAYE from their salaries and remit it to the state tax authority. Each state has its own rate table, so it’s important to calculate correctly."
+            },
+            {
+                type: "HEADING",
+                content: "2. VAT (Value Added Tax)"
+            },
+            {
+                type: "PARAGRAPH",
+                content: "You must charge 7.5% VAT on goods/services (if your annual turnover exceeds ₦25M) and remit monthly to the FIRS. Even if you didn’t make any sales in a month, you're still expected to file a nil return."
+            },
+            {
+                type: "HEADING",
+                content: "3. CIT (Company Income Tax)"
+            },
+            {
+                type: "PARAGRAPH",
+                content: "This is tax on your profit, paid annually. \n \n0% for businesses earning less than ₦25M \n \n20% for those earning ₦25M–₦100M \n \n30% for anything above ₦100M"
+            },
+            {
+                type: "LINEBREAK"
+            },
+            {
+                type: "SUBTITLE",
+                content: "Common Tax Mistakes SMEs Make"
+            },
+            {
+                type: "ULIST",
+                content: [
+                    "Missing deadlines (FIRS is strict!)",
+                    "Not filing returns even when you made no sales",
+                    "Mixing personal & business income",
+                    "Assuming small business = no tax"
+                ]
+            },
+            {
+                type: "LINEBREAK"
+            },
+            {
+                type: "SUBTITLE",
+                content: "How AltBuilda Makes Tax Compliance Easy"
+            },
+            {
+                type: "PARAGRAPH",
+                content: "Altbuilda’s built-in tax tools help you:"
+            },
+            {
+                type: "ULIST",
+                content: [
+                    "Track all your business income & expenses",
+                    "Get automated tax reminders so you never miss a deadline",
+                    "Know which taxes apply to your business",
+                    "Generate quick reports for filing",
+                    "Link with your POS/invoice history to auto-summarize financials"
+                ]
+            }
+        ],
+        conclusion: [
+            {
+                type: "SUBTITLE",
+                content: "Stay Tax Compliant Without The Headache"
+            },
+            {
+                type: "PARAGRAPH",
+                content: "Don’t wait for penalties or audit letters. \n \nStart using Altbuilda’s tax dashboard to stay compliant, organized, and focused on growth."
+            }
+        ],
+        action: {
+            text: "Use Altbuilda’s tax dashboard to stay compliant",
+            link: ""
+        },
+        author: {
+            name: "Olivia Rhye",
+            links: {}
+        },
+        date: new Date(2024, 0, 20),
+
+    },
+    {
+        id: "3",
+        title: "Boosting Sales Without Ads: 5 Cost Free Growth Hacks For SMEs",
+        subject: "Marketing",
+        image: boostingSalesBlogImage,
+        body: [
+            {
+                type: "SUBTITLE",
+                content: "Introduction"
+            },
+
+            {
+                type: "PARAGRAPH",
+                content: "You don’t need a huge marketing budget to grow your business. In fact, some of the most effective strategies don’t cost a thing — just consistency, good tools, and smart execution. \n\nHere are 5 proven ways to increase sales without spending on ads, and how Altbuilda helps you put them into action."
+            },
+            {
+                type: "LINEBREAK"
+            },
+            {
+                type: "SUBTITLE",
+                content: "1. Make Your Invoices Work Harder"
+            },
+            {
+                type: "PARAGRAPH",
+                content: "A clear, professional invoice builds credibility — and trust leads to repeat business. \n\nWith Altbuilda, you can:"
+            },
+            {
+                type: "ULIST",
+                content: [
+                    "Send branded invoices in minutes",
+                    "Track payment status",
+                    "Send reminders that nudge clients to pay faster"
+                ]
+            },
+            {
+                type: "PARAGRAPH",
+                content: "Why it works: A good invoice makes you look legit. Customers are more likely to return when they feel like they’re dealing with a real, structured business."
+            },
+            {
+                type: "LINEBREAK"
+            },
+            {
+                type: "SUBTITLE",
+                content: "2. Use Business Analytics To Know What Is Working"
+            },
+            {
+                type: "PARAGRAPH",
+                content: "If you don’t track your sales and revenue, you’re guessing Altbuilda gives you simple dashboards to:"
+            },
+            {
+                type: "ULIST",
+                content: [
+                    "See your best-selling products",
+                    "Track customer retention",
+                    "Monitor revenue growth"
+                ]
+            },
+            {
+                type: "PARAGRAPH",
+                content: "Why it works: When you know what’s working, you can double down on it — and stop wasting time on what’s not."
+            },
+            {
+                type: "LINEBREAK"
+            },
+            {
+                type: "SUBTITLE",
+                content: "3. Tap Into Referrals The Smart Way"
+            },
+            {
+                type: "PARAGRAPH",
+                content: "Your existing customers are your best marketers. Offer simple perks or discounts for every new customer they refer — and watch your client base grow organically. \n\nYou can even track referrals through manual tagging or CRM notes in Altbuilda. \n\nWhy it works: People trust recommendations from friends more than any ad."
+            },
+            {
+                type: "LINEBREAK"
+            },
+            {
+                type: "SUBTITLE",
+                content: "4. Show Up In The Right Circle With Market Hub"
+            },
+            {
+                type: "PARAGRAPH",
+                content: "Altbuilda’s Market Hub is your digital networking space. Connect with other SMEs, showcase your offerings, and find people who need what you’re selling. \n\nWhy it works: Visibility = Opportunity. Especially when it's free."
+            },
+            {
+                type: "LINEBREAK"
+            },
+            {
+                type: "SUBTITLE",
+                content: "5. Do Not Sleep On Email"
+            },
+            {
+                type: "PARAGRAPH",
+                content: "Sending regular, helpful updates (like promos or new products) keeps your brand top-of-mind. Altbuilda helps you export customer lists and organize them for easy outreach. \n\nWhy it works: Emails convert. And you own the contact list — unlike social media."
+            }
+        ],
+        conclusion: [
+            {
+                type: "SUBTITLE",
+                content: "Try These Growth Hacks Using AltBuilda’s Features."
+            },
+            {
+                type: "PARAGRAPH",
+                content: "You don’t need paid ads to grow. You need systems that help you look professional, track performance, and connect with your market"}
+        ],
+        action: {
+            text: "Try these growth hacks using Altbuilda’s features",
+            link: ""
+        },
+        author: {
+            name: "Olivia Rhye",
+            links: {}
         },
         date: new Date(2024, 0, 20),
     }
-    // {
-    //     id: "1",
-    //     title: "3 Low-Cost Campaigns You Must Run to Win BFCM",
-    //     subject: "Networking",
-    //     body: [
-    //         {
-    //             subtitle: "Introduction",
-    //             text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil eum aut mollitia dolore provident vitae numquam officiis voluptates at possimus reprehenderit magni repellendus dolorum eligendi eveniet quas asperiores, eaque quisquam magnam consectetur, repudiandae est debitis et recusandae. Nostrum quo debitis nam incidunt laudantium iusto eius consequatur rerum quibusdam numquam? Necessitatibus."
-    //         },
-    //         {
-    //             subtitle: "Software and tools",
-    //             text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil eum aut mollitia dolore provident vitae numquam officiis voluptates at possimus reprehenderit magni repellendus dolorum eligendi eveniet quas asperiores, eaque quisquam magnam consectetur, repudiandae est debitis et recusandae. Nostrum quo debitis nam incidunt laudantium iusto eius consequatur rerum quibusdam numquam? Necessitatibus."
-    //         },
-    //         {
-    //             subtitle: "Other resources",
-    //             text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil eum aut mollitia dolore provident vitae numquam officiis voluptates at possimus reprehenderit magni repellendus dolorum eligendi eveniet quas asperiores, eaque quisquam magnam consectetur, repudiandae est debitis et recusandae. Nostrum quo debitis nam incidunt laudantium iusto eius consequatur rerum quibusdam numquam? Necessitatibus."
-    //         }
-    //     ],
-    //     conclusion: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil eum aut mollitia dolore provident vitae numquam officiis voluptates at possimus reprehenderit magni repellendus dolorum eligendi eveniet quas asperiores, eaque quisquam magnam consectetur, repudiandae est debitis et recusandae. Nostrum quo debitis nam incidunt laudantium iusto eius consequatur rerum quibusdam numquam? Necessitatibus.",
-    //     author: {
-    //         name: "Olivia Rhye",
-    //     },
-    //     date: new Date(),
-    //     image: lowCostBlogImage
-    // },
-
-    // {
-    //     id: "2",
-    //     title: "Postcard Marketing: The Definitive Guide to High ROI [2022]",
-    //     subject: "Marketing",
-    //     image: postcardMarketingImage,
-    //     body: [
-    //         {
-    //             subtitle: "Introduction",
-    //             text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil eum aut mollitia dolore provident vitae numquam officiis voluptates at possimus reprehenderit magni repellendus dolorum eligendi eveniet quas asperiores, eaque quisquam magnam consectetur, repudiandae est debitis et recusandae. Nostrum quo debitis nam incidunt laudantium iusto eius consequatur rerum quibusdam numquam? Necessitatibus."
-    //         },
-    //         {
-    //             subtitle: "Software and tools",
-    //             text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil eum aut mollitia dolore provident vitae numquam officiis voluptates at possimus reprehenderit magni repellendus dolorum eligendi eveniet quas asperiores, eaque quisquam magnam consectetur, repudiandae est debitis et recusandae. Nostrum quo debitis nam incidunt laudantium iusto eius consequatur rerum quibusdam numquam? Necessitatibus."
-    //         },
-    //         {
-    //             subtitle: "Other resources",
-    //             text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil eum aut mollitia dolore provident vitae numquam officiis voluptates at possimus reprehenderit magni repellendus dolorum eligendi eveniet quas asperiores, eaque quisquam magnam consectetur, repudiandae est debitis et recusandae. Nostrum quo debitis nam incidunt laudantium iusto eius consequatur rerum quibusdam numquam? Necessitatibus."
-    //         }
-    //     ],
-    //     conclusion: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil eum aut mollitia dolore provident vitae numquam officiis voluptates at possimus reprehenderit magni repellendus dolorum eligendi eveniet quas asperiores, eaque quisquam magnam consectetur, repudiandae est debitis et recusandae. Nostrum quo debitis nam incidunt laudantium iusto eius consequatur rerum quibusdam numquam? Necessitatibus.",
-    //     author: {
-    //         name: "Olivia Rhye",
-    //     },
-    //     date: new Date(),
-    // },
-    // {
-    //     id: "3",
-    //     title: "The Ultimate Guide to Thank You Notes for Ecommerce",
-    //     image: thanksBlogImage,
-    //     body: [
-    //         {
-    //             subtitle: "Introduction",
-    //             text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil eum aut mollitia dolore provident vitae numquam officiis voluptates at possimus reprehenderit magni repellendus dolorum eligendi eveniet quas asperiores, eaque quisquam magnam consectetur, repudiandae est debitis et recusandae. Nostrum quo debitis nam incidunt laudantium iusto eius consequatur rerum quibusdam numquam? Necessitatibus."
-    //         },
-    //         {
-    //             subtitle: "Software and tools",
-    //             text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil eum aut mollitia dolore provident vitae numquam officiis voluptates at possimus reprehenderit magni repellendus dolorum eligendi eveniet quas asperiores, eaque quisquam magnam consectetur, repudiandae est debitis et recusandae. Nostrum quo debitis nam incidunt laudantium iusto eius consequatur rerum quibusdam numquam? Necessitatibus."
-    //         },
-    //         {
-    //             subtitle: "Other resources",
-    //             text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil eum aut mollitia dolore provident vitae numquam officiis voluptates at possimus reprehenderit magni repellendus dolorum eligendi eveniet quas asperiores, eaque quisquam magnam consectetur, repudiandae est debitis et recusandae. Nostrum quo debitis nam incidunt laudantium iusto eius consequatur rerum quibusdam numquam? Necessitatibus."
-    //         }
-    //     ],
-    //     conclusion: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil eum aut mollitia dolore provident vitae numquam officiis voluptates at possimus reprehenderit magni repellendus dolorum eligendi eveniet quas asperiores, eaque quisquam magnam consectetur, repudiandae est debitis et recusandae. Nostrum quo debitis nam incidunt laudantium iusto eius consequatur rerum quibusdam numquam? Necessitatibus.",
-    //     author: {
-    //         name: "Olivia Rhye",
-    //     },
-    //     date: new Date(),
-    //     subject: "Commerce"
-    // }
 ]
 
 export default templateBlogPosts

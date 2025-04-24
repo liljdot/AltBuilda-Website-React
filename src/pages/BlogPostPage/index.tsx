@@ -32,7 +32,7 @@ const BlogPostPage: React.FC = () => {
                     <div className="w-full mt-9 md:mt-8">
                         <ImageSection title={post.title} imageString={post.image} />
                     </div>
-                    
+
                     <div className="w-full mt-15 md:mt-23">
                         <ContentSection post={post} />
                     </div>
@@ -43,15 +43,15 @@ const BlogPostPage: React.FC = () => {
                             Copy link
                         </button>
 
-                        <Link to={""} className="btn bg-base-100 rounded-lg h-full flex items-center justify-center p-2.5">
+                        <Link to={post.author.links.twitter!} className="btn bg-base-100 rounded-lg h-full flex items-center justify-center p-2.5">
                             <FaTwitter className="size-full" />
                         </Link>
 
-                        <Link to={""} className="btn bg-base-100 rounded-lg h-full flex items-center justify-center p-2.5">
+                        <Link to={post.author.links.linkedin!} className="btn bg-base-100 rounded-lg h-full flex items-center justify-center p-2.5">
                             <FaLinkedin className="size-full" />
                         </Link>
 
-                        <Link to={""} className="btn bg-base-100 rounded-lg h-full flex items-center justify-center p-2.5">
+                        <Link to={post.author.links.facebook!} className="btn bg-base-100 rounded-lg h-full flex items-center justify-center p-2.5">
                             <FaFacebook className="size-full" />
                         </Link>
                     </div>

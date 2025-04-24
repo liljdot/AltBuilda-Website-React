@@ -29,6 +29,11 @@ export interface BlogPost {
     author: {
         name: string
         image?: string
+        links: {
+            twitter?: string,
+            linkedin?: string,
+            facebook?: string
+        }
     }
     date: Date
 }
