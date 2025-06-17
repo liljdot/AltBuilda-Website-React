@@ -10,7 +10,7 @@ interface BlogPostCardProps {
     post: BlogPost
 }
 
-const BlogPostCard: React.FC<BlogPostCardProps> = ({post}) => {
+const BlogPostCard: React.FC<BlogPostCardProps> = ({ post }) => {
     const placeholderAuthorImage = "https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" // insert placeholder avatar here
 
     return (
@@ -43,7 +43,7 @@ const BlogPostCard: React.FC<BlogPostCardProps> = ({post}) => {
                     <div className="text-secondary text-sm">
                         <p className="font-semibold">{post.author.name}</p>
 
-                        <p>{`${post.date.toLocaleDateString("en-UK", {day: "2-digit", month: "short", year: "numeric"})}`}</p>
+                        <p>{`${post.date.toLocaleDateString("en-UK", { day: "2-digit", month: "short", year: "numeric" })}`}</p>
                     </div>
                 </div>
             </div>
@@ -57,9 +57,17 @@ const BlogPostsSection: React.FC<BlogPostsSectionProps> = ({ blogPosts }) => {
         <>
             <section className="bg-neutral pt-8 md:pt-14 px-11 md:px-8">
                 {/* card container  */}
-                <div className="w-full grid grid-cols-1 justify-center gap-y-12 xl:gap-y-0 xl:grid-cols-3">
-                    {blogPosts.map(post => <BlogPostCard key={Math.floor(Math.random()*1000) + post.id} post={post}/>)}
-                </div>
+                {
+                    blogPosts.length ? (
+                        <div className="w-full grid grid-cols-1 justify-center gap-y-12 xl:gap-y-0 xl:grid-cols-3">
+                            {blogPosts.map(post => <BlogPostCard key={Math.floor(Math.random() * 1000) + post.id} post={post} />)}
+                        </div>
+                    ) : (
+                        <p className="text-secondary text-center">
+                            No results found.
+                        </p>
+                    )
+                }
             </section>
         </>
     )
