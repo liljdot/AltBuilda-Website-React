@@ -1,8 +1,8 @@
-import heroSectionImage from "../../assets/hero-section-image.png"
+import heroSectionImage from "../../assets/hero-section-image-min.png"
 import ActionButton from "../../components/ActionButton"
 import useThemeContext from "../../hooks/useThemeContext"
-import heroSectionBG from "../../assets/hero-section-bg.png"
-import heroSectionBGDark from "../../assets/hero-section-bg-dark.png"
+import heroSectionBG from "../../assets/hero-section-bg-min.png"
+import heroSectionBGDark from "../../assets/hero-section-bg-dark-min.png"
 
 const HeroSection: React.FC = () => {
     const { theme } = useThemeContext()
