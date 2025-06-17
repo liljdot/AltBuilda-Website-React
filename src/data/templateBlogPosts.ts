@@ -1,7 +1,7 @@
 import { BlogPost } from "../types";
-import howToRegisterBlogImage from "../assets/how-to-register-blog-image.png"
-import understandingTaxesBlogImage from "../assets/understanding-taxes-blog-image.png"
-import boostingSalesBlogImage from "../assets/boosting-sales-blog-image.png"
+import howToRegisterBlogImage from "../assets/how-to-register-blog-image-min.png"
+import understandingTaxesBlogImage from "../assets/understanding-taxes-blog-image-min.png"
+import boostingSalesBlogImage from "../assets/boosting-sales-blog-image-min.png"
 import hustleToStructureBlogImage from "../assets/hustle-to-structure-blog-image.png"
 
 const templateBlogPosts: BlogPost[] = [
