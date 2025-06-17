@@ -12,7 +12,7 @@ interface FAQGroupTileProps {
 interface FAQGroupSectionProps {
     FAQGroups: FAQGroup[]
     setFAQGroups: React.Dispatch<React.SetStateAction<FAQGroup[]>>
-    selectedGroup: FAQGroup
+    selectedGroup?: FAQGroup
     handleSelect: (group: FAQGroup) => void
 }
 
@@ -54,9 +54,19 @@ const FAQGroupSection: React.FC<FAQGroupSectionProps> = ({ FAQGroups, setFAQGrou
                 </div>
 
                 {/* tiles container div  */}
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-y-8 md:gap-y-16 lg:px-8 mt-15 md:mt-12">
-                    {FAQGroups.map(group => <FAQGroupTile handleSelect={handleSelect} selected={group.name == selectedGroup.name} key={group.name} FAQGroup={group} />)}
-                </div>
+                {
+                    FAQGroups.length ? (
+                        <div className="grid grid-cols-2 md:grid-cols-3 gap-y-8 md:gap-y-16 lg:px-8 mt-15 md:mt-12">
+                            {FAQGroups.map(group => <FAQGroupTile
+                                handleSelect={handleSelect}
+                                selected={group.name == selectedGroup?.name}
+                                key={group.name}
+                                FAQGroup={group} />)}
+                        </div>
+                    ) : (
+                        <div className="text-secondary text-center mt-10">No results found.</div>
+                    )
+                }
             </section>
         </>
     )
