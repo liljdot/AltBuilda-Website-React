@@ -1,4 +1,4 @@
-import missionImage from "../../assets/mission-image.png"
+import missionImage from "../../assets/mission-image-min.png"
 import missionImageMobile from "../../assets/mission-image-mobile.png"
 import ActionButton from "../../components/ActionButton";
 
