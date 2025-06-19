@@ -64,7 +64,10 @@ const Blog: React.FC = () => {
                                 pageRangeDisplayed={0}
                                 marginPagesDisplayed={0}
                                 pageLabelBuilder={page => `Page ${page} of ${pageCount}`}
-                                onPageChange={({ selected }) => setPageNumber(selected + 1)}
+                                onPageChange={({ selected }) => {
+                                    setPageNumber(selected + 1)
+                                    document.getElementById("blogposts")?.scrollIntoView({ behavior: "smooth", block: "start" })
+                                }}
                                 breakLabel="..."
                                 breakClassName="btn btn-ptimary"
                                 className="relative w-full flex flex-row justify-center"

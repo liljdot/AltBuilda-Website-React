@@ -55,7 +55,7 @@ const BlogPostsSection: React.FC<BlogPostsSectionProps> = ({ blogPosts }) => {
 
     return (
         <>
-            <section className="bg-neutral pt-8 md:pt-14 px-11 md:px-8">
+            <section id="blogposts" className="bg-neutral pt-8 md:pt-14 px-11 md:px-8">
                 {/* card container  */}
                 {
                     blogPosts.length ? (
