@@ -4,6 +4,7 @@ import ToggleTheme from "./ToggleTheme"
 import { useEffect, useRef, useState } from "react"
 import { FiMenu } from "react-icons/fi"
 import { IoMdClose } from "react-icons/io"
+import { appLoginPage, appRegisterPage } from "../data/links"
 
 const Navbar: React.FC<{ behind?: boolean }> = ({ behind }) => {
     const [isSandwichMenuOpen, setIsSandwichMenuOpen] = useState<boolean>(false)
@@ -65,9 +66,9 @@ const Navbar: React.FC<{ behind?: boolean }> = ({ behind }) => {
                         <ToggleTheme />
 
                         {/* links show only in desktop  */}
-                        <Link to={"/login"} className="hidden lg:flex px-0 hover:bg-transparent hover:text-primary">Login</Link>
+                        <Link to={appLoginPage} className="hidden lg:flex px-0 hover:bg-transparent hover:text-primary">Login</Link>
 
-                        <Link to={"/get-started"} className="hidden lg:flex btn btn-secondary text-[1rem] text-neutral rounded-full font-semibold py-7 transition-all ease-in-out duration-300 hover:scale-105">Get Started for Free</Link>
+                        <Link to={appRegisterPage} className="hidden lg:flex btn btn-secondary text-[1rem] text-neutral rounded-full font-semibold py-7 transition-all ease-in-out duration-300 hover:scale-105">Get Started for Free</Link>
 
                         {/* sandwich menu toggle only shows on mobile  */}
                         <button ref={sandwichButtonRef} className="flex lg:hidden btn btn-ghost p-0" onClick={toggleSandwichMenu}>
@@ -88,8 +89,8 @@ const Navbar: React.FC<{ behind?: boolean }> = ({ behind }) => {
                         </ul>
 
                         <div className="flex flex-col gap-3">
-                            <Link to={"/get-started"} className="btn btn-secondary text-[1rem] text-neutral rounded-full font-semibold py-7 transition-all ease-in-out duration-300 active:scale-95">Get Started for Free</Link>
-                            <Link to={"/login"} className="btn btn-ghost text-[1rem] text-primary border border-primary rounded-full font-semibold py-7 transition-all ease-in-out duration-300 active:scale-95">Login</Link>
+                            <Link to={appRegisterPage} className="btn btn-secondary text-[1rem] text-neutral rounded-full font-semibold py-7 transition-all ease-in-out duration-300 active:scale-95">Get Started for Free</Link>
+                            <Link to={appLoginPage} className="btn btn-ghost text-[1rem] text-primary border border-primary rounded-full font-semibold py-7 transition-all ease-in-out duration-300 active:scale-95">Login</Link>
                         </div>
                     </div>
 

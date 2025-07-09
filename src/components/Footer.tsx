@@ -3,6 +3,7 @@ import signVector from "../assets/sign-vector.png"
 import footerLogo from "../assets/footer-logo.png"
 import { Link, useLocation } from "react-router-dom";
 import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
+import { appLoginPage, appRegisterPage } from "../data/links";
 
 const Footer: React.FC = () => {
     const { pathname } = useLocation()
@@ -17,9 +18,9 @@ const Footer: React.FC = () => {
                             <h3 className="text-2xl  md:text-3xl lg:text-5xl font-bold text-white">Your Business Journey Starts Here</h3>
 
                             <div className="flex flex-row gap-5 sm:gap-7 mt-10 sm:mt-15">
-                                <ActionButton to="/signup" filled>Sign Up Today</ActionButton>
+                                <ActionButton to={appRegisterPage} filled>Sign Up Today</ActionButton>
 
-                                <ActionButton to="/login" >Login</ActionButton>
+                                <ActionButton to={appLoginPage} >Login</ActionButton>
                             </div>
 
                             <div className="flex flex-row w-full sm:px-34 justify-end mt-7">

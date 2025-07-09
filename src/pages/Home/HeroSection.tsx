@@ -3,6 +3,7 @@ import ActionButton from "../../components/ActionButton"
 import useThemeContext from "../../hooks/useThemeContext"
 import heroSectionBG from "../../assets/hero-section-bg-min.png"
 import heroSectionBGDark from "../../assets/hero-section-bg-dark-min.png"
+import { appRegisterPage } from "../../data/links"
 
 const HeroSection: React.FC = () => {
     const { theme } = useThemeContext()
@@ -23,7 +24,7 @@ const HeroSection: React.FC = () => {
                         peers,and drive growth effortlessly</p>
 
                     <div className="w-full sm:w-fit flex flex-row justify-between sm:gap-5 mt-8 md:mt-14 z-99">
-                        <ActionButton to="/get-started" filled>
+                        <ActionButton to={appRegisterPage} filled>
                             Get started now
                         </ActionButton>
 
