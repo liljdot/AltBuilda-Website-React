@@ -10,7 +10,7 @@ const BulletListItem: React.FC<{ children: ReactNode }> = ({ children }) => {
 
     return (
         <li className="list-inside marker:text-2xl md:marker:text-3xl marker:content-['●']">
-            {` ${children}`}
+            {children}
         </li>
     )
 }
@@ -33,21 +33,20 @@ const TermsContentSection: React.FC = () => {
         <>
             <section className="bg-neutral w-full flex flex-col gap-9 md:gap-8 text-secondary px-4 sm:px-18 lg:px-37 xl:px-90 pt-15 md:pt-23 pb-20 md:pb-30">
                 <Subsection>
-                    These Terms and Conditions (“Agreement”) govern your access and use of the Altbuida platform (“Platform” or “Website”), a product of Alternative Bank Limited (“Altbuida”, “we”, “us”, or “our”). Additional product-specific terms may apply depending on your subscription type. By accessing or using the Platform, you confirm your agreement to be bound by these Terms. If you do not accept the Terms, please do not use the Platform.
-                </Subsection>
-
-                <Subsection subtitle="Modifications">
-                    We may revise these Terms at any time. Any changes will become effective upon being posted on the Platform. Your continued access or use of Altbuida constitutes acceptance of the modified Terms. We encourage you to review these Terms periodically to stay informed of any updates.
+                    These Terms and Conditions (“Agreement”) govern your access and use of the Altbuilda platform (“Platform” or “Website”), a product of Alternative Bank Limited (“Altbuilda”, “we”, “us”, or “our”). Additional product-specific terms may apply depending on your subscription type. By accessing or using the Platform, you confirm your agreement to be bound by these Terms. If you do not accept the Terms, please do not use the Platform.
                 </Subsection>
 
                 <Subsection subtitle="Registration">
-                    You can browse general content without registering. However, to access full Altbuida services, including invoicing, tax tools, and business networking, you must complete a registration process and create an account.
+                    You can browse general content without registering. However, to access full Altbuilda services, including invoicing, tax tools, and business networking, you must complete a registration process and create an account.
                 </Subsection>
 
-                <Subsection subtitle="Access To The Platform">
-                    While we aim to provide continuous and secure access to Altbuida, we endeavor to make the Website available uninterrupted and fault free. However, we will not be liable if for any reason the Website is unavailable at any time or for any period. Nature Of Information On our website:
+                <Subsection subtitle="Access to the Platform">
+                    While we aim to provide continuous and secure access to Altbuilda, we endeavor to make the Website available uninterrupted and fault free. However, we do not guarantee that the Website will always be available or work perfectly at all times; downtimes may arise in cases of maintenance, fraud or a fault in our systems, for an unascertainable period, usually beyond our control.
                     <br />
-                    <br />
+                    In the event of a service disruption, users will be notified promptly through appropriate communication channels, and we will work diligently to restore access as quickly as possible.
+                </Subsection>
+
+                <Subsection subtitle="Nature Of Information On our website">
                     <BulletListItem>
                         All information on our website is only intended to provide you with general information about us, our products, services and objectives. Nothing on the website should be treated as an offer but merely as an invitation to do business with us.
                     </BulletListItem>
@@ -58,34 +57,64 @@ const TermsContentSection: React.FC = () => {
                 </Subsection>
 
                 <Subsection subtitle="Nature of the information on the platform?">
-                    All content on Altbuida is intended for general informational purposes and does not constitute legal, tax, or professional advice. You are encouraged to consult appropriate advisors before making decisions based on information from this platform.
+                    All content on Altbuilda is intended for general informational purposes and does not constitute legal, tax, or professional advice. You are encouraged to consult appropriate advisors before making decisions based on information from this platform.
                 </Subsection>
 
                 <Subsection subtitle="Subscription Plans and Services">
-                    Altbuida offers subscription-based services designed to support SMEs. Subscription fees are billed annually and are non-refundable, except where required by applicable law. We reserve the right to revise pricing, with notice provided before any changes take effect.
+                    Altbuilda offers subscription-based services designed to support SMEs. Subscription fees are billed annually and are non-refundable, except where required by applicable law. We reserve the right to revise pricing, with notice provided before any changes take effect.
                 </Subsection>
 
                 <Subsection subtitle="Permitted Use and Access">
-                    You are granted a personal, non-transferable license to use Altbuida in accordance with these Terms. You may not:
+                    You are granted a personal, non-transferable license to use Altbuilda in accordance with these Terms. You may not:
                     <br />
                     <br />
                     <BulletListItem>
-                        Share, sublicense, or resell platform access
+                        Share, sublicense, or resell platform access.
                     </BulletListItem>
                     <br />
                     <BulletListItem>
-                        Copy, modify, or reverse-engineer the platform
+                        Copy, modify, or reverse-engineer the platform.
                     </BulletListItem>
                     <br />
                     <BulletListItem>
-                        Use Altbuida for unlawful or fraudulent activity
+                        Use Altbuilda for unlawful or fraudulent activity.
                     </BulletListItem>
                     <br />
                     <BulletListItem>
-                        Upload or disseminate harmful code or content
+                        Upload or disseminate harmful code or content.
                     </BulletListItem>
                     <br />
-                    Violations may result in suspension or termination of access without notice.
+                    <BulletListItem>
+                        Engage in any of the following prohibited activities or business types:
+                        <ul className="list-inside pl-8">
+                            <br />
+                            <li className="marker:text-lg md:marker:text-xl list-inside marker:content-['⮚']">
+                                Gambling or betting businesses
+                            </li>
+                            <br />
+                            <li className="marker:text-lg md:marker:text-xl list-inside marker:content-['⮚']">
+                                Adult entertainment, pornography, or sexually explicit content
+                            </li>
+                            <br />
+                            <li className="marker:text-lg md:marker:text-xl list-inside marker:content-['⮚']">
+                                Interest-based (riba) financial services
+                            </li>
+                            <br />
+                            <li className="marker:text-lg md:marker:text-xl list-inside marker:content-['⮚']">
+                                Sale or production of alcoholic beverages
+                            </li>
+                            <br />
+                            <li className="marker:text-lg md:marker:text-xl list-inside marker:content-['⮚']">
+                                Tobacco or narcotic substance trade
+                            </li>
+                            <br />
+                            <li className="marker:text-lg md:marker:text-xl list-inside marker:content-['⮚']">
+                                Sale or processing of pork and pork products
+                            </li>
+                        </ul>
+                    </BulletListItem>
+                    <br />
+                    Violations may result in suspension or termination of access with notice stating the reason for access termination before suspending or terminating access, except in cases involving severe misconduct such as fraud.
                 </Subsection>
 
                 <Subsection subtitle="Account Security">
@@ -98,7 +127,7 @@ const TermsContentSection: React.FC = () => {
 
                 <Subsection subtitle="Disclaimers and Limitations of Liability">
                     <BulletListItem>
-                        We accept no liability, no matter how that may be caused, and whether directly or indirectly, for any loss or damage caused to you or another (including but not limited to loss of income, business, profits, opportunity, contracts, actual or anticipated savings, data, reputation or goodwill) arising from your use of the Website.
+                        <strong>We accept no liability</strong>, no matter how that may be caused, and whether directly or indirectly, for any loss or damage caused to you or another (including but not limited to loss of income, business, profits, opportunity, contracts, actual or anticipated savings, data, reputation or goodwill) arising from your use of the Website.
                     </BulletListItem>
                     <br />
                     <BulletListItem>
@@ -131,11 +160,11 @@ const TermsContentSection: React.FC = () => {
                 </Subsection>
 
                 <Subsection subtitle="Privacy and Data Usage">
-                    By using Altbuida, you consent to the collection and use of your data for platform functionality, marketing personalization, and service improvement. Data may be shared with verified third parties to fulfill services. For more details, please refer to our [Privacy Policy]
+                    By using Altbuilda, you consent to the collection and use of your data for platform functionality, marketing personalization, and service improvement. Data may be shared with verified third parties to fulfill services. For more details, please refer to our [Privacy Policy]
                 </Subsection>
 
                 <Subsection subtitle="Intellectual Property">
-                    All content, software, and branding on Altbuida are the intellectual property of Alternative Bank or its licensors. You may not reproduce, redistribute, or commercially exploit any material without prior written consent.
+                    All content, software, and branding on Altbuilda are the intellectual property of Alternative Bank or its licensors. You may not reproduce, redistribute, or commercially exploit any material without prior written consent.
                 </Subsection>
 
                 <Subsection subtitle="Modifications to these Terms">
@@ -153,7 +182,7 @@ const TermsContentSection: React.FC = () => {
                 </Subsection>
 
                 <Subsection subtitle="Third Party Links and Services">
-                    Altbuida may include links to third-party services such as payment processors or CAC registration. These services are governed by their respective terms. We are not responsible for the availability or content of these external sites.Third Party Links
+                    Altbuilda may include links to third-party services such as payment processors or CAC registration. These services are governed by their respective terms. We are not responsible for the availability or content of these external sites.
                     <br />
                     <br />
                     <BulletListItem>
@@ -185,12 +214,12 @@ const TermsContentSection: React.FC = () => {
                     We will use our best efforts to resolve any issue that may arise from the use of the Platform. However, we realize that there may be rare cases where we may not be able to resolve an issue to your satisfaction. In the event we cannot resolve a dispute between us, you agree that all matters related to any use or access to the Platform, or the services shall be referred to Mediation.
                 </Subsection>
 
-                <Subsection subtitle="Dispute Resolution">
+                <Subsection subtitle="Your Privacy">
                     We take the privacy of our Users very seriously. You understand that by using the Services, you consent to the collection, use, storage, and disclosure of your information.
                 </Subsection>
 
                 <Subsection subtitle="Governing Law">
-                    These Terms and your use of the Platform shall be governed by the laws of the Federal Republic of Nigeria, without giving effect to the principles of conflict of laws.
+                    These Terms and your use of the Platform shall be governed by the laws of the Federal Republic of Nigeria Islamic law of commercial jurisprudence as interpreted by the CBN Financial Regulatory Advisory Council of Experts. Where there is a conflict between the provisions of Islamic Commercial Law and any written laws of the Federal Republic of Nigeria, the Islamic Commercial Law shall prevail, being the applicable law governing such transactions., without giving effect to the principles of conflict of laws.
                 </Subsection>
 
                 <Subsection subtitle="Capacity To Enter into These Terms">
@@ -198,7 +227,7 @@ const TermsContentSection: React.FC = () => {
                 </Subsection>
 
                 <Subsection subtitle="Contact Us">
-                    If you have any inquires regarding our services, these Terms or the Website, you may reach us by sending a mail to help@altbank.ng and include the following information: your name, telephone number and a description of your concern or calling us on 01-7000555. We’re here to support your business growth. For inquiries or feedback, don’t hesitate to reach out.
+                    If you have any inquiries regarding our services, these Terms, or the Website, you may reach us by sending a mail to help@altbank.ng and include the following information: your name, telephone number and a description of your concern or calling us on 01-7000555. We’re here to support your business growth. For inquiries or feedback, don’t hesitate to reach out.
                 </Subsection>
             </section>
         </>
