@@ -4,13 +4,15 @@ import ToggleTheme from "./ToggleTheme"
 import { useEffect, useRef, useState } from "react"
 import { FiMenu } from "react-icons/fi"
 import { IoMdClose } from "react-icons/io"
-import { appLoginPage, appRegisterPage } from "../data/links"
 
 const Navbar: React.FC<{ behind?: boolean }> = ({ behind }) => {
     const [isSandwichMenuOpen, setIsSandwichMenuOpen] = useState<boolean>(false)
     const headerRef = useRef<HTMLElement>(null)
     const sandwichButtonRef = useRef<HTMLButtonElement>(null)
     const { pathname, hash } = useLocation()
+
+    const appLoginPage = import.meta.env.VITE_APP_URL + "/login"
+    const appRegisterPage = import.meta.env.VITE_APP_URL + "/register"
 
     const toggleSandwichMenu: React.MouseEventHandler = () => {
         setIsSandwichMenuOpen(!isSandwichMenuOpen)

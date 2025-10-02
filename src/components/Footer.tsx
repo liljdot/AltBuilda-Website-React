@@ -3,10 +3,11 @@ import signVector from "../assets/sign-vector.png"
 import footerLogo from "../assets/footer-logo.png"
 import { Link, useLocation } from "react-router-dom";
 import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
-import { appLoginPage, appRegisterPage } from "../data/links";
 
 const Footer: React.FC = () => {
     const { pathname } = useLocation()
+    const appLoginPage = import.meta.env.VITE_APP_URL + "/login"
+    const appRegisterPage = import.meta.env.VITE_APP_URL + "/register"
 
     return (
         <>
