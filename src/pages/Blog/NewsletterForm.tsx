@@ -1,12 +1,31 @@
+import { useMutation } from "@tanstack/react-query"
 import { useState } from "react"
 import { FiSend } from "react-icons/fi"
+import { subscribeNewsletter } from "../../api"
+import toast from "react-hot-toast"
 
 const NewsletterForm: React.FC = () => {
     const [email, setEmail] = useState<string>("")
 
+
+    const { mutate, isPending } = useMutation({
+        mutationFn: () => subscribeNewsletter(email),
+        onSuccess: () => {
+            toast.success("Thank you for subscribing to our newsletter!")
+            setEmail("")
+        },
+        onError: err => {
+            toast.error(err.message || "Something went wrong. Please try again")
+        }
+    })
+
     const handleSubmit: React.FormEventHandler = e => {
         e.preventDefault()
-        // submit form endpoint here
+
+        if (!email) {
+           return toast.error("Please enter an email")
+        }
+        mutate()
     }
 
     return (
@@ -35,7 +54,13 @@ const NewsletterForm: React.FC = () => {
                     </div>
 
                     <div className="flex w-full">
-                        <button className="btn btn-submit btn-primary text-neutral rounded-lg w-full shadow-none">Subscribe</button>
+                        <button disabled={isPending} className="btn btn-submit btn-primary text-neutral rounded-lg w-full shadow-none">
+                            {
+                                isPending
+                                    ? <span className="loading loading-spinner text-primary"></span>
+                                    : "Subscribe"
+                            }
+                        </button>
                     </div>
                 </form>
             </div>
