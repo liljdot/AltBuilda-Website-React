@@ -1,38 +1,76 @@
-import { ReactNode } from "react"
+interface Props {
+    document: {
+        "title": string
+        "introduction": string
+        "sections": {
+            "id": string
+            "title": string
+            "content": string
+            "order": number
+        }[]
+    }
+}
 
-interface SubsectionProps {
-    children?: React.ReactNode
+// interface SubsectionProps {
+//     children?: React.ReactNode
+//     subtitle?: string
+// }
+
+interface HTMLSubsectionProps {
+    content?: string
     subtitle?: string
 }
 
 
-const BulletListItem: React.FC<{ children: ReactNode }> = ({ children }) => {
+// const BulletListItem: React.FC<{ children: ReactNode }> = ({ children }) => {
 
-    return (
-        <li className="list-inside marker:text-2xl md:marker:text-3xl marker:content-['●']">
-            {children}
-        </li>
-    )
-}
+//     return (
+//         <li className="list-inside marker:text-2xl md:marker:text-3xl marker:content-['●']">
+//             {children}
+//         </li>
+//     )
+// }
 
-const Subsection: React.FC<SubsectionProps> = ({ children, subtitle }) => {
+// const Subsection: React.FC<SubsectionProps> = ({ children, subtitle }) => {
 
+//     return (
+//         <div className="w-full flex flex-col gap-3 md:gap-5">
+//             {subtitle && <h4 className="text-xl md:text-3xl font-semibold">{subtitle}</h4>}
+//             <p className="md:text-lg">
+//                 {children}
+//             </p>
+//         </div>
+//     )
+// }
+
+const HTMLSubsection: React.FC<HTMLSubsectionProps> = ({ content, subtitle }) => {
     return (
         <div className="w-full flex flex-col gap-3 md:gap-5">
             {subtitle && <h4 className="text-xl md:text-3xl font-semibold">{subtitle}</h4>}
-            <p className="md:text-lg">
-                {children}
-            </p>
+            <div
+                {...(!content ? {} : { dangerouslySetInnerHTML: { __html: content } })}
+            />
         </div>
     )
 }
 
-const TermsContentSection: React.FC = () => {
+const TermsContentSection: React.FC<Props> = ({ document }) => {
 
     return (
         <>
             <section className="bg-neutral w-full flex flex-col gap-9 md:gap-8 text-secondary px-4 sm:px-18 lg:px-37 xl:px-90 pt-15 md:pt-23 pb-20 md:pb-30">
-                <Subsection>
+                <HTMLSubsection
+                    content={document.introduction}
+                />
+                {
+                    document.sections.map(section => (
+                        <HTMLSubsection
+                            subtitle={section.title}
+                            content={section.content}
+                        />
+                    ))
+                }
+                {/* <Subsection>
                     These Terms and Conditions (“Agreement”) govern your access and use of the Altbuilda platform (“Platform” or “Website”), a product of Alternative Bank Limited (“Altbuilda”, “we”, “us”, or “our”). Additional product-specific terms may apply depending on your subscription type. By accessing or using the Platform, you confirm your agreement to be bound by these Terms. If you do not accept the Terms, please do not use the Platform.
                 </Subsection>
 
@@ -228,7 +266,7 @@ const TermsContentSection: React.FC = () => {
 
                 <Subsection subtitle="Contact Us">
                     If you have any inquiries regarding our services, these Terms, or the Website, you may reach us by sending a mail to help@altbank.ng and include the following information: your name, telephone number and a description of your concern or calling us on 01-7000555. We’re here to support your business growth. For inquiries or feedback, don’t hesitate to reach out.
-                </Subsection>
+                </Subsection> */}
             </section>
         </>
     )
