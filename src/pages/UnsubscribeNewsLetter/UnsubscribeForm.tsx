@@ -1,12 +1,34 @@
-import { useState } from "react"
+import { useMutation } from "@tanstack/react-query"
+import { EventHandler, SyntheticEvent, useState } from "react"
+import { unsubscribeNewsletter } from "../../api/fns"
+import toast from "react-hot-toast"
 
 const UnsubscribeForm: React.FC = () => {
     const [email, setEmail] = useState<string>("")
     const [unsubscribed, setUnsubscribed] = useState<boolean>(false)
-    const isPending = false
+    const { isPending, mutate } = useMutation({
+        mutationFn: () => unsubscribeNewsletter(email),
+        onSuccess: () => {
+            toast.success("Unsubscibed")
+            setUnsubscribed(true)
+        },
+        onError: err => {
+            toast.error(err.message || "Something went wrong. Please try again")
+        }
+    })
+
+    const handleSubmit: EventHandler<SyntheticEvent> = e => {
+        e.preventDefault()
+
+        if (!email) {
+            return toast.error("Please enter your email")
+        }
+
+        mutate()
+    }
 
     return (
-        <form onSubmit={e => { e.preventDefault(); setUnsubscribed(true) }} className="w-full flex flex-col gap-4">
+        <form onSubmit={handleSubmit} className="w-full flex flex-col gap-4">
             {
                 !unsubscribed ? (
                     <>
