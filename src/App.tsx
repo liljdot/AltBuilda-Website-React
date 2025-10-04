@@ -14,6 +14,7 @@ import { Toaster } from "react-hot-toast"
 import PrivacyPolicy from "./pages/PrivacyPolicy"
 import TermsandConditions from "./pages/TermsandConditions"
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query"
+import UnsubscribeNewsLetter from "./pages/UnsubscribeNewsLetter"
 
 function App() {
   const { theme } = useThemeContext()
@@ -33,6 +34,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:id" element={<BlogPostPage />} />
+            <Route path="/newsletter/unsubscribe" element={<UnsubscribeNewsLetter />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/terms-and-conditions" element={<TermsandConditions />} />
             <Route path="*" element={<NotFound />} />
