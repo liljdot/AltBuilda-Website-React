@@ -35,6 +35,20 @@ const subscribeNewsletter = (email: string) => {
         .then(res => !res.ok ? rejectJson(res) : res.json())
 }
 
+const unsubscribeNewsletter = (email: string) => {
+    return fetch(
+        `${baseURL}/api/v1/Admin/content-mgmt/blogs-newsletter/unsubscribe`,
+        {
+            credentials: "include",
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ email })
+        })
+        .then(res => !res.ok ? rejectJson(res) : res.json())
+}
+
 const getPrivacyPolicy = () => {
     return fetch(`${baseURL}/api/v1/Content/privacy-policy`)
         .then(res => !res.ok ? rejectJson : res.json())
@@ -47,6 +61,7 @@ const getTermsAndConditions = () => {
 
 export {
     subscribeNewsletter,
+    unsubscribeNewsletter,
     getPrivacyPolicy,
     getTermsAndConditions
 }
