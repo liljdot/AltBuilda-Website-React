@@ -19,6 +19,8 @@ export interface GetPrivacyPolicyResponse {
     }
 }
 
+export type GetTermsAndConditionsResponse = GetPrivacyPolicyResponse
+
 const subscribeNewsletter = (email: string) => {
     return fetch(
         `${baseURL}/api/v1/Admin/content-mgmt/blogs-newsletter/subscribe`,
@@ -38,7 +40,13 @@ const getPrivacyPolicy = () => {
         .then(res => !res.ok ? rejectJson : res.json())
 }
 
+const getTermsAndConditions = () => {
+    return fetch(`${baseURL}/api/v1/Content/terms-conditions`)
+        .then(res => !res.ok ? rejectJson : res.json())
+}
+
 export {
     subscribeNewsletter,
-    getPrivacyPolicy
+    getPrivacyPolicy,
+    getTermsAndConditions
 }
