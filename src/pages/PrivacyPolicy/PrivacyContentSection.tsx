@@ -1,37 +1,76 @@
-import { ReactNode } from "react"
+interface Props {
+    document: {
+        "title": string
+        "introduction": string
+        "sections": {
+            "id": string
+            "title": string
+            "content": string
+            "order": number
+        }[]
+    }
+}
 
-interface SubsectionProps {
-    children?: React.ReactNode
+// interface SubsectionProps {
+//     children?: React.ReactNode
+//     subtitle?: string
+// }
+
+interface HTMLSubsectionProps {
+    content?: string
     subtitle?: string
 }
 
-const BulletListItem: React.FC<{ children: ReactNode }> = ({ children }) => {
+// const BulletListItem: React.FC<{ children: ReactNode }> = ({ children }) => {
 
-    return (
-        <li className="list-inside marker:text-2xl md:marker:text-3xl marker:content-['●']">
-            {` ${children}`}
-        </li>
-    )
-}
+//     return (
+//         <li className="list-inside marker:text-2xl md:marker:text-3xl marker:content-['●']">
+//             {` ${children}`}
+//         </li>
+//     )
+// }
 
-const Subsection: React.FC<SubsectionProps> = ({ children, subtitle }) => {
+// const Subsection: React.FC<SubsectionProps> = ({ children, subtitle }) => {
 
+//     return (
+//         <div className="w-full flex flex-col gap-3 md:gap-5">
+//             {subtitle && <h4 className="text-xl md:text-3xl font-semibold">{subtitle}</h4>}
+//             <p className="md:text-lg">
+//                 {children}
+//             </p>
+//         </div>
+//     )
+// }
+
+const HTMLSubsection: React.FC<HTMLSubsectionProps> = ({ content, subtitle }) => {
     return (
         <div className="w-full flex flex-col gap-3 md:gap-5">
             {subtitle && <h4 className="text-xl md:text-3xl font-semibold">{subtitle}</h4>}
-            <p className="md:text-lg">
-                {children}
-            </p>
+            <div
+                {...(!content ? {} : { dangerouslySetInnerHTML: { __html: content } })}
+            />
         </div>
     )
 }
 
-const PrivacyContentSection: React.FC = () => {
+const PrivacyContentSection: React.FC<Props> = ({ document }) => {
 
     return (
         <>
-            <section className="bg-neutral w-full flex flex-col gap-9 md:gap-8 text-secondary px-4 sm:px-18 lg:px-37 xl:px-90 pt-15 md:pt-23 pb-20 md:pb-30">
-                <Subsection>
+            <section
+                className="bg-neutral w-full flex flex-col gap-9 md:gap-8 text-secondary px-4 sm:px-18 lg:px-37 xl:px-90 pt-15 md:pt-23 pb-20 md:pb-30">
+                <HTMLSubsection
+                    content={document.introduction}
+                />
+                {
+                    document.sections.map(section => (
+                        <HTMLSubsection
+                            subtitle={section.title}
+                            content={section.content}
+                        />
+                    ))
+                }
+                {/* <Subsection>
                     At Alternative Bank Limited, we take your privacy seriously. We are committed to protecting your personal information and ensuring your data is collected, stored, and processed lawfully and transparently through Altbuida.
                     <br />
                     <br />
@@ -73,15 +112,15 @@ const PrivacyContentSection: React.FC = () => {
                     <br />
                     <br />
                     <BulletListItem>
-                        Session Cookies. We use Session Cookies to operate our Service. Session cookies will expire at the end of your browser session and allow us to link your actions during that browser session.
+                        Session Cookies. We use Session Cookies to operate our Service. Session cookies will expire at the end of your browser session and allow us to link your actions during that browser session.
                     </BulletListItem>
                     <br />
                     <BulletListItem>
-                        Preference Cookies. We use Preference Cookies to remember your preferences and actions, across multiple sites.
+                        Preference Cookies. We use Preference Cookies to remember your preferences and actions, across multiple sites.
                     </BulletListItem>
                     <br />
                     <BulletListItem>
-                        Security Cookies. We use Security Cookies for security purposes.
+                        Security Cookies. We use Security Cookies for security purposes.
                     </BulletListItem>
                     <br />
                     <BulletListItem>
@@ -207,7 +246,7 @@ const PrivacyContentSection: React.FC = () => {
                     We have implemented appropriate organizational and technical measures to keep your Personal Information/Data confidential and secure. This includes the use of encryption, access controls and other forms of security to ensure that your data is protected. We require all parties including our staff and third-parties processing data on our behalf to comply with relevant policies and guidelines. Where you have a password which grants you access to specific areas on our site or to any of our services, you are responsible for keeping this password confidential. We request that you do not share your password or other authentication details (e.g. token generated codes) with anyone.
                     <br />
                     <br />
-                    Although we have taken measures to secure and keep your information confidential, because the security of your data is important to us, please be aware that no method of transmission over the Internet, or method of electronic storage can guarantee 100% security at all times. While we strive to use commercially acceptable means to protect your Personal Data, we cannot guarantee its absolute security, you are responsible for securing and maintaining the privacy of your password and Account/profile registration information and verifying that the Personal Data we maintain about you is valid, accurate and up to date. If we receive instructions using your account login information, we will consider that you have authorized the instructions and process your instruction accordingly and without incurring any liability for doing so.
+                    Although we have taken measures to secure and keep your information confidential, because the security of your data is important to us, please be aware that no method of transmission over the Internet, or method of electronic storage can guarantee 100% security at all times. While we strive to use commercially acceptable means to protect your Personal Data, we cannot guarantee its absolute security, you are responsible for securing and maintaining the privacy of your password and Account/profile registration information and verifying that the Personal Data we maintain about you is valid, accurate and up to date. If we receive instructions using your account login information, we will consider that you have authorized the instructions and process your instruction accordingly and without incurring any liability for doing so.
                 </Subsection>
 
                 <Subsection subtitle="How Long We Keep Your Information">
@@ -274,11 +313,11 @@ const PrivacyContentSection: React.FC = () => {
                 </Subsection>
 
                 <Subsection subtitle="Third Party Websites">
-                    Our website, related websites and mobile applications may have links to or from other websites that are not operated by us. We have no control over and assume no responsibility for the security, privacy practices or content of third-party websites or services. We recommend that you always read the privacy and security statements on these websites.
+                    Our website, related websites and mobile applications may have links to or from other websites that are not operated by us. We have no control over and assume no responsibility for the security, privacy practices or content of third-party websites or services. We recommend that you always read the privacy and security statements on these websites.
                 </Subsection>
 
                 <Subsection subtitle="Service Providers">
-                    We may employ third party companies and individuals to facilitate our Service (“Service Providers”), to provide the Service on our behalf, to perform specific Service-related roles  or to assist us in analysing how our Service is used. These third parties have access to your Personal Data only to perform these tasks on our behalf and are obligated not to disclose or use it for any other purpose outside of the service-specific need for which the data is required.
+                    We may employ third party companies and individuals to facilitate our Service (“Service Providers”), to provide the Service on our behalf, to perform specific Service-related roles  or to assist us in analysing how our Service is used. These third parties have access to your Personal Data only to perform these tasks on our behalf and are obligated not to disclose or use it for any other purpose outside of the service-specific need for which the data is required.
                 </Subsection>
 
                 <Subsection subtitle="Changes To This Policy">
@@ -296,7 +335,7 @@ const PrivacyContentSection: React.FC = () => {
                     <br />
                     <br />
                     01-7000555
-                </Subsection>
+                </Subsection> */}
             </section>
         </>
     )
