@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { BlogPost } from "../../types";
 import { MdArrowOutward } from "react-icons/md";
+import { format } from "date-fns"
 
 interface BlogPostsSectionProps {
     blogPosts: BlogPost[]
@@ -17,14 +18,14 @@ const BlogPostCard: React.FC<BlogPostCardProps> = ({ post }) => {
         <Link to={`/blog/${post.id}`} target="_blank" className="mx-auto card bg-neutral shrink-0  w-full sm:w-96 transition-all ease-in-out duration-300 hover:underline hover:scale-102">
             <figure className="rounded-lg  sm:h-68">
                 <img
-                    src={post.image}
+                    src={post.coverImageUrl}
                     alt={post.title}
                     className="size-full" />
             </figure>
 
             <div className="card-body flex flex-col gap-6 p-0 mt-5 md:mt-6">
                 <div className="flex flex-col gap-2">
-                    <h6 className="text-sm text-primary font-semibold">{post.subject}</h6>
+                    <h6 className="text-sm text-primary font-semibold">{post.category}</h6>
 
                     <div className="flex flex-row justify-between items-start text-secondary">
                         <h2 className="card-title md:text-2xl font-semibold max-w-86">{post.title}</h2>
@@ -36,14 +37,14 @@ const BlogPostCard: React.FC<BlogPostCardProps> = ({ post }) => {
                 <div className="flex flex-row gap-3">
                     <div className="avatar">
                         <div className="w-10 rounded-full">
-                            <img src={post.author.image || placeholderAuthorImage} />
+                            <img src={post.authorImageUrl || placeholderAuthorImage} />
                         </div>
                     </div>
 
                     <div className="text-secondary text-sm">
-                        <p className="font-semibold">{post.author.name}</p>
+                        <p className="font-semibold">{post.author}</p>
 
-                        <p>{`${post.date.toLocaleDateString("en-UK", { day: "2-digit", month: "short", year: "numeric" })}`}</p>
+                        <p>{`${format(post.publishedAt, "dd MMM y")}`}</p>
                     </div>
                 </div>
             </div>
