@@ -1,1 +1,1 @@
-export type { BlogPost, FAQ, TemplateBlogPost } from "./entities"
+export type { BlogPost, FAQ, TemplateBlogPost, BlogPostForPage } from "./entities"
