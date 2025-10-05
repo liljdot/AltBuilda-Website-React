@@ -83,7 +83,7 @@ const unsubscribeNewsletter = (email: string) => {
 }
 
 const getBlogPosts = () => {
-    return fetch(`${baseURL}/api/v1/Admin/content-mgmt/blogs-newsletter`)
+    return fetch(`${baseURL}/api/v1/Admin/content-mgmt/blogs-newsletter?Status=Published`)
         .then(res => !res.ok ? rejectJson(res) : res.json())
 }
 
