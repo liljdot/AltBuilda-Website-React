@@ -1,10 +1,10 @@
-import { BlogPost } from "../types";
 import howToRegisterBlogImage from "../assets/how-to-register-blog-image-min.png"
 import understandingTaxesBlogImage from "../assets/understanding-taxes-blog-image-min.png"
 import boostingSalesBlogImage from "../assets/boosting-sales-blog-image-min.png"
 import hustleToStructureBlogImage from "../assets/hustle-to-structure-blog-image.png"
+import { TemplateBlogPost } from "../types"
 
-const templateBlogPosts: BlogPost[] = [
+const templateBlogPosts: TemplateBlogPost[] = [
     {
         id: "1",
         title: "How to Register Your Business in Nigeria (Without Losing Your Mind)",
