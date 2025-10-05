@@ -34,6 +34,13 @@ export interface BlogPost {
     "publishedAt": string
 }
 
+interface BlogPostWithContent extends BlogPost {
+    preview: string
+    body: string
+}
+
+export type BlogPostForPage = BlogPostWithContent
+
 export interface FAQ {
     question: string
     answer: string
