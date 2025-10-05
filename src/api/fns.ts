@@ -89,7 +89,7 @@ const getBlogPosts = () => {
 
 const getSingleBlogPost = (id: string) => {
     return fetch(`${baseURL}/api/v1/Admin/content-mgmt/blogs-newsletter/${id}`)
-        .then(res => !res.ok ?  new Error("") : res.json()) // TODO: return to rejectJson(res) when 404 error response is fixed
+        .then(res => !res.ok ? rejectJson(res) : res.json())
 }
 
 const getPrivacyPolicy = () => {
