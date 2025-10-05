@@ -1,9 +1,15 @@
+import { useQuery } from "@tanstack/react-query";
 import ActionButton from "../../components/ActionButton";
-import templateBlogPosts from "../../data/templateBlogPosts";
+// import templateBlogPosts from "../../data/templateBlogPosts";
 import BlogPosts from "./BlogPosts";
+import { getBlogPosts, GetBlogPostsResponse } from "../../api/fns";
 
 const TipsSection: React.FC = () => {
-    const blogPosts = templateBlogPosts
+    const { data, isLoading } = useQuery<GetBlogPostsResponse>({
+        queryFn: getBlogPosts,
+        queryKey: ["blogPosts"]
+    })
+    const blogPosts = data?.result.items
 
     return (
         <>
@@ -13,7 +19,11 @@ const TipsSection: React.FC = () => {
                 </div>
 
                 <div className="w-full">
-                    <BlogPosts posts={blogPosts} />
+                    {
+                        isLoading
+                            ? <span className="loading loading-spinner text-primary"></span>
+                            : <BlogPosts posts={blogPosts || []} />
+                    }
                 </div>
 
                 <div className="flex flex-row justify-around mt-5">
