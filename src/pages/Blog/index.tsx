@@ -1,21 +1,35 @@
 import BlogBanner from "./BlogBanner"
 import BlogPostsSection from "./BlogPostsSection"
-import templateBlogPosts from "../../data/templateBlogPosts"
-import { useState } from "react"
+// import templateBlogPosts from "../../data/templateBlogPosts"
+import { useEffect, useState } from "react"
 import { BlogPost } from "../../types"
 import usePaginate from "../../hooks/usePaginate"
 import ReactPaginate from "react-paginate"
 import { IoArrowBack, IoArrowForward } from "react-icons/io5"
 import NewsletterForm from "./NewsletterForm"
 import useDocumentTitle from "../../hooks/useDocumentTitle"
+import { useQuery } from "@tanstack/react-query"
+import { getBlogPosts, GetBlogPostsResponse } from "../../api/fns"
 
 const Blog: React.FC = () => {
     useDocumentTitle("Blog | AltBuilda")
 
-    // get blogs here 
-    const [blogPosts, setBlogPosts] = useState<BlogPost[]>([...templateBlogPosts])
+    const { data, isLoading, isSuccess } = useQuery<GetBlogPostsResponse>({
+        queryFn: getBlogPosts,
+        queryKey: ["blogPosts"],
+    })
+    const [blogPosts, setBlogPosts] = useState<BlogPost[]>([])
     const pageCount = Math.ceil(blogPosts.length / 3)
     const [displayedBlogposts, setPageNumber] = usePaginate(blogPosts, 3)
+
+    useEffect(() => {
+        if (isSuccess) {
+            setBlogPosts(data.result.items)
+        }
+    }, [
+        isSuccess,
+        data?.result.items
+    ])
 
     // filter function for search. pass down to banner
 
@@ -25,8 +39,17 @@ const Blog: React.FC = () => {
         <>
             <main className="p-0 bg-neutral w-full">
                 <div className="max-w-450 mx-auto md:px-20 pb-20">
-                    <BlogBanner posts={blogPosts} setPosts={setBlogPosts} />
-                    <BlogPostsSection blogPosts={displayedBlogposts} />
+                    <BlogBanner posts={data?.result.items || []} setPosts={setBlogPosts} />
+                    {
+                        isLoading
+                            ? (
+                                <div className="flex justify-center items-center mt-10">
+                                    <span className="loading loading-spinner loading-xl text-primary"></span>
+                                </div>
+                            )
+                            : <BlogPostsSection blogPosts={displayedBlogposts} />
+                    }
+
                     {/* paginate container  */}
                     <div className="px-8 py-16 flex bg-neutral">
                         {/* hidden for mobile  */}
