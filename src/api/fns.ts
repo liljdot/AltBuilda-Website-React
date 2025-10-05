@@ -1,3 +1,4 @@
+import { BlogPostForPage } from "../types"
 import rejectJson from "./rejectJson"
 
 const baseURL = import.meta.env.VITE_API_BASE_URL
@@ -43,6 +44,14 @@ export interface GetBlogPostsResponse {
     }
 }
 
+export interface GetSingleBlogPostResponse {
+    "success": boolean
+    "message": string
+    "remainingDraftsToGenerate": number | null
+    "statusCode": number
+    "result": BlogPostForPage
+}
+
 export type GetTermsAndConditionsResponse = GetPrivacyPolicyResponse
 
 const subscribeNewsletter = (email: string) => {
@@ -72,9 +81,15 @@ const unsubscribeNewsletter = (email: string) => {
         })
         .then(res => !res.ok ? rejectJson(res) : res.json())
 }
+
 const getBlogPosts = () => {
     return fetch(`${baseURL}/api/v1/Admin/content-mgmt/blogs-newsletter`)
         .then(res => !res.ok ? rejectJson(res) : res.json())
+}
+
+const getSingleBlogPost = (id: string) => {
+    return fetch(`${baseURL}/api/v1/Admin/content-mgmt/blogs-newsletter/${id}`)
+        .then(res => !res.ok ?  new Error("") : res.json()) // TODO: return to rejectJson(res) when 404 error response is fixed
 }
 
 const getPrivacyPolicy = () => {
@@ -91,6 +106,7 @@ export {
     subscribeNewsletter,
     unsubscribeNewsletter,
     getBlogPosts,
+    getSingleBlogPost,
     getPrivacyPolicy,
     getTermsAndConditions
 }
