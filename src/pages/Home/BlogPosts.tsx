@@ -16,8 +16,8 @@ const SinglePost: React.FC<SinglePostProps> = ({post}) => {
             <Link to={`/blog/${post.id}`} target="_blank" className="card justify-self-center bg-neutral shrink-0 w-72 sm:w-102.5 transition-all ease-in-out duration-300 hover:underline hover:scale-102 pt-2">
                 <figure className="rounded-lg">
                     <img
-                        src={post.image}
-                        alt={post.subject} />
+                        src={post.coverImageUrl}
+                        alt={post.title} />
                 </figure>
 
                 <div className="card-body p-0 mt-5 max-w-86">
