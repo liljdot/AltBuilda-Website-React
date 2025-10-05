@@ -1,4 +1,4 @@
-import { useRef } from "react"
+import { useEffect, useRef } from "react"
 import { BlogPost } from "../../types"
 
 interface Props {
@@ -6,11 +6,14 @@ interface Props {
     setPosts: React.Dispatch<React.SetStateAction<BlogPost[]>>
 }
 
-const BlogBanner: React.FC<Props> = ({posts, setPosts}) => {
+const BlogBanner: React.FC<Props> = ({ posts, setPosts }) => {
     const postsRef = useRef<BlogPost[]>(posts)
+    useEffect(() => {
+        postsRef.current = posts
+    }, [posts])
 
     const handleChange: React.ChangeEventHandler<HTMLInputElement> = e => {
-        setPosts(postsRef.current.filter(post => post.title.toLowerCase().includes(e.target.value.toLowerCase()) || post.subject.toLowerCase().includes(e.target.value.toLowerCase())))
+        setPosts(postsRef.current.filter(post => post.title.toLowerCase().includes(e.target.value.toLowerCase()) || post.category.toLowerCase().includes(e.target.value.toLowerCase())))
     }
 
     return (
