@@ -1,21 +1,4 @@
-// export interface BlogPost {
-//     id: string
-//     image: string
-//     title: string
-//     subject: string
-//     body: {
-//         subtitle: string
-//         text: string
-//     } []
-//     conclusion?: string
-//     author: {
-//         name: string
-//         image?: string
-//     }
-//     date: Date
-// }
-
-export interface BlogPost {
+export interface TemplateBlogPost {
     id: string
     image: string
     title: string
@@ -38,15 +21,28 @@ export interface BlogPost {
     date: Date
 }
 
+export interface BlogPost {
+    "id": string
+    "title": string
+    "author": string
+    "coverImageUrl": string
+    "authorImageUrl": string
+    "category": string
+    "status": string
+    "createdAt": string
+    "updatedAt": string
+    "publishedAt": string
+}
+
 export interface FAQ {
     question: string
     answer: string
 }
 
 export type BodyType =
-{ type: "SUBTITLE", content: string; } |
-{ type: "PARAGRAPH", content: string; } |
-{ type: "HEADING", content: string; } |
-{ type: "ULIST", content: string[]; } |
-{ type: "OLIST", content: string[]; } |
-{ type: "LINEBREAK" }
+    { type: "SUBTITLE", content: string; } |
+    { type: "PARAGRAPH", content: string; } |
+    { type: "HEADING", content: string; } |
+    { type: "ULIST", content: string[]; } |
+    { type: "OLIST", content: string[]; } |
+    { type: "LINEBREAK" }
