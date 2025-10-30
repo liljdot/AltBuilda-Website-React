@@ -1,5 +1,5 @@
-import navbarLogo from "../assets/navbar-logo.png"
-import navbarLogoDark from "../assets/navbar-logo-dark.png"
+import navbarLogo from "../assets/navbar-logo.svg"
+import navbarLogoDark from "../assets/navbar-logo-dark.svg"
 import useThemeContext from "../hooks/useThemeContext"
 
 const NavbarLogo: React.FC = () => {
