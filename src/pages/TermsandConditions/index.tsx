@@ -5,7 +5,7 @@ import TermsContentSection from "./TermsContentSection"
 import { getTermsAndConditions } from "../../api/fns"
 
 const TermsandConditions: React.FC = () => {
-    useDocumentTitle("T's & C's | AltBuilda")
+    useDocumentTitle("T's & C's | Bold by ALT")
     const { data, isLoading } = useQuery({
         queryFn: getTermsAndConditions,
         queryKey: ["TermsAndConditions"]

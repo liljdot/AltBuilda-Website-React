@@ -5,7 +5,7 @@ import PrivacyContentSection from "./PrivacyContentSection"
 import { getPrivacyPolicy, GetPrivacyPolicyResponse } from "../../api/fns"
 
 const PrivacyPolicy: React.FC = () => {
-    useDocumentTitle("Privacy Policy | AltBuilda")
+    useDocumentTitle("Privacy Policy | Bold by ALT")
     const { data, isLoading } = useQuery<GetPrivacyPolicyResponse>({
         queryFn: getPrivacyPolicy,
         queryKey: ["privacyPolicy"]

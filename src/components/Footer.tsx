@@ -34,7 +34,7 @@ const Footer: React.FC = () => {
                         <div className="navbar flex sm:hidden flex-col gap-19 items-start mt-18">
                             <div className="flex flex-col gap-9 self-start">
                                 <Link to={"/"}>
-                                    <img src={footerLogo} alt="AltBuilda Logo" width={97} />
+                                    <img src={footerLogo} alt="Bold by ALT Logo" width={97} />
                                 </Link>
 
                                 <div className="flex flex-row gap-8.5 p-0 text-white b">
@@ -65,7 +65,7 @@ const Footer: React.FC = () => {
                         {/* hidden for mobile screens  */}
                         <div className="hidden navbar sm:flex flex-row justify-between border-b-gray-700 border-b pb-6">
                             <Link to={"/"}>
-                                <img src={footerLogo} alt="AltBuilda Logo" width={97} />
+                                <img src={footerLogo} alt="Bold by ALT Logo" width={97} />
                             </Link>
 
                             <nav className="grid grid-flow-col gap-11 text-white text-[1rem] font-semibold p-0">

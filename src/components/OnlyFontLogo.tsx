@@ -9,7 +9,7 @@ interface Props {
 const OnlyFontLogo: React.FC<Props> = ({className}) => {
     const { theme } = useThemeContext()
 
-    return <img src={theme == "light" ? onlyFontLogoBlack : onlyFontLogo} alt="AltBuilda" className={className} />
+    return <img src={theme == "light" ? onlyFontLogoBlack : onlyFontLogo} alt="Bold by ALT" className={className} />
 }
 
 export default OnlyFontLogo

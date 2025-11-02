@@ -6,7 +6,7 @@ import SelectedGroupSection from "./SelectedGroupSection"
 import useDocumentTitle from "../../hooks/useDocumentTitle"
 
 const FAQ: React.FC = () => {
-    useDocumentTitle("FAQ | AltBuilda")
+    useDocumentTitle("FAQ | Bold by ALT")
     const [displayedFAQGroups, setDisplayedFAQGroups] = useState<FAQGroup[]>(FAQGroups) // set selected displayed groups for search fn
     const [selectedFAQGroup, setSelectedFAQGroup] = useState<FAQGroup>()
 

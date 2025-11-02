@@ -17,7 +17,7 @@ const templateBlogPosts: TemplateBlogPost[] = [
             },
             {
                 type: "PARAGRAPH",
-                content: "Starting a business in Nigeria is a big deal — but getting it officially registered with the Corporate Affairs Commission (CAC) can feel like a confusing maze. Good news? It doesn’t have to be. \n\nIn this step-by-step guide, we’ll break down the CAC registration process in plain English, so you can handle it like a boss — or let Altbuilda handle it for just ₦20,000."
+                content: "Starting a business in Nigeria is a big deal — but getting it officially registered with the Corporate Affairs Commission (CAC) can feel like a confusing maze. Good news? It doesn’t have to be. \n\nIn this step-by-step guide, we’ll break down the CAC registration process in plain English, so you can handle it like a boss — or let Bold by ALT handle it for just ₦20,000."
 
             },
             {
@@ -79,7 +79,7 @@ const templateBlogPosts: TemplateBlogPost[] = [
             },
             {
                 type: "PARAGRAPH",
-                content: "CAC’s registration fee varies based on your business type. With Altbuilda, you get everything sorted for just ₦20,000 (including processing!)."
+                content: "CAC’s registration fee varies based on your business type. With Bold by ALT, you get everything sorted for just ₦20,000 (including processing!)."
             },
             {
                 type: "HEADING",
@@ -110,11 +110,11 @@ const templateBlogPosts: TemplateBlogPost[] = [
             },
             {
                 type: "SUBTITLE",
-                content: "Or… Let Altbuilda Handle It For You"
+                content: "Or… Let Bold by ALT Handle It For You"
             },
             {
                 type: "PARAGRAPH",
-                content: "We get it — not everyone wants to deal with the CAC portal and document drama. That’s why Altbuilda offers full CAC registration support for just ₦20,000. \n \nWe’ll take care of:"
+                content: "We get it — not everyone wants to deal with the CAC portal and document drama. That’s why Bold by ALT offers full CAC registration support for just ₦20,000. \n \nWe’ll take care of:"
             },
             {
                 type: "ULIST",
@@ -137,7 +137,7 @@ const templateBlogPosts: TemplateBlogPost[] = [
             }
         ],
         action: {
-            text: "Start your CAC process on Altbuilda today",
+            text: "Start your CAC process on Bold by ALT today",
             link: ""
         },
         author: {
@@ -158,7 +158,7 @@ const templateBlogPosts: TemplateBlogPost[] = [
             },
             {
                 type: "PARAGRAPH",
-                content: "Taxes. The word alone makes most small business owners sweat. But staying compliant doesn’t have to be a headache — especially if you understand what’s required and you’re using the right tools to stay on track. \n\nThis guide breaks down the key taxes every SME in Nigeria needs to know, common mistakes to avoid, and how Altbuilda’s tax dashboard can save you time, stress, and even penalties."
+                content: "Taxes. The word alone makes most small business owners sweat. But staying compliant doesn’t have to be a headache — especially if you understand what’s required and you’re using the right tools to stay on track. \n\nThis guide breaks down the key taxes every SME in Nigeria needs to know, common mistakes to avoid, and how Bold by ALT’s tax dashboard can save you time, stress, and even penalties."
             },
             {
                 type: "LINEBREAK"
@@ -212,11 +212,11 @@ const templateBlogPosts: TemplateBlogPost[] = [
             },
             {
                 type: "SUBTITLE",
-                content: "How AltBuilda Makes Tax Compliance Easy"
+                content: "How Bold by ALT Makes Tax Compliance Easy"
             },
             {
                 type: "PARAGRAPH",
-                content: "Altbuilda’s built-in tax tools help you:"
+                content: "Bold by ALT’s built-in tax tools help you:"
             },
             {
                 type: "ULIST",
@@ -236,11 +236,11 @@ const templateBlogPosts: TemplateBlogPost[] = [
             },
             {
                 type: "PARAGRAPH",
-                content: "Don’t wait for penalties or audit letters. \n \nStart using Altbuilda’s tax dashboard to stay compliant, organized, and focused on growth."
+                content: "Don’t wait for penalties or audit letters. \n \nStart using Bold by ALT’s tax dashboard to stay compliant, organized, and focused on growth."
             }
         ],
         action: {
-            text: "Use Altbuilda’s tax dashboard to stay compliant",
+            text: "Use Bold by ALT’s tax dashboard to stay compliant",
             link: ""
         },
         author: {
@@ -263,7 +263,7 @@ const templateBlogPosts: TemplateBlogPost[] = [
 
             {
                 type: "PARAGRAPH",
-                content: "You don’t need a huge marketing budget to grow your business. In fact, some of the most effective strategies don’t cost a thing — just consistency, good tools, and smart execution. \n\nHere are 5 proven ways to increase sales without spending on ads, and how Altbuilda helps you put them into action."
+                content: "You don’t need a huge marketing budget to grow your business. In fact, some of the most effective strategies don’t cost a thing — just consistency, good tools, and smart execution. \n\nHere are 5 proven ways to increase sales without spending on ads, and how Bold by ALT helps you put them into action."
             },
             {
                 type: "LINEBREAK"
@@ -274,7 +274,7 @@ const templateBlogPosts: TemplateBlogPost[] = [
             },
             {
                 type: "PARAGRAPH",
-                content: "A clear, professional invoice builds credibility — and trust leads to repeat business. \n\nWith Altbuilda, you can:"
+                content: "A clear, professional invoice builds credibility — and trust leads to repeat business. \n\nWith Bold by ALT, you can:"
             },
             {
                 type: "ULIST",
@@ -297,7 +297,7 @@ const templateBlogPosts: TemplateBlogPost[] = [
             },
             {
                 type: "PARAGRAPH",
-                content: "If you don’t track your sales and revenue, you’re guessing Altbuilda gives you simple dashboards to:"
+                content: "If you don’t track your sales and revenue, you’re guessing Bold by ALT gives you simple dashboards to:"
             },
             {
                 type: "ULIST",
@@ -320,7 +320,7 @@ const templateBlogPosts: TemplateBlogPost[] = [
             },
             {
                 type: "PARAGRAPH",
-                content: "Your existing customers are your best marketers. Offer simple perks or discounts for every new customer they refer — and watch your client base grow organically. \n\nYou can even track referrals through manual tagging or CRM notes in Altbuilda. \n\nWhy it works: People trust recommendations from friends more than any ad."
+                content: "Your existing customers are your best marketers. Offer simple perks or discounts for every new customer they refer — and watch your client base grow organically. \n\nYou can even track referrals through manual tagging or CRM notes in Bold by ALT. \n\nWhy it works: People trust recommendations from friends more than any ad."
             },
             {
                 type: "LINEBREAK"
@@ -331,7 +331,7 @@ const templateBlogPosts: TemplateBlogPost[] = [
             },
             {
                 type: "PARAGRAPH",
-                content: "Altbuilda’s Market Hub is your digital networking space. Connect with other SMEs, showcase your offerings, and find people who need what you’re selling. \n\nWhy it works: Visibility = Opportunity. Especially when it's free."
+                content: "Bold by ALT’s Market Hub is your digital networking space. Connect with other SMEs, showcase your offerings, and find people who need what you’re selling. \n\nWhy it works: Visibility = Opportunity. Especially when it's free."
             },
             {
                 type: "LINEBREAK"
@@ -342,13 +342,13 @@ const templateBlogPosts: TemplateBlogPost[] = [
             },
             {
                 type: "PARAGRAPH",
-                content: "Sending regular, helpful updates (like promos or new products) keeps your brand top-of-mind. Altbuilda helps you export customer lists and organize them for easy outreach. \n\nWhy it works: Emails convert. And you own the contact list — unlike social media."
+                content: "Sending regular, helpful updates (like promos or new products) keeps your brand top-of-mind. Bold by ALT helps you export customer lists and organize them for easy outreach. \n\nWhy it works: Emails convert. And you own the contact list — unlike social media."
             }
         ],
         conclusion: [
             {
                 type: "SUBTITLE",
-                content: "Try These Growth Hacks Using AltBuilda’s Features."
+                content: "Try These Growth Hacks Using Bold by ALT’s Features."
             },
             {
                 type: "PARAGRAPH",
@@ -356,7 +356,7 @@ const templateBlogPosts: TemplateBlogPost[] = [
             }
         ],
         action: {
-            text: "Try these growth hacks using Altbuilda’s features",
+            text: "Try these growth hacks using Bold by ALT’s features",
             link: ""
         },
         author: {
@@ -377,7 +377,7 @@ const templateBlogPosts: TemplateBlogPost[] = [
             },
             {
                 type: "PARAGRAPH",
-                content: "You’ve been running your business from your phone. Orders are coming in, customers are paying — but deep down, you know it’s still just a hustle. If you want to go from side gig to serious brand, it’s time to put structure in place. \n\nThis isn’t just about looking legit — it’s about setting yourself up for growth, funding, and bigger opportunities. And with tools like Altbuilda, you don’t have to figure it out alone."
+                content: "You’ve been running your business from your phone. Orders are coming in, customers are paying — but deep down, you know it’s still just a hustle. If you want to go from side gig to serious brand, it’s time to put structure in place. \n\nThis isn’t just about looking legit — it’s about setting yourself up for growth, funding, and bigger opportunities. And with tools like Bold by ALT, you don’t have to figure it out alone."
             },
             {
                 type: "LINEBREAK"
@@ -428,11 +428,11 @@ const templateBlogPosts: TemplateBlogPost[] = [
             },
             {
                 type: "SUBTITLE",
-                content: "AltBuilda Makes It Seamless"
+                content: "Bold by ALT Makes It Seamless"
             },
             {
                 type: "PARAGRAPH",
-                content: "Whether you’re selling fashion, food, skincare, or services — Altbuilda gives you everything you need to move like a pro:"
+                content: "Whether you’re selling fashion, food, skincare, or services — Bold by ALT gives you everything you need to move like a pro:"
             },
             {
                 type: "ULIST",
@@ -453,7 +453,7 @@ const templateBlogPosts: TemplateBlogPost[] = [
         conclusion: [
             {
                 type: "SUBTITLE",
-                content: "Subscribe To AltBuilda’s Premium and Go Pro"
+                content: "Subscribe To Bold by ALT’s Premium and Go Pro"
             },
             {
                 type: "PARAGRAPH",
@@ -461,7 +461,7 @@ const templateBlogPosts: TemplateBlogPost[] = [
             }
         ],
         action: {
-            text: "Subscribe to AltBuilda’s premium and go pro",
+            text: "Subscribe to Bold by ALT’s premium and go pro",
             link: ""
         },
         author: {

@@ -12,7 +12,7 @@ import { useQuery } from "@tanstack/react-query"
 import { getBlogPosts, GetBlogPostsResponse } from "../../api/fns"
 
 const Blog: React.FC = () => {
-    useDocumentTitle("Blog | AltBuilda")
+    useDocumentTitle("Blog | Bold by ALT")
 
     const { data, isLoading, isSuccess } = useQuery<GetBlogPostsResponse>({
         queryFn: getBlogPosts,

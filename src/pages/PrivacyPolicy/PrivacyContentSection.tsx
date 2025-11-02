@@ -71,16 +71,16 @@ const PrivacyContentSection: React.FC<Props> = ({ document }) => {
                     ))
                 }
                 {/* <Subsection>
-                    At Alternative Bank Limited, we take your privacy seriously. We are committed to protecting your personal information and ensuring your data is collected, stored, and processed lawfully and transparently through Altbuida.
+                    At Alternative Bank Limited, we take your privacy seriously. We are committed to protecting your personal information and ensuring your data is collected, stored, and processed lawfully and transparently through Bold by ALT.
                     <br />
                     <br />
-                    This Privacy Policy (“Policy”) explains how we collect, use, store, and share the personal data you provide when accessing Altbuida through our website, mobile platform, and other communication or service channels (collectively referred to as “Services”).
+                    This Privacy Policy (“Policy”) explains how we collect, use, store, and share the personal data you provide when accessing Bold by ALT through our website, mobile platform, and other communication or service channels (collectively referred to as “Services”).
                     <br />
                     <br />
-                    Throughout this Policy, “we”, “us”, “our” or “Altbuida” refer to Alternative Bank Limited as the provider of Altbuida. “You” or “your” means any user, business owner, entrepreneur, consultant, or subscriber who interacts with the Altbuida platform.
+                    Throughout this Policy, “we”, “us”, “our” or “Bold by ALT” refer to Alternative Bank Limited as the provider of Bold by ALT. “You” or “your” means any user, business owner, entrepreneur, consultant, or subscriber who interacts with the Bold by ALT platform.
                     <br />
                     <br />
-                    By accessing or using the Altbuida platform or any of our services, you agree to the terms of this Policy.
+                    By accessing or using the Bold by ALT platform or any of our services, you agree to the terms of this Policy.
                 </Subsection>
 
                 <Subsection subtitle="The Information We Collect About You">
@@ -92,7 +92,7 @@ const PrivacyContentSection: React.FC<Props> = ({ document }) => {
                 </Subsection>
 
                 <Subsection subtitle="How We Use Your Information">
-                    We may use your personal data to Deliver platform features and services (e.g., invoicing, financial analytics, tax tools), Set up and manage your Altbuida account, Personalize your user experience and marketing communications, Improve platform functionality, usability, and security, Process payments and manage your subscriptions, Respond to inquiries or provide customer support or Fulfill legal and regulatory obligations
+                    We may use your personal data to Deliver platform features and services (e.g., invoicing, financial analytics, tax tools), Set up and manage your Bold by ALT account, Personalize your user experience and marketing communications, Improve platform functionality, usability, and security, Process payments and manage your subscriptions, Respond to inquiries or provide customer support or Fulfill legal and regulatory obligations
                 </Subsection>
 
                 <Subsection subtitle="Sensitive Data">
@@ -104,7 +104,7 @@ const PrivacyContentSection: React.FC<Props> = ({ document }) => {
                 </Subsection>
 
                 <Subsection subtitle="Tracking and Cookies Data">
-                    Altbuida uses cookies and related technologies to understand how you use our platform and to enhance your experience. You can manage your cookie preferences through your browser settings. Please note, disabling cookies may limit certain platform features. Tracking technologies are also used-e.g, beacons, tags, and scripts to collect and track information and to improve and analyze our Service. You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent. You can also refuse permission to read your phone data by the mobile application. However, if you do not accept cookies on your browser or allow permissions on your mobile device, our online service experience to you may be degraded and you may not be able to use some portions of our Service. We may also collect information about your internet browser settings and Internet Protocol (IP) address and other relevant information to help us identify your geographic location when providing you with our services.
+                    Bold by ALT uses cookies and related technologies to understand how you use our platform and to enhance your experience. You can manage your cookie preferences through your browser settings. Please note, disabling cookies may limit certain platform features. Tracking technologies are also used-e.g, beacons, tags, and scripts to collect and track information and to improve and analyze our Service. You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent. You can also refuse permission to read your phone data by the mobile application. However, if you do not accept cookies on your browser or allow permissions on your mobile device, our online service experience to you may be degraded and you may not be able to use some portions of our Service. We may also collect information about your internet browser settings and Internet Protocol (IP) address and other relevant information to help us identify your geographic location when providing you with our services.
                     <br />
                     <br />
                     <br />
@@ -235,11 +235,11 @@ const PrivacyContentSection: React.FC<Props> = ({ document }) => {
                         Regular audits and system reviews
                     </BulletListItem>
                     <br />
-                    You are responsible for keeping your Altbuida login credentials safe.
+                    You are responsible for keeping your Bold by ALT login credentials safe.
                 </Subsection>
 
                 <Subsection subtitle="Updates To This Policy">
-                    This Policy may be updated from time to time. We will notify you of any material changes via the Altbuida platform or email. Continued use of our services constitutes your acceptance of the updated terms.
+                    This Policy may be updated from time to time. We will notify you of any material changes via the Bold by ALT platform or email. Continued use of our services constitutes your acceptance of the updated terms.
                 </Subsection>
 
                 <Subsection subtitle="How We Secure Your Information">

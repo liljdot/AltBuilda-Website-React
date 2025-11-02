@@ -4,7 +4,7 @@ import useThemeContext from "../../hooks/useThemeContext"
 import useDocumentTitle from "../../hooks/useDocumentTitle"
 
 const NotFound: React.FC = () => {
-    useDocumentTitle("404 | AltBuilda")
+    useDocumentTitle("404 | Bold by ALT")
     const { theme } = useThemeContext()
 
     return (

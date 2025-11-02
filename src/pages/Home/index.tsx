@@ -8,7 +8,7 @@ import TransformSection from "./TransformSection";
 import WhyTrustSection from "./WhyTrustSection";
 
 export default function Home() {
-  useDocumentTitle("AltBuilda")
+  useDocumentTitle("Bold by ALT")
   
     return (
       <>

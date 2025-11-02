@@ -18,9 +18,9 @@ const WhyChooseSection: React.FC = () => {
         <>
             <section className="bg-success py-11.5 md:py-30 relative z-0">
                 <div className="flex flex-col gap-3 text-secondary text-center">
-                    <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-5xl font-bold">Why Choose AltBuilda</h1>
+                    <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-5xl font-bold">Why Choose Bold by ALT</h1>
 
-                    <p className="md:text-lg">The AltBuilda Advantages.</p>
+                    <p className="md:text-lg">The Bold by ALT Advantages.</p>
                 </div>
 
                 <div className="px-6 md:px-25 lg:px-50 xl:px-100 mt-11 md:mt-23.5 relative z-1">
@@ -33,7 +33,7 @@ const WhyChooseSection: React.FC = () => {
                         <Card>
                             <h2 className="card-title text-xl md:text-2xl">SME Focused</h2>
                             <p className="md:text-xl">
-                                Altbuida is built specifically for SMEs, providing practical and effective solutions tailored to your needs.
+                                Bold by ALT is built specifically for SMEs, providing practical and effective solutions tailored to your needs.
                             </p>
                         </Card>
 
@@ -72,7 +72,7 @@ const WhyChooseSection: React.FC = () => {
 
                     <div className="flex flex-row justify-center mt-10 mb-15 md:mb-0 md:mt-17 2xl:px-31">
                         <Link to={"/services"} className="w-full sm:w-fit btn btn-secondary text-sm sm:text-[1rem] text-neutral rounded-full font-semibold p-7 hover:scale-105 transition-all ease-in-out duration-500 hover:[&>*]:translate-x-2 active:scale-95">
-                            See how AltBuilda can help You
+                            See how Bold by ALT can help You
                             <IoIosArrowRoundForward className="size-8 transition-all ease-in-out duration-500" />
                         </Link>
                     </div>

@@ -68,12 +68,12 @@ const Feature: React.FC<FeatureProps> = ({ reverse, icon, title, content, button
 
                 {/* hidden for mobile and small tablets  */}
                 <figure className="hidden md:block md:w-[47%]">
-                    <img src={reverse ? featureImageLeft : featureImageRight} alt="Altbuilda on your computer" />
+                    <img src={reverse ? featureImageLeft : featureImageRight} alt="Bold by ALT on your computer" />
                 </figure>
 
                 {/* for mobile and small tablets  */}
                 <figure className="md:hidden">
-                    <img src={theme == "dark" ? iphoneImageDark : iphoneImage} alt="AltBuilda on your iphone" />
+                    <img src={theme == "dark" ? iphoneImageDark : iphoneImage} alt="Bold by ALT on your iphone" />
                 </figure>
             </div>
         </>

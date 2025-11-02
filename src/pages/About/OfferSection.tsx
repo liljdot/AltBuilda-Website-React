@@ -56,7 +56,7 @@ const OfferSection: React.FC = () => {
                         </OfferCard>
 
                         <OfferCard Icon={FinancialSoulutionIcon} title="Financial Solution and Compliance">
-                            Manage your finances effortlessly. Altbuida provides integrated financial tools, tax compliance assistance, and subscription-based financial services to help you stay on top of your cash flow and regulatory obligations.
+                            Manage your finances effortlessly. Bold by ALT provides integrated financial tools, tax compliance assistance, and subscription-based financial services to help you stay on top of your cash flow and regulatory obligations.
                         </OfferCard>
 
                         <OfferCard Icon={CardsIcon} title="Networking and Business Growth">

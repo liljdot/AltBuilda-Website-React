@@ -13,16 +13,16 @@ const MissionSection: React.FC = () => {
 
                 {/* hidden on mobile */}
                 <figure className="hidden sm:block">
-                    <img src={missionImage} alt="AltBuilda Image" />
+                    <img src={missionImage} alt="Bold by ALT Image" />
                 </figure>
 
                 {/* for mobile  */}
                 <figure className="sm:hidden mt-5">
-                    <img src={missionImageMobile} alt="AltBuilda Image" />
+                    <img src={missionImageMobile} alt="Bold by ALT Image" />
                 </figure>
 
                 <p className="text-center text-secondary text-[1rem]/11 md:text-xl/10 px-6 lg:px-39 mt-12 md:mt-19">
-                    Altbuida is designed to empower Small and Medium Enterprises (SMEs) like yours to thrive and scale. We provide the essential tools, financial solutions, and networking opportunities you need to manage your business effectively and achieve sustainable growth. Whether you're just starting or looking to expand, Altbuida is the right platform for success.
+                    Bold by ALT is designed to empower Small and Medium Enterprises (SMEs) like yours to thrive and scale. We provide the essential tools, financial solutions, and networking opportunities you need to manage your business effectively and achieve sustainable growth. Whether you're just starting or looking to expand, Bold by ALT is the right platform for success.
                 </p>
 
                 <div className="flex flex-row justify-center my-10 md:my-14">

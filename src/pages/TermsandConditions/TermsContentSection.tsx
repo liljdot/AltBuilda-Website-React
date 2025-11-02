@@ -71,15 +71,15 @@ const TermsContentSection: React.FC<Props> = ({ document }) => {
                     ))
                 }
                 {/* <Subsection>
-                    These Terms and Conditions (“Agreement”) govern your access and use of the Altbuilda platform (“Platform” or “Website”), a product of Alternative Bank Limited (“Altbuilda”, “we”, “us”, or “our”). Additional product-specific terms may apply depending on your subscription type. By accessing or using the Platform, you confirm your agreement to be bound by these Terms. If you do not accept the Terms, please do not use the Platform.
+                    These Terms and Conditions (“Agreement”) govern your access and use of the Bold by ALT platform (“Platform” or “Website”), a product of Alternative Bank Limited (“Bold by ALT”, “we”, “us”, or “our”). Additional product-specific terms may apply depending on your subscription type. By accessing or using the Platform, you confirm your agreement to be bound by these Terms. If you do not accept the Terms, please do not use the Platform.
                 </Subsection>
 
                 <Subsection subtitle="Registration">
-                    You can browse general content without registering. However, to access full Altbuilda services, including invoicing, tax tools, and business networking, you must complete a registration process and create an account.
+                    You can browse general content without registering. However, to access full Bold by ALT services, including invoicing, tax tools, and business networking, you must complete a registration process and create an account.
                 </Subsection>
 
                 <Subsection subtitle="Access to the Platform">
-                    While we aim to provide continuous and secure access to Altbuilda, we endeavor to make the Website available uninterrupted and fault free. However, we do not guarantee that the Website will always be available or work perfectly at all times; downtimes may arise in cases of maintenance, fraud or a fault in our systems, for an unascertainable period, usually beyond our control.
+                    While we aim to provide continuous and secure access to Bold by ALT, we endeavor to make the Website available uninterrupted and fault free. However, we do not guarantee that the Website will always be available or work perfectly at all times; downtimes may arise in cases of maintenance, fraud or a fault in our systems, for an unascertainable period, usually beyond our control.
                     <br />
                     In the event of a service disruption, users will be notified promptly through appropriate communication channels, and we will work diligently to restore access as quickly as possible.
                 </Subsection>
@@ -95,15 +95,15 @@ const TermsContentSection: React.FC<Props> = ({ document }) => {
                 </Subsection>
 
                 <Subsection subtitle="Nature of the information on the platform?">
-                    All content on Altbuilda is intended for general informational purposes and does not constitute legal, tax, or professional advice. You are encouraged to consult appropriate advisors before making decisions based on information from this platform.
+                    All content on Bold by ALT is intended for general informational purposes and does not constitute legal, tax, or professional advice. You are encouraged to consult appropriate advisors before making decisions based on information from this platform.
                 </Subsection>
 
                 <Subsection subtitle="Subscription Plans and Services">
-                    Altbuilda offers subscription-based services designed to support SMEs. Subscription fees are billed annually and are non-refundable, except where required by applicable law. We reserve the right to revise pricing, with notice provided before any changes take effect.
+                    Bold by ALT offers subscription-based services designed to support SMEs. Subscription fees are billed annually and are non-refundable, except where required by applicable law. We reserve the right to revise pricing, with notice provided before any changes take effect.
                 </Subsection>
 
                 <Subsection subtitle="Permitted Use and Access">
-                    You are granted a personal, non-transferable license to use Altbuilda in accordance with these Terms. You may not:
+                    You are granted a personal, non-transferable license to use Bold by ALT in accordance with these Terms. You may not:
                     <br />
                     <br />
                     <BulletListItem>
@@ -115,7 +115,7 @@ const TermsContentSection: React.FC<Props> = ({ document }) => {
                     </BulletListItem>
                     <br />
                     <BulletListItem>
-                        Use Altbuilda for unlawful or fraudulent activity.
+                        Use Bold by ALT for unlawful or fraudulent activity.
                     </BulletListItem>
                     <br />
                     <BulletListItem>
@@ -198,11 +198,11 @@ const TermsContentSection: React.FC<Props> = ({ document }) => {
                 </Subsection>
 
                 <Subsection subtitle="Privacy and Data Usage">
-                    By using Altbuilda, you consent to the collection and use of your data for platform functionality, marketing personalization, and service improvement. Data may be shared with verified third parties to fulfill services. For more details, please refer to our [Privacy Policy]
+                    By using Bold by ALT, you consent to the collection and use of your data for platform functionality, marketing personalization, and service improvement. Data may be shared with verified third parties to fulfill services. For more details, please refer to our [Privacy Policy]
                 </Subsection>
 
                 <Subsection subtitle="Intellectual Property">
-                    All content, software, and branding on Altbuilda are the intellectual property of Alternative Bank or its licensors. You may not reproduce, redistribute, or commercially exploit any material without prior written consent.
+                    All content, software, and branding on Bold by ALT are the intellectual property of Alternative Bank or its licensors. You may not reproduce, redistribute, or commercially exploit any material without prior written consent.
                 </Subsection>
 
                 <Subsection subtitle="Modifications to these Terms">
@@ -220,7 +220,7 @@ const TermsContentSection: React.FC<Props> = ({ document }) => {
                 </Subsection>
 
                 <Subsection subtitle="Third Party Links and Services">
-                    Altbuilda may include links to third-party services such as payment processors or CAC registration. These services are governed by their respective terms. We are not responsible for the availability or content of these external sites.
+                    Bold by ALT may include links to third-party services such as payment processors or CAC registration. These services are governed by their respective terms. We are not responsible for the availability or content of these external sites.
                     <br />
                     <br />
                     <BulletListItem>
@@ -237,7 +237,7 @@ const TermsContentSection: React.FC<Props> = ({ document }) => {
                 </Subsection>
 
                 <Subsection subtitle="Indemnity">
-                    You agree to defend, indemnify, and hold The Alternative Bank where Altbuida is under,  its employees, officers, directors, agents, its affiliates and third-party service providers harmless from and against any and all claims, suits, liabilities, damages (actual and consequential), losses, fines, penalties, costs, and expenses (including reasonable attorneys’ fees) arising from or in any way related to any claims relating to your use of the Website, violation of these Terms, applicable law or any third-party rights or claims, or your fraud or wilful misconduct. Such indemnified parties reserve the right to assume the exclusive defence and control of any matter subject to indemnification by you, in which event you will cooperate in asserting any available defences.
+                    You agree to defend, indemnify, and hold The Alternative Bank where Bold by ALT is under,  its employees, officers, directors, agents, its affiliates and third-party service providers harmless from and against any and all claims, suits, liabilities, damages (actual and consequential), losses, fines, penalties, costs, and expenses (including reasonable attorneys’ fees) arising from or in any way related to any claims relating to your use of the Website, violation of these Terms, applicable law or any third-party rights or claims, or your fraud or wilful misconduct. Such indemnified parties reserve the right to assume the exclusive defence and control of any matter subject to indemnification by you, in which event you will cooperate in asserting any available defences.
                 </Subsection>
 
                 <Subsection subtitle="Force Majeure">

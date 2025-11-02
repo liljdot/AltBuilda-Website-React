@@ -4,7 +4,7 @@ import FormSection from "./FormSection"
 import InfoSection from "./InfoSection"
 
 const Contact: React.FC = () => {
-    useDocumentTitle("Contact | AltBuilda")
+    useDocumentTitle("Contact | Bold by ALT")
 
     return (
         <>

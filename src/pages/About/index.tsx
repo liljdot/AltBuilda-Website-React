@@ -5,7 +5,7 @@ import OfferSection from "./OfferSection";
 import WhyChooseSection from "./WhyChooseSection";
 
 const About: React.FC = () => {
-    useDocumentTitle("About | AltBuilda")
+    useDocumentTitle("About | Bold by ALT")
 
     return (
         <>

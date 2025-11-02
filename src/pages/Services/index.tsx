@@ -3,7 +3,7 @@ import useDocumentTitle from "../../hooks/useDocumentTitle";
 import FeaturesSection from "./FeaturesSection";
 
 const Services: React.FC = () => {
-    useDocumentTitle("Services | AltBuilda")
+    useDocumentTitle("Services | Bold by ALT")
 
     return (
         <>
