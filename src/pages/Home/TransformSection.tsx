@@ -27,7 +27,7 @@ const TransformSection: React.FC = () => {
                         with
                     </h3>
 
-                    <OnlyFontLogo className="absolute bottom-0 -right-10 lg:-right-5 w-34.5 sm:w-40 md:w-45 lg:w-61"/>
+                    <OnlyFontLogo className="absolute bottom-0 -right-15 lg:-right-10 w-34.5 sm:w-40 md:w-45 lg:w-61"/>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-10 gap-y-10 place-items-center mt-19 sm:mt-35">
