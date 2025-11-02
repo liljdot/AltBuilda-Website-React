@@ -1,5 +1,5 @@
-import onlyFontLogo from "../assets/only-font-logo.png"
-import onlyFontLogoBlack from "../assets/only-font-logo-black.png"
+import onlyFontLogo from "../assets/navbar-logo-dark.svg"
+import onlyFontLogoBlack from "../assets/navbar-logo.svg"
 import useThemeContext from "../hooks/useThemeContext"
 
 interface Props {
