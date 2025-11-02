@@ -1,6 +1,6 @@
 import ActionButton from "./ActionButton";
 import signVector from "../assets/sign-vector.png"
-import footerLogo from "../assets/footer-logo.png"
+import footerLogo from "../assets/navbar-logo-dark.svg"
 import { Link, useLocation } from "react-router-dom";
 import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
 
