@@ -7,14 +7,20 @@ import altproImageMobile from "../../assets/altpro-image-mobile.png"
 import altproImageMobileDark from "../../assets/altpro-image-mobile-dark.png"
 import altproImageDark from "../../assets/altpro-image-dark.png"
 
+import invoiceImage from "../../assets/invoice-image.png"
+import invoiceImageDark from "../../assets/invoice-image-dark.png"
+import invoiceImageMobile from "../../assets/invoice-image-mobile.png"
+import invoiceImageMobileDark from "../../assets/invoice-image-mobile-dark.png"
+
+
 import chatIcon from "../../assets/chat-icon.png"
 import chatIconDark from "../../assets/chat-icon-dark.png"
 
 import altproIcon from "../../assets/altpro-icon.png"
 import altproIconDark from "../../assets/altpro-icon-dark.png"
 
-// import invoiceIcon from "../../assets/invoice-icon.png"
-// import invoiceIconDark from "../../assets/invoice-icon-dark.png"
+import invoiceIcon from "../../assets/invoice-icon.png"
+import invoiceIconDark from "../../assets/invoice-icon-dark.png"
 
 // import speedIcon from "../../assets/speed-icon.png"
 // import speedIconDark from "../../assets/speed-icon-dark.png"
@@ -64,11 +70,11 @@ const FeatureCardsSection: React.FC = () => {
             mobileImage: theme == "dark" ? altproImageMobileDark : altproImageMobile
         },
         {
-            icon: theme == "dark" ? altproIconDark : altproIcon,
-            title: "Business Banking(AltPro)",
-            content: "Sync with AltPro for seamless financial access",
-            image: theme == "dark" ? altproImageDark : altproImage,
-            mobileImage: theme == "dark" ? altproImageMobileDark : altproImageMobile
+            icon: theme == "dark" ? invoiceIconDark : invoiceIcon,
+            title: "Invoicing and receipt Generation",
+            content: "Create, track and automate invoices",
+            image: theme == "dark" ? invoiceImageDark : invoiceImage,
+            mobileImage: theme == "dark" ? invoiceImageMobileDark : invoiceImageMobile
         },
     ]
 
@@ -77,8 +83,6 @@ const FeatureCardsSection: React.FC = () => {
             <section className="bg-neutral flex flex-col items-center gap-12 md:gap-24 px-4 md:px-19 lg:px-38 py-17 md:py-24">
                 <NewsletterFeature />
                 <FeatureList features={features} />
-                {/* <FeatureCard feature={{ icon: altproIcon, title: "Business Banking(AltPro)", content: "Sync with AltPro for seamless financial access" }} /> */}
-
                 {/* <FeatureCard
                     title="Email Newsletter"
                     content="Personalized industry insights & updates"
