@@ -1,6 +1,8 @@
 import featureImageRight from "../../assets/feature-image-right.png"
 import featureImageLeft from "../../assets/feature-image-left.png"
 
+import newsletterOnPhoneImage from "../../assets/newsletter-on-phone-image.png"
+
 import chatIcon from "../../assets/chat-icon.png"
 import chatIconDark from "../../assets/chat-icon-dark.png"
 
@@ -37,7 +39,7 @@ import iphoneImageDark from "../../assets/iphone-image-dark.png"
 import useThemeContext from "../../hooks/useThemeContext"
 import { Link } from "react-router-dom"
 
-interface FeatureProps {
+interface FeatureCardProps {
     reverse?: boolean
     icon: string
     title: string
@@ -48,7 +50,7 @@ interface FeatureProps {
     }
 }
 
-const Feature: React.FC<FeatureProps> = ({ reverse, icon, title, content, button }) => {
+const FeatureCard: React.FC<FeatureCardProps> = ({ reverse, icon, title, content, button }) => {
     const { theme } = useThemeContext()
 
     return (
@@ -80,72 +82,99 @@ const Feature: React.FC<FeatureProps> = ({ reverse, icon, title, content, button
     )
 }
 
-const FeaturesSection: React.FC = () => {
+const FeatureCardsSection: React.FC = () => {
     const { theme } = useThemeContext()
 
     return (
         <>
-            <section className="bg-neutral flex flex-col gap-12 md:gap-24 py-17 md:py-24">
-                <Feature
+            <section className="bg-neutral flex flex-col items-center gap-12 md:gap-24 px-38 py-17 md:py-24">
+                <div className="card lg:card-side w-full xl:w-218">
+                    <div className="card-body w-1/2 p-0 justify-center">
+                        <div className="flex flex-col space-y-8">
+                            <figure className="size-12">
+                                <img src={theme == "dark" ? chatIconDark : chatIcon} />
+                            </figure>
+
+                            <h4 className="text-xl xl:text-3xl font-medium">Email Newsletter</h4>
+
+                            <p className="xl:text-xl">
+                                Personalized industry insights & updates
+                            </p>
+
+                            <Link to={"/blog#newsletter"} className="btn btn-primary text-secondary p-6.5 rounded-full min-w-55 md:min-w-fit max-w-67 hover:scale-105 transition-all ease-in-out duration-500">
+                                Subscribe Now
+                            </Link>
+                        </div>
+                    </div>
+                    <figure className="w-1/2">
+                        <img
+                            src={newsletterOnPhoneImage}
+                            alt="Newsletter"
+                        />
+                    </figure>
+
+                </div>
+
+                <FeatureCard
                     title="Email Newsletter"
                     content="Personalized industry insights & updates"
                     icon={theme == "dark" ? chatIconDark : chatIcon}
                     button={{ text: "Subscribe Now", to: "/blog#newsletter" }}
                 />
 
-                <Feature
+                <FeatureCard
                     reverse
                     title="Business Banking(AltPro)"
                     content="Sync with AltPro for seamless financial access"
                     icon={theme == "dark" ? altproIconDark : altproIcon}
                 />
 
-                <Feature
+                <FeatureCard
                     title="Invoicing and receipt Generation"
                     content="Create, track and automate invoices"
                     icon={theme == "dark" ? invoiceIconDark : invoiceIcon}
                 />
 
-                <Feature
+                <FeatureCard
                     reverse
                     title="POS Terminal Access(Wakeel)"
                     content="Apply & Track POS terminal status"
                     icon={theme == "dark" ? speedIconDark : speedIcon}
                 />
 
-                <Feature
+                <FeatureCard
                     title="Credit Facility(Coming Soon)"
                     content="Flexible SME credit for business growth"
                     icon={theme == "dark" ? noteIconDark : noteIcon}
                 />
 
-                <Feature
+                <FeatureCard
                     reverse
                     title="Tax Management and Filing Support"
                     content="Easy tax calculation & Filing tools "
                     icon={theme == "dark" ? bookIconDark : bookIcon}
                 />
 
-                <Feature
+                <FeatureCard
                     title="Market Hub (Business Networking)"
                     content="Connect with verified SMEs and partners"
                     icon={theme == "dark" ? peopleIconDark : peopleIcon}
                 />
 
-                <Feature
+                <FeatureCard
                     reverse
                     title="Campaign and Content Tools"
                     content="Schedule and track digital marketing campaigns"
                     icon={theme == "dark" ? soundIconDark : soundIcon}
                 />
 
-                <Feature
+                <FeatureCard
                     title="Sales and Revenue Insights"
                     content="Gain analytics on business performance "
                     icon={theme == "dark" ? chartIconDark : chartIcon}
                 />
 
-                <Feature
+                <FeatureCard
                     reverse
                     title="Business Registration Support"
                     content="CAC guidance for new businesses"
@@ -156,4 +185,4 @@ const FeaturesSection: React.FC = () => {
     )
 }
 
-export default FeaturesSection;
+export default FeatureCardsSection;
