@@ -6,6 +6,8 @@ import newsletterOnPhoneImageMobile from "../../assets/newsletter-on-phone-image
 import newsletterOnPhoneImageMobileDark from "../../assets/newsletter-on-phone-image-mobile-dark.png"
 
 import altproImage from "../../assets/altpro-image.png"
+import altproImageMobile from "../../assets/altpro-image-mobile.png"
+import altproImageMobileDark from "../../assets/altpro-image-mobile-dark.png"
 import altproImageDark from "../../assets/altpro-image-dark.png"
 
 import chatIcon from "../../assets/chat-icon.png"
@@ -49,6 +51,7 @@ interface Feature {
     title: string
     content: string
     image: string
+    mobileImage?: string
 }
 
 interface FeatureList {
@@ -63,7 +66,7 @@ const FeatureCardsSection: React.FC = () => {
         <>
             <section className="bg-neutral flex flex-col items-center gap-12 md:gap-24 px-4 md:px-19 lg:px-38 py-17 md:py-24">
                 <NewsletterFeature />
-                <FeatureCard feature={{ icon: altproIcon, title: "Business Banking(AltPro)", content: "Sync with AltPro for seamless financial access", image: theme == "dark" ? altproImageDark : altproImage }} />
+                <FeatureCard feature={{ icon: altproIcon, title: "Business Banking(AltPro)", content: "Sync with AltPro for seamless financial access", image: theme == "dark" ? altproImageDark : altproImage, mobileImage: theme == "dark" ? altproImageMobileDark: altproImageMobile }} />
                 {/* <FeatureCard feature={{ icon: altproIcon, title: "Business Banking(AltPro)", content: "Sync with AltPro for seamless financial access" }} /> */}
 
                 {/* <FeatureCard
@@ -141,7 +144,7 @@ const FeatureCard: React.FC<{ feature: Feature }> = ({ feature }) => {
 
     return (
         <>
-            <div className="card w-full xl:w-218 p-0">
+            <div className="card w-full items-center xl:w-218 p-0">
                 <div className="card-body p-0 py-10">
                     <div className="flex flex-col items-center md:items-center space-y-8">
                         <figure className="size-12">
@@ -156,11 +159,19 @@ const FeatureCard: React.FC<{ feature: Feature }> = ({ feature }) => {
                     </div>
                 </div>
 
-                <figure>
+                {/* for mobile and small tablets */}
+                <div className="md:hidden">
+                    <img
+                        src={feature.mobileImage ? feature.mobileImage : feature.image}
+                        alt={feature.title} />
+                </div>
+
+                {/* hidden on mobile and small tablets */}
+                <div className="hidden md:flex">
                     <img
                         src={feature.image}
-                        alt="Shoes" />
-                </figure>
+                        alt={feature.title} />
+                </div>
             </div>
         </>
     )
