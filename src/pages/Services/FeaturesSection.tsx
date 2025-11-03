@@ -1,6 +1,3 @@
-import featureImageRight from "../../assets/feature-image-right.png"
-import featureImageLeft from "../../assets/feature-image-left.png"
-
 import newsletterOnPhoneImage from "../../assets/newsletter-on-phone-image.png"
 import newsletterOnPhoneImageMobile from "../../assets/newsletter-on-phone-image-mobile.png"
 import newsletterOnPhoneImageMobileDark from "../../assets/newsletter-on-phone-image-mobile-dark.png"
@@ -40,9 +37,6 @@ import altproIconDark from "../../assets/altpro-icon-dark.png"
 // import buildingIcon from "../../assets/building-icon.png"
 // import buildingIconDark from "../../assets/building-icon-dark.png"
 
-import iphoneImage from "../../assets/iphone-image.png"
-import iphoneImageDark from "../../assets/iphone-image-dark.png"
-
 import useThemeContext from "../../hooks/useThemeContext"
 import { Link } from "react-router-dom"
 
@@ -54,19 +48,35 @@ interface Feature {
     mobileImage?: string
 }
 
-interface FeatureList {
+interface FeatureListProps {
     features: Feature[]
 }
 
 
 const FeatureCardsSection: React.FC = () => {
     const { theme } = useThemeContext()
+    const features: Feature[] = [
+        {
+            icon: theme == "dark" ? altproIconDark : altproIcon,
+            title: "Business Banking(AltPro)",
+            content: "Sync with AltPro for seamless financial access",
+            image: theme == "dark" ? altproImageDark : altproImage,
+            mobileImage: theme == "dark" ? altproImageMobileDark : altproImageMobile
+        },
+        {
+            icon: theme == "dark" ? altproIconDark : altproIcon,
+            title: "Business Banking(AltPro)",
+            content: "Sync with AltPro for seamless financial access",
+            image: theme == "dark" ? altproImageDark : altproImage,
+            mobileImage: theme == "dark" ? altproImageMobileDark : altproImageMobile
+        },
+    ]
 
     return (
         <>
             <section className="bg-neutral flex flex-col items-center gap-12 md:gap-24 px-4 md:px-19 lg:px-38 py-17 md:py-24">
                 <NewsletterFeature />
-                <FeatureCard feature={{ icon: altproIcon, title: "Business Banking(AltPro)", content: "Sync with AltPro for seamless financial access", image: theme == "dark" ? altproImageDark : altproImage, mobileImage: theme == "dark" ? altproImageMobileDark: altproImageMobile }} />
+                <FeatureList features={features} />
                 {/* <FeatureCard feature={{ icon: altproIcon, title: "Business Banking(AltPro)", content: "Sync with AltPro for seamless financial access" }} /> */}
 
                 {/* <FeatureCard
@@ -139,8 +149,16 @@ const FeatureCardsSection: React.FC = () => {
     )
 }
 
+const FeatureList: React.FC<FeatureListProps> = ({ features }) => {
+
+    return (
+        features.map(feature => (
+            <FeatureCard key={feature.title} feature={feature} />
+        ))
+    )
+}
+
 const FeatureCard: React.FC<{ feature: Feature }> = ({ feature }) => {
-    const { theme } = useThemeContext()
 
     return (
         <>
