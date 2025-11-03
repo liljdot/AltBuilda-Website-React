@@ -5,11 +5,14 @@ import newsletterOnPhoneImage from "../../assets/newsletter-on-phone-image.png"
 import newsletterOnPhoneImageMobile from "../../assets/newsletter-on-phone-image-mobile.png"
 import newsletterOnPhoneImageMobileDark from "../../assets/newsletter-on-phone-image-mobile-dark.png"
 
+import altproImage from "../../assets/altpro-image.png"
+import altproImageDark from "../../assets/altpro-image-dark.png"
+
 import chatIcon from "../../assets/chat-icon.png"
 import chatIconDark from "../../assets/chat-icon-dark.png"
 
-// import altproIcon from "../../assets/altpro-icon.png"
-// import altproIconDark from "../../assets/altpro-icon-dark.png"
+import altproIcon from "../../assets/altpro-icon.png"
+import altproIconDark from "../../assets/altpro-icon-dark.png"
 
 // import invoiceIcon from "../../assets/invoice-icon.png"
 // import invoiceIconDark from "../../assets/invoice-icon-dark.png"
@@ -41,122 +44,124 @@ import iphoneImageDark from "../../assets/iphone-image-dark.png"
 import useThemeContext from "../../hooks/useThemeContext"
 import { Link } from "react-router-dom"
 
-interface FeatureCardProps {
-    reverse?: boolean
+interface Feature {
     icon: string
     title: string
     content: string
-    button?: {
-        to: string
-        text: string
-    }
+    image: string
 }
 
-const FeatureCard: React.FC<FeatureCardProps> = ({ reverse, icon, title, content, button }) => {
-    const { theme } = useThemeContext()
-
-    return (
-        <>
-            <div className={`flex flex-col gap-10 md:gap-0 ${reverse ? "md:flex-row-reverse" : "md:flex-row"} items-center px-5 md:px-0`}>
-                <div className="w-full md:w-[53%] flex flex-col gap-6 text-secondary sm:px-14 lg:px-28">
-                    <figure className="size-12">
-                        <img src={icon} alt="icon" />
-                    </figure>
-
-                    <h4 className="text-xl xl:text-3xl font-medium">{title}</h4>
-
-                    <p className="xl:text-xl">{content}</p>
-
-                    {button && <Link to={button.to} className="btn btn-primary text-secondary p-6.5 rounded-full min-w-55 md:min-w-fit w-fit hover:scale-105 transition-all ease-in-out duration-500">{button.text}</Link>}
-                </div>
-
-                {/* hidden for mobile and small tablets  */}
-                <figure className="hidden md:block md:w-[47%]">
-                    <img src={reverse ? featureImageLeft : featureImageRight} alt="Bold by ALT on your computer" />
-                </figure>
-
-                {/* for mobile and small tablets  */}
-                <figure className="md:hidden">
-                    <img src={theme == "dark" ? iphoneImageDark : iphoneImage} alt="Bold by ALT on your iphone" />
-                </figure>
-            </div>
-        </>
-    )
+interface FeatureList {
+    features: Feature[]
 }
+
 
 const FeatureCardsSection: React.FC = () => {
+    const { theme } = useThemeContext()
 
     return (
         <>
             <section className="bg-neutral flex flex-col items-center gap-12 md:gap-24 px-4 md:px-19 lg:px-38 py-17 md:py-24">
                 <NewsletterFeature />
+                <FeatureCard feature={{ icon: altproIcon, title: "Business Banking(AltPro)", content: "Sync with AltPro for seamless financial access", image: theme == "dark" ? altproImageDark : altproImage }} />
+                {/* <FeatureCard feature={{ icon: altproIcon, title: "Business Banking(AltPro)", content: "Sync with AltPro for seamless financial access" }} /> */}
 
                 {/* <FeatureCard
                     title="Email Newsletter"
                     content="Personalized industry insights & updates"
                     icon={theme == "dark" ? chatIconDark : chatIcon}
                     button={{ text: "Subscribe Now", to: "/blog#newsletter" }}
-                />
-
-                <FeatureCard
+                    />
+                    
+                    <FeatureCard
                     reverse
                     title="Business Banking(AltPro)"
                     content="Sync with AltPro for seamless financial access"
                     icon={theme == "dark" ? altproIconDark : altproIcon}
-                />
-
-                <FeatureCard
+                    />
+                    
+                    <FeatureCard
                     title="Invoicing and receipt Generation"
                     content="Create, track and automate invoices"
                     icon={theme == "dark" ? invoiceIconDark : invoiceIcon}
-                />
-
-                <FeatureCard
+                    />
+                    
+                    <FeatureCard
                     reverse
                     title="POS Terminal Access(Wakeel)"
                     content="Apply & Track POS terminal status"
                     icon={theme == "dark" ? speedIconDark : speedIcon}
-                />
-
-                <FeatureCard
+                    />
+                    
+                    <FeatureCard
                     title="Credit Facility(Coming Soon)"
                     content="Flexible SME credit for business growth"
                     icon={theme == "dark" ? noteIconDark : noteIcon}
-                />
-
-                <FeatureCard
+                    />
+                    
+                    <FeatureCard
                     reverse
                     title="Tax Management and Filing Support"
                     content="Easy tax calculation & Filing tools "
                     icon={theme == "dark" ? bookIconDark : bookIcon}
-                />
-
-                <FeatureCard
+                    />
+                    
+                    <FeatureCard
                     title="Market Hub (Business Networking)"
                     content="Connect with verified SMEs and partners"
                     icon={theme == "dark" ? peopleIconDark : peopleIcon}
-                />
-
-                <FeatureCard
+                    />
+                    
+                    <FeatureCard
                     reverse
                     title="Campaign and Content Tools"
                     content="Schedule and track digital marketing campaigns"
                     icon={theme == "dark" ? soundIconDark : soundIcon}
-                />
-
-                <FeatureCard
+                    />
+                    
+                    <FeatureCard
                     title="Sales and Revenue Insights"
                     content="Gain analytics on business performance "
                     icon={theme == "dark" ? chartIconDark : chartIcon}
-                />
-
-                <FeatureCard
+                    />
+                    
+                    <FeatureCard
                     reverse
                     title="Business Registration Support"
                     content="CAC guidance for new businesses"
                     icon={theme == "dark" ? buildingIconDark : buildingIcon}
-                /> */}
+                    /> */}
             </section>
+        </>
+    )
+}
+
+const FeatureCard: React.FC<{ feature: Feature }> = ({ feature }) => {
+    const { theme } = useThemeContext()
+
+    return (
+        <>
+            <div className="card w-full xl:w-218 p-0">
+                <div className="card-body p-0 py-10">
+                    <div className="flex flex-col items-center md:items-center space-y-8">
+                        <figure className="size-12">
+                            <img src={feature.icon} />
+                        </figure>
+
+                        <h4 className="text-xl xl:text-3xl font-medium">{feature.title}</h4>
+
+                        <p className="xl:text-xl">
+                            {feature.content}
+                        </p>
+                    </div>
+                </div>
+
+                <figure>
+                    <img
+                        src={feature.image}
+                        alt="Shoes" />
+                </figure>
+            </div>
         </>
     )
 }
