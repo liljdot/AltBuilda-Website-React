@@ -26,8 +26,8 @@ import altproIconDark from "../../assets/altpro-icon-dark.png"
 import invoiceIcon from "../../assets/invoice-icon.png"
 import invoiceIconDark from "../../assets/invoice-icon-dark.png"
 
-// import speedIcon from "../../assets/speed-icon.png"
-// import speedIconDark from "../../assets/speed-icon-dark.png"
+import speedIcon from "../../assets/speed-icon.png"
+import speedIconDark from "../../assets/speed-icon-dark.png"
 
 // import noteIcon from "../../assets/note-icon.png"
 // import noteIconDark from "../../assets/note-icon-dark.png"
@@ -35,17 +35,17 @@ import invoiceIconDark from "../../assets/invoice-icon-dark.png"
 import bookIcon from "../../assets/book-icon.png"
 import bookIconDark from "../../assets/book-icon-dark.png"
 
-// import peopleIcon from "../../assets/people-icon.png"
-// import peopleIconDark from "../../assets/people-icon-dark.png"
+import peopleIcon from "../../assets/people-icon.png"
+import peopleIconDark from "../../assets/people-icon-dark.png"
 
-// import soundIcon from "../../assets/sound-icon.png"
-// import soundIconDark from "../../assets/sound-icon-dark.png"
+import soundIcon from "../../assets/sound-icon.png"
+import soundIconDark from "../../assets/sound-icon-dark.png"
 
-// import chartIcon from "../../assets/chart-icon.png"
-// import chartIconDark from "../../assets/chart-icon-dark.png"
+import chartIcon from "../../assets/chart-icon.png"
+import chartIconDark from "../../assets/chart-icon-dark.png"
 
-// import buildingIcon from "../../assets/building-icon.png"
-// import buildingIconDark from "../../assets/building-icon-dark.png"
+import buildingIcon from "../../assets/building-icon.png"
+import buildingIconDark from "../../assets/building-icon-dark.png"
 
 import useThemeContext from "../../hooks/useThemeContext"
 import { Link } from "react-router-dom"
@@ -88,77 +88,48 @@ const FeatureCardsSection: React.FC = () => {
             mobileImage: theme == "dark" ? taxImageMobileDark : taxImageMobile
         }
     ]
+    const featuresForTiles: Omit<Feature, "image" | "mobileImage">[] = [
+        {
+            title: "Market Hub (Business Networking)",
+            content: "Connect with verified SMEs and partners",
+            icon: theme == "dark" ? peopleIconDark : peopleIcon
+        },
+        {
+            title: "POS Terminal Access(Wakeel)",
+            content: "Apply & Track POS terminal status",
+            icon: theme == "dark" ? speedIconDark : speedIcon
+        },
+        {
+            title: "Sales and Revenue Insights",
+            content: "Gain analytics on business performance",
+            icon: theme == "dark" ? chartIconDark : chartIcon
+        },
+        {
+            title: "Campaign and Content Tools",
+            content: "Schedule and track digital marketing campaigns",
+            icon: theme == "dark" ? soundIconDark : soundIcon
+        },
+        {
+            title: "Business Registration Support",
+            content: "CAC guidance for new businesses",
+            icon: theme == "dark" ? buildingIconDark : buildingIcon
+        }
+    ]
 
     return (
         <>
             <section className="bg-neutral flex flex-col items-center gap-12 md:gap-24 px-4 md:px-19 lg:px-38 py-17 md:py-24">
                 <NewsletterFeature />
                 <FeatureList features={features} />
-                {/* <FeatureCard
-                    title="Email Newsletter"
-                    content="Personalized industry insights & updates"
-                    icon={theme == "dark" ? chatIconDark : chatIcon}
-                    button={{ text: "Subscribe Now", to: "/blog#newsletter" }}
-                    />
-                    
-                    <FeatureCard
-                    reverse
-                    title="Business Banking(AltPro)"
-                    content="Sync with AltPro for seamless financial access"
-                    icon={theme == "dark" ? altproIconDark : altproIcon}
-                    />
-                    
-                    <FeatureCard
-                    title="Invoicing and receipt Generation"
-                    content="Create, track and automate invoices"
-                    icon={theme == "dark" ? invoiceIconDark : invoiceIcon}
-                    />
-                    
-                    <FeatureCard
-                    reverse
-                    title="POS Terminal Access(Wakeel)"
-                    content="Apply & Track POS terminal status"
-                    icon={theme == "dark" ? speedIconDark : speedIcon}
-                    />
+                <FeatureTileList features={featuresForTiles} />
+                {/* 
                     
                     <FeatureCard
                     title="Credit Facility(Coming Soon)"
                     content="Flexible SME credit for business growth"
                     icon={theme == "dark" ? noteIconDark : noteIcon}
                     />
-                    
-                    <FeatureCard
-                    reverse
-                    title="Tax Management and Filing Support"
-                    content="Easy tax calculation & Filing tools "
-                    icon={theme == "dark" ? bookIconDark : bookIcon}
-                    />
-                    
-                    <FeatureCard
-                    title="Market Hub (Business Networking)"
-                    content="Connect with verified SMEs and partners"
-                    icon={theme == "dark" ? peopleIconDark : peopleIcon}
-                    />
-                    
-                    <FeatureCard
-                    reverse
-                    title="Campaign and Content Tools"
-                    content="Schedule and track digital marketing campaigns"
-                    icon={theme == "dark" ? soundIconDark : soundIcon}
-                    />
-                    
-                    <FeatureCard
-                    title="Sales and Revenue Insights"
-                    content="Gain analytics on business performance "
-                    icon={theme == "dark" ? chartIconDark : chartIcon}
-                    />
-                    
-                    <FeatureCard
-                    reverse
-                    title="Business Registration Support"
-                    content="CAC guidance for new businesses"
-                    icon={theme == "dark" ? buildingIconDark : buildingIcon}
-                    /> */}
+                     */}
             </section>
         </>
     )
@@ -249,6 +220,35 @@ const NewsletterFeature: React.FC = () => {
                 />
             </div>
 
+        </div>
+    )
+}
+
+const FeatureTileList: React.FC<{ features: Omit<Feature, "image" | "mobileImage">[] }> = ({ features }) => {
+
+    return (
+        <div className="w-full flex flex-row gap-10 md:gap-6 flex-wrap">
+            {
+                features.map(f => (
+                    <FeatureTile feature={f} />
+                ))
+            }
+        </div>
+    )
+}
+
+const FeatureTile: React.FC<{ feature: Omit<Feature, "image" | "mobileImage"> }> = ({ feature }) => {
+    return (
+        <div className="bg-base-100 flex flex-1 min-w-full md:min-w-3/8 flex-col items-center md:items-center space-y-8 px-10 py-11 rounded-2xl shadow-md">
+            <figure className="size-12">
+                <img src={feature.icon} />
+            </figure>
+
+            <h4 className="text-xl xl:text-3xl font-medium">{feature.title}</h4>
+
+            <p className="xl:text-xl">
+                {feature.content}
+            </p>
         </div>
     )
 }
