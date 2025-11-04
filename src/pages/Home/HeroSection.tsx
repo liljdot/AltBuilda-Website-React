@@ -21,7 +21,7 @@ const HeroSection: React.FC = () => {
                     </h1>
 
                     <p className="mt-6 md:mt-10 md:pr-21 z-99">Empowering businesses with tools to manage operations, connect with
-                        peers,and drive growth effortlessly</p>
+                        peers, and drive growth effortlessly</p>
 
                     <div className="w-full sm:w-fit flex flex-row justify-between sm:gap-5 mt-8 md:mt-14 z-99">
                         <ActionButton to={appRegisterPage} filled>
