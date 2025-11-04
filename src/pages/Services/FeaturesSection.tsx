@@ -12,6 +12,10 @@ import invoiceImageDark from "../../assets/invoice-image-dark.png"
 import invoiceImageMobile from "../../assets/invoice-image-mobile.png"
 import invoiceImageMobileDark from "../../assets/invoice-image-mobile-dark.png"
 
+import taxImage from "../../assets/tax-image.png"
+import taxImageDark from "../../assets/tax-image-dark.png"
+import taxImageMobile from "../../assets/tax-image-mobile.png"
+import taxImageMobileDark from "../../assets/tax-image-mobile-dark.png"
 
 import chatIcon from "../../assets/chat-icon.png"
 import chatIconDark from "../../assets/chat-icon-dark.png"
@@ -28,8 +32,8 @@ import invoiceIconDark from "../../assets/invoice-icon-dark.png"
 // import noteIcon from "../../assets/note-icon.png"
 // import noteIconDark from "../../assets/note-icon-dark.png"
 
-// import bookIcon from "../../assets/book-icon.png"
-// import bookIconDark from "../../assets/book-icon-dark.png"
+import bookIcon from "../../assets/book-icon.png"
+import bookIconDark from "../../assets/book-icon-dark.png"
 
 // import peopleIcon from "../../assets/people-icon.png"
 // import peopleIconDark from "../../assets/people-icon-dark.png"
@@ -76,6 +80,13 @@ const FeatureCardsSection: React.FC = () => {
             image: theme == "dark" ? invoiceImageDark : invoiceImage,
             mobileImage: theme == "dark" ? invoiceImageMobileDark : invoiceImageMobile
         },
+        {
+            icon: theme == "dark" ? bookIconDark : bookIcon,
+            title: "Tax Management",
+            content: "Easy tax calculation",
+            image: theme == "dark" ? taxImageDark : taxImage,
+            mobileImage: theme == "dark" ? taxImageMobileDark : taxImageMobile
+        }
     ]
 
     return (
